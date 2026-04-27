@@ -114,6 +114,24 @@
       <span class="text-sm font-bold text-gray-600 italic">TOPIK II 必勝！加油！</span>
     </div>
   </div>
-
+// 呢段 code 係專門對付 iOS Safari 跳頁會彈出全螢幕嘅問題
+(function(document, navigator, standalone) {
+    // 只有喺「全螢幕模式」下先執行
+    if ((standalone in navigator) && navigator[standalone]) {
+        var curnode, location = document.location, stop = /^(a|html)$/i;
+        document.addEventListener('click', function(e) {
+            curnode = e.target;
+            // 向上搵返個 <a> 標籤
+            while (!(stop).test(curnode.nodeName)) {
+                curnode = curnode.parentNode;
+            }
+            // 如果搵到連結，而且唔係外連，就強制喺原視窗跳轉
+            if('href' in curnode && (curnode.href.indexOf('http') || ~curnode.href.indexOf(location.host))) {
+                e.preventDefault();
+                document.location.href = curnode.href;
+            }
+        }, false);
+    }
+})(document, window.navigator, 'standalone');
 </body>
 </html>
