@@ -233,7 +233,7 @@
       } catch (error) {
         console.warn("無法讀取 word.json。使用內建後備資料。");
         masterVocabList = [
-          { word: "미리보기", meaning: "預覽", tag: "系統", example_ko: "이것은 미리보기 단어입니다.", example_zh: "這是預覽單字。" }
+          { word: "우려하다", hanja: "[憂慮--]", meaning: "擔憂、憂慮", tag: "新聞", frequency: 4, example_ko: "전문가들은 환경 오염의 심각성을 크게 우려하고 있다.", example_zh: "專家們非常擔憂環境污染的嚴重性。", example_type: "topik" }
         ];
       } finally {
         els.loadingOverlay.style.opacity = '0';
