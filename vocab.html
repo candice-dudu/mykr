@@ -193,7 +193,7 @@
       } catch (error) {
         console.warn("無法讀取 word.json。使用內建後備資料。");
         masterVocabList = [
-          { word: "미리보기", meaning: "預覽", tag: "系統", example_ko: "이것은 미리보기 단어입니다.", example_zh: "這是預覽單字。" }
+         { word: "미리보기", hanja: "[對策]", meaning: "預覽", tag: "系統", frequency: 5, example_ko: "이것은 미리보기 단어입니다.", example_zh: "這是預覽單字。", example_type: "topik" }
         ];
       } finally {
         els.loadingOverlay.style.opacity = '0';
