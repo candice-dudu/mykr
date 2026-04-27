@@ -187,19 +187,19 @@
     // --- 關鍵修正：從 word.json 抓取數據 ---
     async function initApp() {
       try {
-        // 加一個隨機參數防止快取 (Cache) 導致看不到更新
         const response = await fetch('word.json');
-        if (!response.ok) throw new Error("找不到 word.json");
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         masterVocabList = await response.json();
-        
+      } catch (error) {
+        console.warn("無法讀取 word.json。使用內建後備資料。");
+        masterVocabList = [
+          { word: "미리보기", meaning: "預覽", tag: "系統", example_ko: "이것은 미리보기 단어입니다.", example_zh: "這是預覽單字。" }
+        ];
+      } finally {
         els.loadingOverlay.style.opacity = '0';
         setTimeout(() => els.loadingOverlay.style.display = 'none', 300);
-        
         generateTags();
         applyFilter('all');
-      } catch (error) {
-        console.error("讀取失敗:", error);
-        document.getElementById('loadingText').innerHTML = "❌ 無法讀取單字庫<br><span class='text-xs font-normal'>請確認 word.json 是否已 Commit 到 GitHub</span>";
       }
     }
 
