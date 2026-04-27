@@ -53,24 +53,21 @@
 </head>
 <body class="h-[100dvh] w-screen flex flex-col items-center py-4 px-4 relative overflow-hidden">
 
-  <!-- 🏠 返回主頁 -->
+  <!-- Loading 遮罩：數據讀取中顯示 -->
+  <div id="loadingOverlay" class="absolute inset-0 bg-[var(--bg-oat)] z-50 flex flex-col items-center justify-center transition-opacity duration-300">
+    <div class="loader mb-3"></div>
+    <p class="text-[var(--sage-dark)] font-bold text-sm" id="loadingText">正在同步 GitHub 單字庫...</p>
+  </div>
+
   <a href="index.html" class="absolute top-4 left-4 z-40 w-10 h-10 bg-white rounded-full flex justify-center items-center shadow-sm border border-gray-200 text-gray-500 hover:text-[var(--sage-dark)] active:scale-95 transition-all">
     <i class="ph-bold ph-house text-xl"></i>
   </a>
 
-  <!-- Loading 遮罩 -->
-  <div id="loadingOverlay" class="absolute inset-0 bg-[var(--bg-oat)] z-50 flex flex-col items-center justify-center transition-opacity duration-300">
-    <div class="loader mb-3"></div>
-    <p class="text-[var(--sage-dark)] font-bold text-sm" id="loadingText">同步單字庫中...</p>
-  </div>
-
-  <!-- Mascot -->
   <div id="mascotChat" class="absolute top-6 right-4 flex items-center gap-2 opacity-0 transition-opacity duration-500 z-40 pointer-events-none">
     <div class="bg-white px-3 py-2 rounded-2xl rounded-tr-none shadow-md text-sm font-medium text-[var(--sage-dark)]" id="mascotMessage">做得好！</div>
     <img id="mascotIcon" src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Cat/3D/cat_3d.png" alt="Mascot" class="w-12 h-12 object-contain drop-shadow-md">
   </div>
 
-  <!-- 模式切換 (加咗 mt-12 避開 Home 掣) -->
   <div class="flex bg-gray-200 rounded-full p-1 mb-3 mt-12 w-full max-w-[240px] shrink-0">
     <button id="modeStudyBtn" onclick="switchMode('study')" class="mode-btn active flex-1 rounded-full py-1.5 text-sm text-gray-500 flex justify-center items-center gap-1">
       <i class="ph-bold ph-cards"></i> 學習
@@ -80,12 +77,10 @@
     </button>
   </div>
 
-  <!-- 分類篩選 -->
   <div class="w-full max-w-sm mb-3 shrink-0">
     <div class="flex overflow-x-auto gap-2 pb-1 no-scrollbar" id="tagContainer"></div>
   </div>
 
-  <!-- 進度條 -->
   <div class="w-full max-w-sm mb-4 shrink-0 px-1">
     <div class="flex justify-between items-end mb-1 px-1">
       <div class="text-xs font-bold text-[var(--sage-dark)] tracking-wider" id="progressTitle">學習進度</div>
@@ -98,15 +93,11 @@
     </div>
   </div>
 
-  <!-- 單字卡片區 -->
   <div class="w-full max-w-sm flex-1 min-h-0 relative perspective-1000 mb-4" id="flashcardWrapper">
     <div class="card-container w-full h-full absolute transform-style-3d shadow-lg rounded-3xl cursor-pointer" id="cardContainer" onclick="handleCardClick()">
-      
-      <!-- 正面 -->
       <div class="absolute w-full h-full bg-white rounded-3xl p-6 flex flex-col items-center backface-hidden border-t-[8px] border-[var(--sage-green)] overflow-y-auto no-scrollbar">
         <span id="wordTag" class="absolute top-4 left-4 bg-gray-100 text-[var(--sage-dark)] text-[10px] px-2.5 py-1 rounded-full font-bold shadow-sm border border-gray-200 uppercase tracking-tighter">--</span>
         <div id="frequencyStars" class="absolute top-4 right-4 flex gap-0.5 text-[var(--gold-star)] text-[10px]"></div>
-        
         <div class="flex flex-col items-center mt-8 mb-4 w-full shrink-0">
           <h1 id="koreanWord" class="text-4xl font-bold text-center text-gray-800 mb-1 tracking-wide">--</h1>
           <h3 id="hanjaText" class="text-sm text-gray-400 font-serif tracking-widest border-b border-gray-100 pb-1 px-4 mb-1">--</h3>
@@ -114,37 +105,25 @@
             <i class="ph-fill ph-speaker-high text-2xl"></i>
           </button>
         </div>
-
         <div id="flipHint" class="mt-auto mb-2 text-[var(--sage-green)] text-xs flex items-center gap-1 font-bold bg-gray-50 px-4 py-2 rounded-full shadow-inner shrink-0">
           <i class="ph-bold ph-arrows-clockwise text-lg"></i> 點擊翻面
         </div>
-
         <div id="quizOptionsContainer" class="w-full flex flex-col gap-2 mt-2 hidden"></div>
       </div>
-
-      <!-- 反面 -->
       <div class="absolute w-full h-full bg-white rounded-3xl p-6 flex flex-col backface-hidden rotate-y-180 border-t-[8px] border-[var(--sage-dark)] overflow-y-auto no-scrollbar cursor-default" onclick="event.stopPropagation()">
         <button onclick="forceCloseCard()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600"><i class="ph-bold ph-x text-xl"></i></button>
-        
         <div class="flex justify-between items-start border-b pb-3 mb-4 mt-2">
           <div>
             <h2 id="koreanWordBack" class="text-2xl font-bold text-gray-800">--</h2>
             <p id="hanjaTextBack" class="text-sm text-gray-400 font-serif tracking-widest mt-0.5">--</p>
           </div>
-          <button onclick="playCurrentWordAudio(event)" class="text-[var(--sage-green)] hover:text-[var(--sage-dark)] active:scale-90">
-            <i class="ph-fill ph-speaker-high text-3xl"></i>
-          </button>
+          <button onclick="playCurrentWordAudio(event)" class="text-[var(--sage-green)] hover:text-[var(--sage-dark)] active:scale-90"><i class="ph-fill ph-speaker-high text-3xl"></i></button>
         </div>
-        
         <div class="flex-grow">
           <p class="text-[11px] text-[var(--sage-green)] font-bold mb-1 flex items-center gap-1 uppercase"><i class="ph-bold ph-book-open"></i> 釋義</p>
           <p id="chineseMeaning" class="text-xl font-bold text-gray-700 mb-5">--</p>
-          
           <div id="exampleBlockWrapper">
-            <p class="text-[11px] text-[var(--sage-green)] font-bold mb-2 flex items-center uppercase">
-              <i class="ph-bold ph-chat-circle-text mr-1"></i> 例句
-              <span id="exampleTypeBadge" class="ml-2 text-[9px] bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded-full font-bold tracking-wider">TOPIK</span>
-            </p>
+            <p class="text-[11px] text-[var(--sage-green)] font-bold mb-2 flex items-center uppercase"><i class="ph-bold ph-chat-circle-text mr-1"></i> 例句</p>
             <div class="bg-gray-50 rounded-2xl p-4 border border-gray-100">
               <p id="koreanExample" class="text-[15px] text-gray-800 leading-relaxed font-medium mb-1.5">--</p>
               <p id="chineseExample" class="text-sm text-gray-500 leading-relaxed">--</p>
@@ -155,7 +134,6 @@
     </div>
   </div>
 
-  <!-- 底部按鈕 -->
   <div id="actionButtons" class="w-full max-w-sm mb-6 flex justify-center items-center gap-8 px-4 opacity-0 transition-opacity duration-300 pointer-events-none shrink-0">
     <button onclick="markAs('forget', event)" class="btn-action flex flex-col items-center gap-1 text-[var(--coral-red)] group">
       <div class="w-14 h-14 bg-white rounded-full border-2 border-[var(--coral-red)] flex justify-center items-center group-active:bg-[var(--coral-red)] group-active:text-white transition-colors shadow-sm"><i class="ph-bold ph-x text-2xl"></i></div>
@@ -176,7 +154,6 @@
     let studyQueue = [];          
     let currentWordData = null;
     let isFlipped = false;
-    let streakCount = 0;
     let learnedCount = 0;
     let quizAnswered = false;
 
@@ -192,7 +169,6 @@
       chineseMeaning: document.getElementById('chineseMeaning'),
       koreanExample: document.getElementById('koreanExample'),
       chineseExample: document.getElementById('chineseExample'),
-      exampleTypeBadge: document.getElementById('exampleTypeBadge'),
       exampleBlockWrapper: document.getElementById('exampleBlockWrapper'),
       totalCount: document.getElementById('totalCountDisplay'),
       learnedCount: document.getElementById('learnedCount'),
@@ -208,20 +184,22 @@
       tagContainer: document.getElementById('tagContainer')
     };
 
-    // --- 核心：從 GitHub JSON 獲取資料 ---
+    // --- 關鍵修正：從 word.json 抓取數據 ---
     async function initApp() {
       try {
-        const response = await fetch('word.json');
-        if (!response.ok) throw new Error("讀取失敗");
+        // 加一個隨機參數防止快取 (Cache) 導致看不到更新
+        const response = await fetch(`word.json?v=${new Date().getTime()}`);
+        if (!response.ok) throw new Error("找不到 word.json");
         masterVocabList = await response.json();
-      } catch (error) {
-        console.error("Fetch Error:", error);
-        document.getElementById('loadingText').innerText = "讀取 JSON 失敗，請確認檔案已上傳。";
-      } finally {
+        
         els.loadingOverlay.style.opacity = '0';
         setTimeout(() => els.loadingOverlay.style.display = 'none', 300);
+        
         generateTags();
         applyFilter('all');
+      } catch (error) {
+        console.error("讀取失敗:", error);
+        document.getElementById('loadingText').innerHTML = "❌ 無法讀取單字庫<br><span class='text-xs font-normal'>請確認 word.json 是否已 Commit 到 GitHub</span>";
       }
     }
 
@@ -246,7 +224,6 @@
       document.querySelectorAll('.tag-btn').forEach(btn => btn.classList.remove('active', 'bg-[var(--sage-dark)]', 'text-white', 'border-[var(--sage-dark)]'));
       const activeBtn = document.getElementById(`tagBtn-${tag}`);
       if(activeBtn) activeBtn.classList.add('active', 'bg-[var(--sage-dark)]', 'text-white', 'border-[var(--sage-dark)]');
-      
       filteredVocabList = tag === 'all' ? [...masterVocabList] : masterVocabList.filter(item => item.tag === tag);
       startStudySession();
     }
@@ -265,12 +242,10 @@
       if (studyQueue.length === 0) { showCompletionScreen("🎉 完美通關！"); return; }
       quizAnswered = false;
       currentWordData = studyQueue[0];
-      
       els.wordTag.innerText = currentWordData.tag || '未分類';
       els.frequencyStars.innerHTML = Array(currentWordData.frequency || 0).fill('<i class="ph-fill ph-star"></i>').join('');
       els.koreanWord.innerText = currentWordData.word;
       els.koreanWordBack.innerText = currentWordData.word;
-      
       if (currentWordData.hanja) {
         els.hanjaText.innerText = currentWordData.hanja;
         els.hanjaTextBack.innerText = currentWordData.hanja;
@@ -278,7 +253,6 @@
       } else {
         els.hanjaText.style.display = 'none';
       }
-
       els.chineseMeaning.innerText = currentWordData.meaning;
       if (currentWordData.example_ko) {
         els.exampleBlockWrapper.style.display = 'block';
@@ -287,7 +261,6 @@
       } else {
         els.exampleBlockWrapper.style.display = 'none';
       }
-
       currentMode === 'study' ? setupStudyUI() : setupQuizUI();
     }
 
@@ -352,13 +325,13 @@
       }
     }
 
-    function forceCloseCard() { isFlipped = false; els.cardContainer.style.transform = 'rotateY(0deg)'; toggleFlip(); toggleFlip(); }
+    function forceCloseCard() { isFlipped = false; els.cardContainer.style.transform = 'rotateY(0deg)'; }
 
     function markAs(status, event, isFromQuiz = false) {
       if (event) event.stopPropagation();
       const word = studyQueue.shift();
-      if (status === 'remember') { learnedCount++; streakCount++; } 
-      else { studyQueue.push(word); streakCount = 0; }
+      if (status === 'remember') learnedCount++;
+      else studyQueue.push(word);
       updateProgress();
       if (!isFromQuiz) forceCloseCard();
       setTimeout(() => loadNextWord(), isFromQuiz ? 1200 : 200);
@@ -372,7 +345,7 @@
 
     function showCompletionScreen(title) {
       els.koreanWord.innerText = title;
-      els.chineseMeaning.innerText = "做得好！今日嘅任務已經完成。";
+      els.chineseMeaning.innerText = "今日任務已完成！";
       els.exampleBlockWrapper.style.display = 'none';
       els.flipHint.style.display = 'none';
       els.actionButtons.style.opacity = '0';
