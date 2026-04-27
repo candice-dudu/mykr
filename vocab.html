@@ -7,6 +7,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- 設定頂部狀態欄顏色 (透明或與背景色融合) -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer">
   <title>我的專屬韓語單字本</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -483,15 +484,34 @@
       if (isFlipped) forceCloseCard();
       els.cardContainer.onclick = null; 
     }
+// 搵返呢個 Function 名，成段換掉
+function playCurrentWordAudio(event) {
+  if (event) {
+    event.preventDefault();
+    event.stopPropagation();
+  }
+  if (!currentWordData) return;
 
-    function playCurrentWordAudio(event) {
-      if (event) event.stopPropagation();
-      if (!currentWordData) return;
-      const audioUrl = `https://translate.google.com/translate_tts?ie=UTF-8&tl=ko&client=tw-ob&q=${encodeURIComponent(currentWordData.word)}`;
-      const audio = new Audio(audioUrl);
-      audio.play().catch(e => console.log("播放失敗", e));
-    }
-
+  const text = currentWordData.word;
+  
+  // 準備兩個唔同嘅 Google 接口，邊個得就用邊個
+  const engineA = `https://translate.google.com/translate_tts?ie=UTF-8&tl=ko&client=tw-ob&q=${encodeURIComponent(text)}`;
+  const engineB = `https://translate.google.com/translate_tts?ie=UTF-8&tl=ko&client=gtx&q=${encodeURIComponent(text)}`;
+  
+  // 建立播放器
+  const audio = new Audio();
+  audio.src = engineA;
+  
+  // 嘗試播放引擎 A
+  audio.play().catch(error => {
+    console.warn("引擎 A 失敗，切換引擎 B...");
+    audio.src = engineB;
+    audio.play().catch(e => {
+        console.error("所有發音方式都失敗");
+        // 假如真係完全冇聲，可以考慮加個 alert 提示自己
+    });
+  });
+}
     window.onload = initApp;
   </script>
 </body>
