@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>新聞聽讀機</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <style>
+    :root {
+      --bg-reader: #FFFDF5; 
+      --text-main: #2C3E50; 
+      --accent-gold: #B8860B;
+    }
+
+    body {
+      background-color: var(--bg-reader);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    .article-text {
+      font-size: 1.125rem;
+      line-height: 1.8;
+      letter-spacing: 0.025em;
+    }
+
+    .btn-action { transition: all 0.2s; }
+    .btn-action:active { transform: scale(0.95); }
+
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="h-[100dvh] w-screen flex flex-col items-center py-4 px-4 relative overflow-hidden">
+
+  <!-- 🏠 懸浮返回主頁按鈕 -->
+  <a href="index.html" class="absolute top-4 left-4 z-40 w-10 h-10 bg-white rounded-full flex justify-center items-center shadow-sm border border-gray-200 text-gray-500 hover:text-[var(--accent-gold)] active:scale-95 transition-all">
+    <i class="ph-bold ph-house text-xl"></i>
+  </a>
+
+  <!-- 標題列 -->
+  <div class="w-full max-w-md text-center mt-2 mb-4 shrink-0">
+    <h1 class="text-xl font-bold text-gray-800 tracking-wider">新聞聽讀機</h1>
+  </div>
+
+  <!-- 文章清單 (List View) -->
+  <div id="listView" class="w-full max-w-md flex flex-col gap-4 overflow-y-auto no-scrollbar flex-1 pb-6 px-1"></div>
+
+  <!-- 文章閱讀區 (Detail View) -->
+  <div id="detailView" class="w-full max-w-md flex-col flex-1 hidden bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden relative">
+    
+    <!-- 頂部控制列 -->
+    <div class="bg-gray-50 border-b border-gray-100 p-4 flex items-center justify-between sticky top-0 z-10">
+      <button onclick="backToList()" class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-gray-600 active:scale-95 transition-transform">
+        <i class="ph-bold ph-caret-left text-xl"></i>
+      </button>
+      
+      <div class="flex gap-2">
+        <button id="btnPlay" onclick="toggleAudio()" class="bg-[var(--accent-gold)] text-white px-5 py-2 rounded-full font-bold shadow-md flex items-center gap-2 active:scale-95 transition-transform">
+          <i id="playIcon" class="ph-fill ph-play text-xl"></i> <span id="playText">開始朗讀</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- 滾動內容區 -->
+    <div class="p-6 overflow-y-auto no-scrollbar flex-1">
+      <span id="articleTag" class="text-xs font-bold text-[var(--accent-gold)] bg-yellow-50 px-2 py-1 rounded-md mb-3 inline-block">--</span>
+      <h2 id="articleTitle" class="text-2xl font-bold text-gray-800 mb-6 leading-snug">--</h2>
+      
+      <!-- 韓文原文 -->
+      <div id="articleContent" class="article-text text-gray-700 mb-8 whitespace-pre-line font-medium">--</div>
+
+      <!-- 中文翻譯 -->
+      <details class="group mb-8">
+        <summary class="text-sm font-bold text-gray-500 cursor-pointer flex items-center gap-1 list-none bg-gray-50 p-3 rounded-xl border border-gray-100">
+          <i class="ph-bold ph-translate"></i> 查看中文翻譯 <i class="ph-bold ph-caret-down group-open:rotate-180 transition-transform text-xs ml-auto"></i>
+        </summary>
+        <p id="articleTranslation" class="mt-3 text-[15px] text-gray-600 leading-relaxed px-2 whitespace-pre-line">--</p>
+      </details>
+
+      <!-- 關鍵生字庫 -->
+      <div class="border-t border-gray-200 pt-6">
+        <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2">
+          <i class="ph-fill ph-notebook text-[var(--accent-gold)]"></i> 關鍵生字
+        </h3>
+        <div id="vocabList" class="flex flex-col gap-3"></div>
+      </div>
+      
+    </div>
+  </div>
+
+  <script>
+    let articlesDatabase = [];
+    let currentArticle = null;
+    
+    // --- Google 音頻接力系統變數 ---
+    let sentencesQueue = [];
+    let currentSentenceIndex = 0;
+    let currentAudioObj = null;
+    let isPlaying = false;
+
+    const els = {
+      listView: document.getElementById('listView'),
+      detailView: document.getElementById('detailView'),
+      articleTag: document.getElementById('articleTag'),
+      articleTitle: document.getElementById('articleTitle'),
+      articleContent: document.getElementById('articleContent'),
+      articleTranslation: document.getElementById('articleTranslation'),
+      vocabList: document.getElementById('vocabList'),
+      btnPlay: document.getElementById('btnPlay'),
+      playIcon: document.getElementById('playIcon'),
+      playText: document.getElementById('playText')
+    };
+
+    async function initApp() {
+      try {
+        const response = await fetch('articles.json');
+        if (!response.ok) throw new Error("HTTP error");
+        articlesDatabase = await response.json();
+      } catch (error) {
+        console.warn("無法讀取 articles.json，使用預設資料。");
+        articlesDatabase = [
+          {
+            "id": 1,
+            "title": "한국, 내년부터 플라스틱 컵 금지",
+            "category": "社會 / 環保",
+            "content": "한국 정부는 환경 보호를 위해 내년부터 카페와 식당에서 일회용 플라스틱 컵 사용을 전면 금지한다고 발표했습니다. 플라스틱 쓰레기로 인한 환경 오염이 심각해지면서 도입하게 되었습니다.",
+            "translation": "韓國政府為了保護環境，宣布從明年起全面禁止在咖啡廳和餐廳使用一次性塑膠杯。因塑膠垃圾造成的環境污染日益嚴重而引進了這項政策。",
+            "vocab": [
+              { "word": "일회용", "meaning": "一次性" },
+              { "word": "전면 금지", "meaning": "全面禁止" }
+            ]
+          }
+        ];
+      }
+      renderList();
+    }
+
+    function renderList() {
+      els.listView.innerHTML = '';
+      articlesDatabase.forEach((article, index) => {
+        const cardHtml = `
+          <div onclick="openArticle(${index})" class="bg-white p-5 rounded-3xl shadow-sm border border-gray-100 cursor-pointer active:scale-95 transition-transform">
+            <span class="text-[10px] font-bold text-[var(--accent-gold)] bg-yellow-50 px-2 py-0.5 rounded mb-2 inline-block">${article.category}</span>
+            <h3 class="text-[17px] font-bold text-gray-800 leading-snug mb-2 line-clamp-2">${article.title}</h3>
+            <p class="text-sm text-gray-400 line-clamp-1">${article.content.substring(0, 50)}...</p>
+          </div>
+        `;
+        els.listView.innerHTML += cardHtml;
+      });
+    }
+
+    function openArticle(index) {
+      currentArticle = articlesDatabase[index];
+      
+      els.articleTag.innerText = currentArticle.category;
+      els.articleTitle.innerText = currentArticle.title;
+      els.articleContent.innerText = currentArticle.content;
+      els.articleTranslation.innerText = currentArticle.translation;
+      
+      els.vocabList.innerHTML = '';
+      if(currentArticle.vocab && currentArticle.vocab.length > 0) {
+        currentArticle.vocab.forEach(v => {
+          els.vocabList.innerHTML += `
+            <div class="bg-gray-50 border border-gray-100 p-3 rounded-xl flex justify-between items-center">
+              <span class="font-bold text-lg text-gray-800">${v.word}</span>
+              <span class="text-sm text-gray-500">${v.meaning}</span>
+            </div>
+          `;
+        });
+      }
+
+      els.listView.classList.add('hidden');
+      els.detailView.classList.replace('hidden', 'flex');
+      
+      stopAudio(); // 重置語音
+    }
+
+    function backToList() {
+      stopAudio(); 
+      els.detailView.classList.replace('flex', 'hidden');
+      els.listView.classList.remove('hidden');
+    }
+
+    // --- 核心：Google 語音接力系統 ---
+    function stopAudio() {
+      if (currentAudioObj) {
+        currentAudioObj.pause();
+        currentAudioObj = null;
+      }
+      isPlaying = false;
+      currentSentenceIndex = 0;
+      sentencesQueue = [];
+      updatePlayButtonUI();
+    }
+
+    function toggleAudio() {
+      if (isPlaying) {
+        // 暫停
+        if (currentAudioObj) currentAudioObj.pause();
+        isPlaying = false;
+        updatePlayButtonUI();
+      } else {
+        // 開始或繼續
+        if (sentencesQueue.length === 0) {
+          // 第一次撳，將文章斬件
+          const fullText = currentArticle.title + "。 " + currentArticle.content;
+          // 利用 Regex 將文章按 . ? ! 或者換行符號 斬開
+          sentencesQueue = fullText.match(/[^.!?\n]+[.!?\n]*/g)
+                                   ?.map(s => s.trim())
+                                   .filter(s => s.length > 0) || [fullText];
+          currentSentenceIndex = 0;
+          playNextSentence();
+        } else if (currentAudioObj) {
+          // 繼續播
+          currentAudioObj.play();
+          isPlaying = true;
+          updatePlayButtonUI();
+        }
+      }
+    }
+
+    function playNextSentence() {
+      if (currentSentenceIndex >= sentencesQueue.length) {
+        // 讀完晒成篇
+        stopAudio();
+        return;
+      }
+
+      isPlaying = true;
+      updatePlayButtonUI();
+
+      const textChunk = sentencesQueue[currentSentenceIndex];
+      // 呼叫 Google TTS API (同單字卡一樣)
+      const url = `https://translate.google.com/translate_tts?ie=UTF-8&tl=ko&client=tw-ob&q=${encodeURIComponent(textChunk)}`;
+      
+      currentAudioObj = new Audio(url);
+      
+      // 讀完一句，自動 index+1 讀下一句 (接力賽)
+      currentAudioObj.onended = () => {
+        currentSentenceIndex++;
+        playNextSentence();
+      };
+
+      currentAudioObj.onerror = () => {
+        console.warn("此句音檔載入失敗，跳過並朗讀下一句...");
+        currentSentenceIndex++;
+        playNextSentence();
+      };
+
+      currentAudioObj.play().catch(e => {
+        console.error("播放失敗:", e);
+        isPlaying = false;
+        updatePlayButtonUI();
+      });
+    }
+
+    function updatePlayButtonUI() {
+      if(isPlaying) {
+        els.playIcon.className = "ph-fill ph-pause text-xl";
+        els.playText.innerText = "暫停朗讀";
+      } else {
+        els.playIcon.className = "ph-fill ph-play text-xl";
+        els.playText.innerText = currentSentenceIndex > 0 ? "繼續朗讀" : "開始朗讀";
+      }
+    }
+
+    window.onload = initApp;
+  </script>
+</body>
+</html>

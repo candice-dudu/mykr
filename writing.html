@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>TOPIK 51/52 寫作兵器庫</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <style>
+    :root {
+      --bg-paper: #F9F8F4;      
+      --ink-blue: #2A4365;      
+      --ink-light: #4A5568;
+      --highlight: #EBF8FF;
+      --accent-red: #C53030;    
+    }
+
+    body {
+      background-color: var(--bg-paper);
+      color: var(--ink-blue);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-image: linear-gradient(#e2e8f0 1px, transparent 1px);
+      background-size: 100% 2.5rem;
+      background-position: 0 1.25rem;
+      overscroll-behavior-y: none;
+    }
+
+    .nav-switch {
+      background-color: #E2E8F0;
+      border-radius: 9999px;
+      padding: 0.25rem;
+      display: flex;
+    }
+    .nav-btn {
+      flex: 1;
+      text-align: center;
+      padding: 0.5rem 0;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #718096;
+      transition: all 0.3s ease;
+    }
+    .nav-btn.active {
+      background-color: white;
+      color: var(--ink-blue);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .content-card {
+      background-color: white;
+      box-shadow: 0 10px 25px rgba(42, 67, 101, 0.08);
+      border: 1px solid #E2E8F0;
+      border-top: 6px solid var(--ink-blue);
+    }
+
+    .blank-box {
+      display: inline-block;
+      border-bottom: 2px dashed var(--ink-blue);
+      color: transparent;
+      padding: 0 1rem;
+      min-width: 100px;
+      text-align: center;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .blank-box.revealed {
+      border-bottom: 2px solid var(--accent-red);
+      color: var(--accent-red);
+      font-weight: bold;
+    }
+
+    .btn-primary {
+      background-color: var(--ink-blue);
+      color: white;
+      transition: all 0.2s;
+    }
+    .btn-primary:active { transform: scale(0.95); }
+
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    
+    .loader { border: 4px solid #f3f3f3; border-top: 4px solid var(--ink-blue); border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; }
+    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+  </style>
+</head>
+<body class="h-[100dvh] w-screen flex flex-col items-center py-5 px-4 relative overflow-hidden">
+
+  <!-- ========================================== -->
+  <!-- 🏠 懸浮返回主頁按鈕 (連去 index.html) -->
+  <!-- ========================================== -->
+  <a href="index.html" class="absolute top-4 left-4 z-40 w-10 h-10 bg-white rounded-full flex justify-center items-center shadow-sm border border-gray-200 text-gray-500 hover:text-[var(--ink-blue)] active:scale-95 transition-all">
+    <i class="ph-bold ph-house text-xl"></i>
+  </a>
+
+  <!-- Loading 遮罩 -->
+  <div id="loadingOverlay" class="absolute inset-0 bg-[var(--bg-paper)] z-50 flex flex-col items-center justify-center transition-opacity duration-300">
+    <div class="loader mb-4"></div>
+    <p class="text-[var(--ink-blue)] font-medium font-bold" id="loadingText">正在載入句型庫...</p>
+  </div>
+
+  <!-- 主模式切換 (加咗 mt-10 避開返回按鈕) -->
+  <div class="w-full max-w-md mb-4 mt-10 shrink-0">
+    <div class="nav-switch">
+      <button id="tabStudy" onclick="switchMainMode('study')" class="nav-btn active flex justify-center items-center gap-1.5">
+        <i class="ph-bold ph-books text-lg"></i> 句型學習庫
+      </button>
+      <button id="tabQuiz" onclick="switchMainMode('quiz')" class="nav-btn flex justify-center items-center gap-1.5">
+        <i class="ph-bold ph-pencil-simple text-lg"></i> 實戰解謎
+      </button>
+    </div>
+  </div>
+
+  <!-- 模塊 A：句型學習庫 -->
+  <div id="studySection" class="w-full max-w-md content-card rounded-3xl overflow-y-auto no-scrollbar flex-col flex-1 min-h-0 flex bg-white">
+    <div class="sticky top-0 z-10 bg-white px-5 pt-5 pb-3 border-b border-gray-100 mb-4 shrink-0 rounded-t-3xl">
+      <div class="flex items-center gap-2">
+        <i class="ph-fill ph-book-open-text text-2xl text-[var(--ink-blue)]"></i>
+        <span class="font-bold text-gray-800 text-lg">必背句型筆記</span>
+      </div>
+    </div>
+    <div id="grammarListContainer" class="flex flex-col gap-4 px-5 pb-5"></div>
+  </div>
+
+  <!-- 模塊 B：實戰解謎 -->
+  <div id="quizSection" class="w-full max-w-md hidden flex-col flex-1 min-h-0">
+    <div class="content-card w-full rounded-3xl flex flex-col relative overflow-y-auto no-scrollbar flex-1 min-h-0 bg-white">
+      <div class="sticky top-0 z-10 bg-white px-6 pt-6 pb-3 border-b border-gray-100 mb-4 shrink-0 flex justify-between items-center rounded-t-3xl">
+        <span id="questionType" class="bg-blue-100 text-blue-800 text-xs px-3 py-1.5 rounded-md font-bold tracking-wider">--</span>
+        <div class="flex items-center gap-3">
+          <span id="topicTag" class="text-gray-400 text-xs font-medium"><i class="ph-bold ph-tag"></i> --</span>
+          <span class="text-xs font-bold text-gray-300 border-l border-gray-200 pl-3">
+            <span id="currentIndexDisplay">1</span> / <span id="totalCountDisplay">0</span>
+          </span>
+        </div>
+      </div>
+      <div class="px-6 pb-6 flex flex-col flex-1">
+        <div class="mb-5 mt-1 shrink-0">
+          <p class="text-sm text-gray-400 font-bold mb-2 flex items-center gap-1"><i class="ph-bold ph-text-aa"></i> 題目內容</p>
+          <div id="koreanContent" class="text-lg leading-loose text-gray-800 font-medium"></div>
+        </div>
+        <div class="mb-5 shrink-0">
+          <details class="group">
+            <summary class="text-sm text-gray-400 font-bold cursor-pointer flex items-center gap-1 hover:text-[var(--ink-blue)] list-none">
+              <i class="ph-bold ph-translate"></i> 查看中文情境 <i class="ph-bold ph-caret-down group-open:rotate-180 transition-transform text-xs ml-auto"></i>
+            </summary>
+            <p id="chineseContent" class="mt-2 text-[15px] text-gray-600 leading-relaxed bg-gray-50 p-3 rounded-lg border border-gray-100">--</p>
+          </details>
+        </div>
+        <div id="hintBlock" class="mt-auto bg-blue-50 border border-blue-100 rounded-xl p-4 hidden shrink-0 mb-2">
+          <p class="text-xs text-blue-500 font-bold mb-1 uppercase tracking-wider">思考提示 Hint</p>
+          <p id="hintText" class="text-sm text-blue-900 font-medium leading-relaxed">--</p>
+        </div>
+        <div id="answerBlock" class="mt-auto bg-[#FFF5F5] border border-[#FED7D7] rounded-xl p-4 hidden shrink-0 mb-2">
+          <p class="text-xs text-[var(--accent-red)] font-bold mb-1 uppercase tracking-wider flex justify-between">
+            <span>正確答案</span><span><i class="ph-bold ph-check-circle"></i></span>
+          </p>
+          <p id="correctAnswer" class="text-lg text-[var(--accent-red)] font-bold mb-3">--</p>
+          <div class="bg-white p-2.5 rounded-lg text-sm border border-red-100 shadow-sm">
+            <p class="font-bold text-gray-700 mb-1 flex items-center gap-1"><i class="ph-bold ph-puzzle-piece"></i> 應用句型：</p>
+            <p id="grammarFormula" class="text-gray-800 font-medium">--</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-full mt-4 flex justify-center items-center gap-4 px-1 shrink-0 pb-2">
+      <button id="btnHint" onclick="showHint()" class="flex-1 bg-white border-2 border-[var(--ink-blue)] text-[var(--ink-blue)] rounded-xl py-3.5 font-bold shadow-sm hover:bg-gray-50 active:scale-95 transition-all flex justify-center items-center gap-2">
+        <i class="ph-bold ph-lightbulb"></i> 給我提示
+      </button>
+      <button id="btnReveal" onclick="revealAnswer()" class="flex-1 btn-primary rounded-xl py-3.5 font-bold shadow-md flex justify-center items-center gap-2">
+        <i class="ph-bold ph-eye"></i> 揭曉答案
+      </button>
+      <button id="btnNext" onclick="nextQuestion()" class="w-full btn-primary rounded-xl py-3.5 font-bold shadow-md flex justify-center items-center gap-2 hidden">
+        下一題 <i class="ph-bold ph-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <script>
+    let writingDatabase = []; 
+    let flatQuizQueue = [];   
+    let currentQuizIndex = 0;
+
+    const els = {
+      loadingOverlay: document.getElementById('loadingOverlay'),
+      tabStudy: document.getElementById('tabStudy'),
+      tabQuiz: document.getElementById('tabQuiz'),
+      studySection: document.getElementById('studySection'),
+      quizSection: document.getElementById('quizSection'),
+      grammarListContainer: document.getElementById('grammarListContainer'),
+      currentIndexDisplay: document.getElementById('currentIndexDisplay'),
+      totalCountDisplay: document.getElementById('totalCountDisplay'),
+      questionType: document.getElementById('questionType'),
+      topicTag: document.getElementById('topicTag'),
+      koreanContent: document.getElementById('koreanContent'),
+      chineseContent: document.getElementById('chineseContent'),
+      hintBlock: document.getElementById('hintBlock'),
+      hintText: document.getElementById('hintText'),
+      answerBlock: document.getElementById('answerBlock'),
+      correctAnswer: document.getElementById('correctAnswer'),
+      grammarFormula: document.getElementById('grammarFormula'),
+      btnHint: document.getElementById('btnHint'),
+      btnReveal: document.getElementById('btnReveal'),
+      btnNext: document.getElementById('btnNext')
+    };
+
+    async function initApp() {
+      try {
+        const response = await fetch('grammar.json');
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        writingDatabase = await response.json();
+      } catch (error) {
+        console.warn("無法讀取 grammar.json，使用預設測試資料。");
+        writingDatabase = [
+          {
+            type: "51", category: "計畫與意圖", pattern: "-고자 합니다", meaning: "打算要...", rule: "動詞 + -고자 합니다", nuance: "測試用",
+            examples: [ { ko: "테니스 동호회 신입 회원을 모집하려고 합니다.", zh: "我們準備招收網球社新會員。" } ],
+            quizzes: [ { ko: "그래서 함께 {blank}.", zh: "所以 [ ㉠ ] 一起住的室友。", answer: "살 룸메이트를 구하려고 합니다", hint: "招募室友。" } ]
+          }
+        ];
+      } finally {
+        els.loadingOverlay.style.opacity = '0';
+        setTimeout(() => els.loadingOverlay.style.display = 'none', 300);
+        
+        if (writingDatabase.length > 0) {
+          renderStudyLibrary();
+          prepareQuizQueue(); 
+          loadQuestion();
+        } else {
+          els.grammarListContainer.innerHTML = "<p class='text-center p-4 text-gray-500'>資料庫是空的喔！</p>";
+        }
+      }
+    }
+
+    function switchMainMode(mode) {
+      if (mode === 'study') {
+        els.tabStudy.classList.add('active');
+        els.tabQuiz.classList.remove('active');
+        els.studySection.classList.replace('hidden', 'flex');
+        els.quizSection.classList.replace('flex', 'hidden');
+      } else {
+        els.tabQuiz.classList.add('active');
+        els.tabStudy.classList.remove('active');
+        els.studySection.classList.replace('flex', 'hidden');
+        els.quizSection.classList.replace('hidden', 'flex');
+      }
+    }
+
+    function renderStudyLibrary() {
+      els.grammarListContainer.innerHTML = '';
+      writingDatabase.forEach((item) => {
+        let examplesHtml = '';
+        if (item.examples && item.examples.length > 0) {
+          item.examples.forEach((example, index) => {
+            const numbering = item.examples.length > 1 ? `<span class="text-blue-500 font-bold mr-1">${index + 1}.</span>` : '';
+            examplesHtml += `
+              <div class="${index > 0 ? 'mt-3 pt-3 border-t border-gray-100' : ''}">
+                <p class="text-[14px] text-gray-800 font-medium mb-1 leading-relaxed">${numbering}${example.ko}</p>
+                <p class="text-[13px] text-gray-500">${example.zh}</p>
+              </div>
+            `;
+          });
+        } else {
+          examplesHtml = `<p class="text-sm text-gray-400 italic">暫無學習例句</p>`;
+        }
+
+        const cardHtml = `
+          <div class="border border-gray-200 rounded-2xl p-4 bg-gray-50 shadow-sm transition hover:shadow-md">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold text-[var(--ink-blue)]">${item.pattern}</h3>
+              <span class="text-[10px] font-bold ${item.type === '51' ? 'bg-blue-100 text-blue-700' : 'bg-purple-100 text-purple-700'} px-2 py-1 rounded">第 ${item.type} 題</span>
+            </div>
+            <p class="text-[15px] font-bold text-gray-700 mb-3">${item.meaning}</p>
+            <div class="bg-white border border-gray-200 rounded-lg p-3 mb-3">
+              <p class="text-xs text-gray-400 font-bold mb-1 uppercase tracking-wider">✍️ 組合公式</p>
+              <p class="text-sm font-medium text-[var(--accent-red)]">${item.rule}</p>
+            </div>
+            <p class="text-sm text-gray-600 leading-relaxed mb-3">
+              <span class="font-bold text-gray-500">💡 提示：</span>${item.nuance}
+            </p>
+            <div class="border-t border-gray-200 pt-3 mt-1">
+              <p class="text-[11px] text-gray-400 font-bold mb-2 uppercase flex justify-between items-center">
+                <span>📖 基礎例句：</span>
+                <span class="text-[10px] bg-gray-200 text-gray-500 px-1.5 py-0.5 rounded">未考</span>
+              </p>
+              ${examplesHtml}
+            </div>
+          </div>
+        `;
+        els.grammarListContainer.innerHTML += cardHtml;
+      });
+    }
+
+    function prepareQuizQueue() {
+      flatQuizQueue = [];
+      writingDatabase.forEach(grammar => {
+        if (grammar.quizzes && grammar.quizzes.length > 0) {
+          grammar.quizzes.forEach(quiz => {
+            flatQuizQueue.push({
+              type: grammar.type, category: grammar.category, pattern: grammar.pattern, rule: grammar.rule,
+              ko: quiz.ko, zh: quiz.zh, answer: quiz.answer, hint: quiz.hint
+            });
+          });
+        }
+      });
+      flatQuizQueue.sort(() => Math.random() - 0.5);
+      els.totalCountDisplay.innerText = flatQuizQueue.length;
+      currentQuizIndex = 0;
+    }
+
+    function loadQuestion() {
+      if (flatQuizQueue.length === 0) return;
+      const data = flatQuizQueue[currentQuizIndex];
+      els.currentIndexDisplay.innerText = currentQuizIndex + 1;
+      
+      els.questionType.innerText = `第 ${data.type} 題 (${data.type === '51' ? '實用文' : '說明文'})`;
+      els.questionType.className = data.type === '51' ? "bg-blue-100 text-blue-800 text-xs px-3 py-1.5 rounded-md font-bold tracking-wider" : "bg-purple-100 text-purple-800 text-xs px-3 py-1.5 rounded-md font-bold tracking-wider";
+      els.topicTag.innerHTML = `<i class="ph-bold ph-tag"></i> ${data.category}`;
+      
+      const formattedKo = data.ko.replace('{blank}', '<span id="theBlank" class="blank-box bg-gray-100 rounded" onclick="revealAnswer()">㉠</span>');
+      els.koreanContent.innerHTML = formattedKo;
+      els.chineseContent.innerText = data.zh;
+      
+      els.hintBlock.classList.add('hidden');
+      els.answerBlock.classList.add('hidden');
+      els.btnHint.classList.remove('hidden');
+      els.btnReveal.classList.remove('hidden');
+      els.btnNext.classList.add('hidden');
+      
+      const detailsEl = document.querySelector('details');
+      if(detailsEl) detailsEl.removeAttribute('open');
+    }
+
+    function showHint() {
+      els.hintText.innerText = flatQuizQueue[currentQuizIndex].hint;
+      els.hintBlock.classList.remove('hidden');
+      els.btnHint.classList.add('hidden'); 
+    }
+
+    function revealAnswer() {
+      const data = flatQuizQueue[currentQuizIndex];
+      const blankEl = document.getElementById('theBlank');
+      blankEl.innerText = data.answer.split('/')[0].trim(); 
+      blankEl.classList.add('revealed');
+      blankEl.classList.remove('bg-gray-100');
+      
+      els.correctAnswer.innerText = data.answer;
+      els.grammarFormula.innerText = data.pattern + " (" + data.rule + ")";
+      
+      els.hintBlock.classList.add('hidden'); 
+      els.answerBlock.classList.remove('hidden'); 
+      els.btnHint.classList.add('hidden');
+      els.btnReveal.classList.add('hidden');
+      els.btnNext.classList.remove('hidden');
+    }
+
+    function nextQuestion() {
+      currentQuizIndex++;
+      if (currentQuizIndex >= flatQuizQueue.length) {
+        alert("恭喜！你已經溫習完一輪所有題目！系統將為你重新洗牌。");
+        prepareQuizQueue(); 
+      }
+      loadQuestion();
+    }
+
+    window.onload = initApp;
+  </script>
+</body>
+</html>

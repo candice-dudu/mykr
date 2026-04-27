@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="apple-touch-icon" href="./mykr.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>我的 TOPIK 學習中心</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <style>
+    :root {
+      --bg-main: #F7F7F8;
+      --vocab-color: #8DA399;   /* 燕麥奶茶綠 */
+      --writing-color: #2A4365; /* 墨水藍 */
+      --reader-color: #B8860B;  /* 復古報紙金 */
+      --idiom-color: #6C5B7B;   /* 復古梅子紫 */
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: #333;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      overscroll-behavior-y: none;
+    }
+
+    .app-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    .app-card:active { transform: scale(0.96); }
+    
+    .bg-vocab { background-color: #F4F1EA; }
+    .bg-writing { background-color: #F9F8F4; }
+    .bg-reader { background-color: #FFFDF5; }
+    .bg-idiom { background-color: #F6F4F8; } /* 柔和灰紫色底 */
+
+    .bg-dots {
+      background-image: radial-gradient(#d1d5db 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="h-[100dvh] w-screen flex flex-col items-center py-6 px-5 relative overflow-hidden bg-dots overflow-y-auto no-scrollbar">
+
+  <div class="w-full max-w-sm mb-6 shrink-0 mt-4">
+    <h1 class="text-3xl font-bold text-gray-800 tracking-tight mb-2">準備好溫書未？</h1>
+    <p class="text-gray-500 font-medium font-bold">四大 TOPIK 神器，全面幫你搶分。</p>
+  </div>
+
+  <div class="w-full max-w-sm flex flex-col gap-4 pb-12">
+    
+    <a href="vocab.html" class="app-card block w-full bg-vocab rounded-3xl p-5 shadow-sm border border-gray-200 relative overflow-hidden no-underline">
+      <div class="absolute -right-6 -top-6 w-24 h-24 rounded-full bg-[var(--vocab-color)] opacity-10"></div>
+      <div class="flex items-center gap-4 mb-2">
+        <div class="w-12 h-12 rounded-2xl bg-[var(--vocab-color)] text-white flex justify-center items-center shadow-md shrink-0">
+          <i class="ph-bold ph-cards text-2xl"></i>
+        </div>
+        <div>
+          <h2 class="text-xl font-bold text-gray-800">專屬單字卡</h2>
+          <span class="text-[10px] font-bold text-[var(--vocab-color)] bg-white px-2 py-0.5 rounded-full shadow-sm mt-0.5 inline-block">基礎彈藥庫</span>
+        </div>
+      </div>
+      <p class="text-sm text-gray-600 font-medium ml-1">每日必刷高頻字，三選一測驗模式。</p>
+    </a>
+
+    <a href="idiom.html" class="app-card block w-full bg-idiom rounded-3xl p-5 shadow-sm border border-gray-200 relative overflow-hidden no-underline">
+      <div class="absolute -right-6 -top-6 w-24 h-24 rounded-full bg-[var(--idiom-color)] opacity-10"></div>
+      <div class="flex items-center gap-4 mb-2">
+        <div class="w-12 h-12 rounded-2xl bg-[var(--idiom-color)] text-white flex justify-center items-center shadow-md shrink-0">
+          <i class="ph-bold ph-mask-happy text-2xl"></i>
+        </div>
+        <div>
+          <h2 class="text-xl font-bold text-gray-800">慣用語解密卡</h2>
+          <span class="text-[10px] font-bold text-[var(--idiom-color)] bg-white px-2 py-0.5 rounded-full shadow-sm mt-0.5 inline-block">聽力閱讀必考</span>
+        </div>
+      </div>
+      <p class="text-sm text-gray-600 font-medium ml-1">解開字面背後的隱喻，逆向測驗小遊戲。</p>
+    </a>
+
+    <a href="writing.html" class="app-card block w-full bg-writing rounded-3xl p-5 shadow-sm border border-gray-200 relative overflow-hidden no-underline">
+      <div class="absolute -right-6 -top-6 w-24 h-24 rounded-full bg-[var(--writing-color)] opacity-10"></div>
+      <div class="flex items-center gap-4 mb-2">
+        <div class="w-12 h-12 rounded-2xl bg-[var(--writing-color)] text-white flex justify-center items-center shadow-md shrink-0">
+          <i class="ph-bold ph-pencil-simple-line text-2xl"></i>
+        </div>
+        <div>
+          <h2 class="text-xl font-bold text-gray-800">寫作兵器庫</h2>
+          <span class="text-[10px] font-bold text-[var(--writing-color)] bg-white px-2 py-0.5 rounded-full shadow-sm mt-0.5 inline-block">51/52題專攻</span>
+        </div>
+      </div>
+      <p class="text-sm text-gray-600 font-medium ml-1">必背句型公式，模擬原稿紙填空解謎。</p>
+    </a>
+
+    <a href="reader.html" class="app-card block w-full bg-reader rounded-3xl p-5 shadow-sm border border-gray-200 relative overflow-hidden no-underline">
+      <div class="absolute -right-6 -top-6 w-24 h-24 rounded-full bg-[var(--reader-color)] opacity-10"></div>
+      <div class="flex items-center gap-4 mb-2">
+        <div class="w-12 h-12 rounded-2xl bg-[var(--reader-color)] text-white flex justify-center items-center shadow-md shrink-0">
+          <i class="ph-bold ph-headphones text-2xl"></i>
+        </div>
+        <div>
+          <h2 class="text-xl font-bold text-gray-800">新聞聽讀機</h2>
+          <span class="text-[10px] font-bold text-[var(--reader-color)] bg-white px-2 py-0.5 rounded-full shadow-sm mt-0.5 inline-block">聽力帶動閱讀</span>
+        </div>
+      </div>
+      <p class="text-sm text-gray-600 font-medium ml-1">Google語音接力朗讀，沉浸式長文練習。</p>
+    </a>
+
+  </div>
+
+  <div class="mt-auto text-center w-full max-w-sm pb-8 shrink-0">
+    <div class="inline-flex items-center justify-center gap-2 bg-white px-6 py-2.5 rounded-full shadow-sm border border-gray-100">
+      <i class="ph-fill ph-fire text-orange-400 text-lg"></i>
+      <span class="text-sm font-bold text-gray-600 italic">TOPIK II 必勝！加油！</span>
+    </div>
+  </div>
+
+</body>
+</html>
