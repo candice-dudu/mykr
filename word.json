@@ -1,0 +1,62 @@
+[
+  { 
+    "word": "대책", 
+    "hanja": "[對策]", 
+    "meaning": "對策、措施", 
+    "tag": "社會", 
+    "frequency": 5, 
+    "example_ko": "정부는 청년 실업 문제에 대한 대책을 마련해야 한다.", 
+    "example_zh": "政府必須針對青年失業問題制定對策。", 
+    "example_type": "topik"
+  },
+  { 
+    "word": "불가피하다", 
+    "hanja": "[不可避--]", 
+    "meaning": "不可避免的", 
+    "tag": "新聞", 
+    "frequency": 4, 
+    "example_ko": "물가 상승으로 인해 금리 인상이 불가피한 상황입니다.", 
+    "example_zh": "由於物價上漲，升息是不可避免的情況。", 
+    "example_type": "topik"
+  },
+  { 
+    "word": "모순", 
+    "hanja": "[矛盾]", 
+    "meaning": "矛盾", 
+    "tag": "抽象", 
+    "frequency": 3, 
+    "example_ko": "그의 말은 모순투성이다.", 
+    "example_zh": "他的話充滿了矛盾。", 
+    "example_type": "normal" 
+  },
+  { 
+    "word": "활성화", 
+    "hanja": "[活性化]", 
+    "meaning": "活絡、活化", 
+    "tag": "經濟", 
+    "frequency": 5, 
+    "example_ko": "전통 시장을 활성화합시다.", 
+    "example_zh": "讓我們活絡傳統市場吧。", 
+    "example_type": "normal" 
+  },
+  { 
+    "word": "우려하다", 
+    "hanja": "[憂慮--]", 
+    "meaning": "擔憂、憂慮", 
+    "tag": "新聞", 
+    "frequency": 4, 
+    "example_ko": "전문가들은 환경 오염의 심각성을 크게 우려하고 있다.", 
+    "example_zh": "專家們非常擔憂環境污染的嚴重性。", 
+    "example_type": "topik"
+  },
+  { 
+    "word": "까다롭다", 
+    "hanja": "", 
+    "meaning": "挑剔的、棘手的", 
+    "tag": "形容詞", 
+    "frequency": 4, 
+    "example_ko": "", 
+    "example_zh": "", 
+    "example_type": "normal"
+  }
+]
