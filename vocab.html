@@ -47,34 +47,31 @@
     .no-scrollbar::-webkit-scrollbar { display: none; }
     .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-    @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-    .animate-bounce-custom { animation: bounce 0.5s ease-in-out 2; }
+    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    .loader { border: 4px solid #e0dcd3; border-top: 4px solid var(--sage-green); border-radius: 50%; width: 30px; height: 30px; animation: spin 1s linear infinite; }
   </style>
 </head>
-<body class="h-screen w-screen flex flex-col items-center py-4 px-4 relative overflow-hidden">
+<body class="h-[100dvh] w-screen flex flex-col items-center py-4 px-4 relative overflow-hidden">
 
-  <!-- ========================================== -->
-  <!-- 🏠 懸浮返回主頁按鈕 (連去 index.html) -->
-  <!-- ========================================== -->
+  <!-- 🏠 返回主頁 -->
   <a href="index.html" class="absolute top-4 left-4 z-40 w-10 h-10 bg-white rounded-full flex justify-center items-center shadow-sm border border-gray-200 text-gray-500 hover:text-[var(--sage-dark)] active:scale-95 transition-all">
     <i class="ph-bold ph-house text-xl"></i>
   </a>
 
+  <!-- Loading 遮罩 -->
+  <div id="loadingOverlay" class="absolute inset-0 bg-[var(--bg-oat)] z-50 flex flex-col items-center justify-center transition-opacity duration-300">
+    <div class="loader mb-3"></div>
+    <p class="text-[var(--sage-dark)] font-bold text-sm" id="loadingText">同步單字庫中...</p>
+  </div>
 
-  <!-- ========================================== -->
-  <!-- 🌟 Mascot (自訂 PNG 圖片版) 🌟 -->
-  <!-- ========================================== -->
-  <div id="mascotChat" class="absolute top-6 right-4 flex items-center gap-2 opacity-0 transition-opacity duration-500 z-50 pointer-events-none">
-    <div class="bg-white px-3 py-2 rounded-2xl rounded-tr-none shadow-md text-sm font-medium text-[var(--sage-dark)]" id="mascotMessage">
-      做得好！
-    </div>
-    <!-- 將原本嘅 div 改成 img，src 放入你嘅圖片連結 -->
+  <!-- Mascot -->
+  <div id="mascotChat" class="absolute top-6 right-4 flex items-center gap-2 opacity-0 transition-opacity duration-500 z-40 pointer-events-none">
+    <div class="bg-white px-3 py-2 rounded-2xl rounded-tr-none shadow-md text-sm font-medium text-[var(--sage-dark)]" id="mascotMessage">做得好！</div>
     <img id="mascotIcon" src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Cat/3D/cat_3d.png" alt="Mascot" class="w-12 h-12 object-contain drop-shadow-md">
   </div>
-  <!-- ========================================== -->
 
-  <!-- 模式切換 Switch -->
-  <div class="flex bg-gray-200 rounded-full p-1 mb-3 w-full max-w-[240px]">
+  <!-- 模式切換 (加咗 mt-12 避開 Home 掣) -->
+  <div class="flex bg-gray-200 rounded-full p-1 mb-3 mt-12 w-full max-w-[240px] shrink-0">
     <button id="modeStudyBtn" onclick="switchMode('study')" class="mode-btn active flex-1 rounded-full py-1.5 text-sm text-gray-500 flex justify-center items-center gap-1">
       <i class="ph-bold ph-cards"></i> 學習
     </button>
@@ -83,13 +80,13 @@
     </button>
   </div>
 
-  <!-- 分類過濾器 -->
-  <div class="w-full max-w-sm mb-3">
+  <!-- 分類篩選 -->
+  <div class="w-full max-w-sm mb-3 shrink-0">
     <div class="flex overflow-x-auto gap-2 pb-1 no-scrollbar" id="tagContainer"></div>
   </div>
 
-  <!-- 頂部進度條 -->
-  <div class="w-full max-w-sm mb-3">
+  <!-- 進度條 -->
+  <div class="w-full max-w-sm mb-4 shrink-0 px-1">
     <div class="flex justify-between items-end mb-1 px-1">
       <div class="text-xs font-bold text-[var(--sage-dark)] tracking-wider" id="progressTitle">學習進度</div>
       <div class="text-xs font-medium text-[var(--text-light)]">
@@ -101,101 +98,78 @@
     </div>
   </div>
 
-  <!-- 單字卡片區塊 -->
-  <div class="w-full max-w-sm h-[380px] relative perspective-1000 transition-all duration-500 ease-in-out" id="flashcardWrapper">
+  <!-- 單字卡片區 -->
+  <div class="w-full max-w-sm flex-1 min-h-0 relative perspective-1000 mb-4" id="flashcardWrapper">
     <div class="card-container w-full h-full absolute transform-style-3d shadow-lg rounded-3xl cursor-pointer" id="cardContainer" onclick="handleCardClick()">
       
       <!-- 正面 -->
-      <div class="absolute w-full h-full bg-white rounded-3xl p-5 flex flex-col items-center backface-hidden border-t-[8px] border-[var(--sage-green)] overflow-y-auto no-scrollbar pb-6">
+      <div class="absolute w-full h-full bg-white rounded-3xl p-6 flex flex-col items-center backface-hidden border-t-[8px] border-[var(--sage-green)] overflow-y-auto no-scrollbar">
+        <span id="wordTag" class="absolute top-4 left-4 bg-gray-100 text-[var(--sage-dark)] text-[10px] px-2.5 py-1 rounded-full font-bold shadow-sm border border-gray-200 uppercase tracking-tighter">--</span>
+        <div id="frequencyStars" class="absolute top-4 right-4 flex gap-0.5 text-[var(--gold-star)] text-[10px]"></div>
         
-        <span id="wordTag" class="absolute top-4 left-4 bg-gray-100 text-[var(--sage-dark)] text-[11px] px-3 py-1 rounded-full font-bold shadow-sm border border-gray-200">--</span>
-        <div id="frequencyStars" class="absolute top-4 right-4 flex gap-0.5 text-[var(--gold-star)] text-xs"></div>
-        
-        <div class="flex flex-col items-center mt-8 mb-2 w-full shrink-0">
+        <div class="flex flex-col items-center mt-8 mb-4 w-full shrink-0">
           <h1 id="koreanWord" class="text-4xl font-bold text-center text-gray-800 mb-1 tracking-wide">--</h1>
-          <h3 id="hanjaText" class="text-sm text-gray-400 font-serif tracking-widest border-b border-gray-100 pb-1 px-4 mb-1 transition-opacity duration-300">--</h3>
-          <button id="frontMiniPlayBtn" onclick="playCurrentWordAudio(event)" class="text-[var(--sage-green)] hover:text-[var(--sage-dark)] p-2 transition-transform active:scale-90">
+          <h3 id="hanjaText" class="text-sm text-gray-400 font-serif tracking-widest border-b border-gray-100 pb-1 px-4 mb-1">--</h3>
+          <button id="frontMiniPlayBtn" onclick="playCurrentWordAudio(event)" class="text-[var(--sage-green)] hover:text-[var(--sage-dark)] p-2 active:scale-90 hidden">
             <i class="ph-fill ph-speaker-high text-2xl"></i>
           </button>
         </div>
 
-        <div id="flipHint" class="mt-auto mb-2 text-[var(--sage-green)] text-sm flex items-center gap-1 font-medium bg-gray-50 px-4 py-2 rounded-full shadow-inner shrink-0 transition-opacity">
-          <i class="ph-bold ph-arrows-clockwise text-lg"></i> 點擊翻面看解釋
+        <div id="flipHint" class="mt-auto mb-2 text-[var(--sage-green)] text-xs flex items-center gap-1 font-bold bg-gray-50 px-4 py-2 rounded-full shadow-inner shrink-0">
+          <i class="ph-bold ph-arrows-clockwise text-lg"></i> 點擊翻面
         </div>
 
-        <div id="quizOptionsContainer" class="w-full flex flex-col gap-2 mt-2 hidden pb-2">
-          <!-- 選項按鈕會動態生成 -->
-        </div>
-
+        <div id="quizOptionsContainer" class="w-full flex flex-col gap-2 mt-2 hidden"></div>
       </div>
 
       <!-- 反面 -->
       <div class="absolute w-full h-full bg-white rounded-3xl p-6 flex flex-col backface-hidden rotate-y-180 border-t-[8px] border-[var(--sage-dark)] overflow-y-auto no-scrollbar cursor-default" onclick="event.stopPropagation()">
-        
-        <button onclick="forceCloseCard()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
-           <i class="ph-bold ph-x text-xl"></i>
-        </button>
+        <button onclick="forceCloseCard()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600"><i class="ph-bold ph-x text-xl"></i></button>
         
         <div class="flex justify-between items-start border-b pb-3 mb-4 mt-2">
           <div>
             <h2 id="koreanWordBack" class="text-2xl font-bold text-gray-800">--</h2>
             <p id="hanjaTextBack" class="text-sm text-gray-400 font-serif tracking-widest mt-0.5">--</p>
           </div>
-          <button onclick="playCurrentWordAudio(event)" class="text-[var(--sage-green)] hover:text-[var(--sage-dark)] btn-action mt-1">
+          <button onclick="playCurrentWordAudio(event)" class="text-[var(--sage-green)] hover:text-[var(--sage-dark)] active:scale-90">
             <i class="ph-fill ph-speaker-high text-3xl"></i>
           </button>
         </div>
         
         <div class="flex-grow">
-          <p class="text-sm text-[var(--sage-green)] font-bold mb-1 flex items-center gap-1">
-            <i class="ph-bold ph-book-open"></i> 釋義
-          </p>
-          <p id="chineseMeaning" class="text-lg font-medium text-gray-700 mb-4 pl-1">--</p>
+          <p class="text-[11px] text-[var(--sage-green)] font-bold mb-1 flex items-center gap-1 uppercase"><i class="ph-bold ph-book-open"></i> 釋義</p>
+          <p id="chineseMeaning" class="text-xl font-bold text-gray-700 mb-5">--</p>
           
           <div id="exampleBlockWrapper">
-            <p class="text-sm text-[var(--sage-green)] font-bold mb-2 flex items-center">
+            <p class="text-[11px] text-[var(--sage-green)] font-bold mb-2 flex items-center uppercase">
               <i class="ph-bold ph-chat-circle-text mr-1"></i> 例句
-              <span id="exampleTypeBadge" class="ml-2 text-[10px] bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded-full font-bold tracking-wider">TOPIK</span>
+              <span id="exampleTypeBadge" class="ml-2 text-[9px] bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded-full font-bold tracking-wider">TOPIK</span>
             </p>
-            <div class="bg-gray-50 rounded-xl p-3 border border-gray-100">
+            <div class="bg-gray-50 rounded-2xl p-4 border border-gray-100">
               <p id="koreanExample" class="text-[15px] text-gray-800 leading-relaxed font-medium mb-1.5">--</p>
               <p id="chineseExample" class="text-sm text-gray-500 leading-relaxed">--</p>
             </div>
           </div>
         </div>
       </div>
-      
     </div>
   </div>
 
-  <!-- 底部操作區 -->
-  <div id="actionButtons" class="w-full max-w-sm mt-5 flex justify-center items-center gap-8 px-4 opacity-0 transition-opacity duration-300 pointer-events-none">
+  <!-- 底部按鈕 -->
+  <div id="actionButtons" class="w-full max-w-sm mb-6 flex justify-center items-center gap-8 px-4 opacity-0 transition-opacity duration-300 pointer-events-none shrink-0">
     <button onclick="markAs('forget', event)" class="btn-action flex flex-col items-center gap-1 text-[var(--coral-red)] group">
-      <div class="w-14 h-14 bg-white rounded-full border-2 border-[var(--coral-red)] flex justify-center items-center group-active:bg-[var(--coral-red)] group-active:text-white transition-colors shadow-sm">
-        <i class="ph-bold ph-x text-2xl"></i>
-      </div>
+      <div class="w-14 h-14 bg-white rounded-full border-2 border-[var(--coral-red)] flex justify-center items-center group-active:bg-[var(--coral-red)] group-active:text-white transition-colors shadow-sm"><i class="ph-bold ph-x text-2xl"></i></div>
       <span class="text-xs font-bold mt-1">還不熟</span>
     </button>
-    <button id="frontPlayBtn" onclick="playCurrentWordAudio(event)" class="btn-action bg-[var(--sage-green)] text-white rounded-full w-16 h-16 flex justify-center items-center shadow-lg z-10 pointer-events-auto">
-      <i class="ph-fill ph-speaker-high text-3xl"></i>
-    </button>
+    <button id="frontPlayBtn" onclick="playCurrentWordAudio(event)" class="btn-action bg-[var(--sage-green)] text-white rounded-full w-16 h-16 flex justify-center items-center shadow-lg z-10 pointer-events-auto"><i class="ph-fill ph-speaker-high text-3xl"></i></button>
     <button onclick="markAs('remember', event)" class="btn-action flex flex-col items-center gap-1 text-[var(--sage-dark)] group">
-      <div class="w-14 h-14 bg-white rounded-full border-2 border-[var(--sage-dark)] flex justify-center items-center group-active:bg-[var(--sage-dark)] group-active:text-white transition-colors shadow-sm">
-        <i class="ph-bold ph-check text-2xl"></i>
-      </div>
+      <div class="w-14 h-14 bg-white rounded-full border-2 border-[var(--sage-dark)] flex justify-center items-center group-active:bg-[var(--sage-dark)] group-active:text-white transition-colors shadow-sm"><i class="ph-bold ph-check text-2xl"></i></div>
       <span class="text-xs font-bold mt-1">我會了</span>
     </button>
   </div>
 
   <script>
-    const masterVocabList = [
-      { word: "대책", hanja: "[對策]", meaning: "對策、措施", tag: "社會", frequency: 5, example_ko: "정부는 청년 실업 문제에 대한 대책을 마련해야 한다.", example_zh: "政府必須針對青年失業問題制定對策。", example_type: "topik" },
-      { word: "불가피하다", hanja: "[不可避--]", meaning: "不可避免的", tag: "新聞", frequency: 4, example_ko: "물가 상승으로 인해 금리 인상이 불가피한 상황입니다.", example_zh: "由於物價上漲，升息是不可避免的情況。", example_type: "topik" },
-      { word: "모순", hanja: "[矛盾]", meaning: "矛盾", tag: "抽象", frequency: 3, example_ko: "그의 말은 모순투성이다.", example_zh: "他的話充滿了矛盾。", example_type: "normal" },
-      { word: "활성화", hanja: "[活性化]", meaning: "活絡、活化", tag: "經濟", frequency: 5, example_ko: "전통 시장을 활성화합시다.", example_zh: "讓我們活絡傳統市場吧。", example_type: "normal" },
-      { word: "우려하다", hanja: "[憂慮--]", meaning: "擔憂、憂慮", tag: "新聞", frequency: 4, example_ko: "전문가들은 환경 오염의 심각성을 크게 우려하고 있다.", example_zh: "專家們非常擔憂環境污染的嚴重性。", example_type: "topik" }
-    ];
-
+    let masterVocabList = []; 
     let currentMode = 'study';
     let currentFilterTag = 'all'; 
     let filteredVocabList = [];   
@@ -207,7 +181,7 @@
     let quizAnswered = false;
 
     const els = {
-      flashcardWrapper: document.getElementById('flashcardWrapper'),
+      loadingOverlay: document.getElementById('loadingOverlay'),
       cardContainer: document.getElementById('cardContainer'),
       wordTag: document.getElementById('wordTag'),
       koreanWord: document.getElementById('koreanWord'),
@@ -223,7 +197,6 @@
       totalCount: document.getElementById('totalCountDisplay'),
       learnedCount: document.getElementById('learnedCount'),
       progressBar: document.getElementById('progressBar'),
-      progressTitle: document.getElementById('progressTitle'),
       actionButtons: document.getElementById('actionButtons'),
       frontPlayBtn: document.getElementById('frontPlayBtn'),
       frontMiniPlayBtn: document.getElementById('frontMiniPlayBtn'),
@@ -235,24 +208,35 @@
       tagContainer: document.getElementById('tagContainer')
     };
 
-    function initApp() {
-      generateTags();
-      applyFilter('all');
+    // --- 核心：從 GitHub JSON 獲取資料 ---
+    async function initApp() {
+      try {
+        const response = await fetch('word.json');
+        if (!response.ok) throw new Error("讀取失敗");
+        masterVocabList = await response.json();
+      } catch (error) {
+        console.error("Fetch Error:", error);
+        document.getElementById('loadingText').innerText = "讀取 JSON 失敗，請確認檔案已上傳。";
+      } finally {
+        els.loadingOverlay.style.opacity = '0';
+        setTimeout(() => els.loadingOverlay.style.display = 'none', 300);
+        generateTags();
+        applyFilter('all');
+      }
     }
 
     function switchMode(mode) {
       currentMode = mode;
       document.getElementById('modeStudyBtn').classList.toggle('active', mode === 'study');
       document.getElementById('modeQuizBtn').classList.toggle('active', mode === 'quiz');
-      els.progressTitle.innerText = mode === 'study' ? "學習進度" : "測驗進度";
       startStudySession();
     }
 
     function generateTags() {
       const tags = [...new Set(masterVocabList.map(item => item.tag))].filter(Boolean);
-      let html = `<button id="tagBtn-all" class="tag-btn active border border-gray-300 rounded-full px-4 py-1 text-sm font-medium bg-white text-gray-600 shadow-sm" onclick="applyFilter('all')">全部</button>`;
+      let html = `<button id="tagBtn-all" class="tag-btn active border border-gray-300 rounded-full px-4 py-1.5 text-[13px] font-bold bg-white text-gray-600 shadow-sm" onclick="applyFilter('all')">全部</button>`;
       tags.forEach(tag => {
-        html += `<button id="tagBtn-${tag}" class="tag-btn border border-gray-300 rounded-full px-4 py-1 text-sm font-medium bg-white text-gray-600 shadow-sm" onclick="applyFilter('${tag}')">${tag}</button>`;
+        html += `<button id="tagBtn-${tag}" class="tag-btn border border-gray-300 rounded-full px-4 py-1.5 text-[13px] font-bold bg-white text-gray-600 shadow-sm" onclick="applyFilter('${tag}')">${tag}</button>`;
       });
       els.tagContainer.innerHTML = html;
     }
@@ -260,12 +244,9 @@
     function applyFilter(tag) {
       currentFilterTag = tag;
       document.querySelectorAll('.tag-btn').forEach(btn => btn.classList.remove('active', 'bg-[var(--sage-dark)]', 'text-white', 'border-[var(--sage-dark)]'));
-      document.querySelectorAll('.tag-btn').forEach(btn => btn.classList.add('bg-white', 'text-gray-600', 'border-gray-300'));
       const activeBtn = document.getElementById(`tagBtn-${tag}`);
-      if(activeBtn) {
-        activeBtn.classList.remove('bg-white', 'text-gray-600', 'border-gray-300');
-        activeBtn.classList.add('active', 'bg-[var(--sage-dark)]', 'text-white', 'border-[var(--sage-dark)]');
-      }
+      if(activeBtn) activeBtn.classList.add('active', 'bg-[var(--sage-dark)]', 'text-white', 'border-[var(--sage-dark)]');
+      
       filteredVocabList = tag === 'all' ? [...masterVocabList] : masterVocabList.filter(item => item.tag === tag);
       startStudySession();
     }
@@ -273,129 +254,69 @@
     function startStudySession() {
       studyQueue = [...filteredVocabList].sort(() => Math.random() - 0.5);
       learnedCount = 0;
-      streakCount = 0;
       els.totalCount.innerText = filteredVocabList.length;
       updateProgress();
       if (isFlipped) forceCloseCard();
-      
       if(studyQueue.length > 0) loadNextWord();
-      else showCompletionScreen("這個分類目前沒有單字喔！");
-    }
-
-    function renderStars(count) {
-      if (!count) return '';
-      return Array(count).fill('<i class="ph-fill ph-star"></i>').join('');
+      else showCompletionScreen("暫無單字");
     }
 
     function loadNextWord() {
-      if (studyQueue.length === 0) {
-        showCompletionScreen("🎉 完美通關！");
-        return;
-      }
+      if (studyQueue.length === 0) { showCompletionScreen("🎉 完美通關！"); return; }
       quizAnswered = false;
       currentWordData = studyQueue[0];
       
       els.wordTag.innerText = currentWordData.tag || '未分類';
-      els.frequencyStars.innerHTML = renderStars(currentWordData.frequency);
+      els.frequencyStars.innerHTML = Array(currentWordData.frequency || 0).fill('<i class="ph-fill ph-star"></i>').join('');
       els.koreanWord.innerText = currentWordData.word;
       els.koreanWordBack.innerText = currentWordData.word;
       
       if (currentWordData.hanja) {
         els.hanjaText.innerText = currentWordData.hanja;
         els.hanjaTextBack.innerText = currentWordData.hanja;
-        els.hanjaText.style.display = 'block'; 
-        els.hanjaTextBack.style.display = 'block';
+        els.hanjaText.style.display = 'block';
       } else {
         els.hanjaText.style.display = 'none';
-        els.hanjaTextBack.style.display = 'none';
       }
 
       els.chineseMeaning.innerText = currentWordData.meaning;
-      
-      if (currentWordData.example_ko && currentWordData.example_ko.trim() !== '') {
+      if (currentWordData.example_ko) {
         els.exampleBlockWrapper.style.display = 'block';
         els.koreanExample.innerText = currentWordData.example_ko;
         els.chineseExample.innerText = currentWordData.example_zh || '';
-        
-        if (currentWordData.example_type === 'topik') {
-          els.exampleTypeBadge.innerText = 'TOPIK';
-          els.exampleTypeBadge.className = 'ml-2 text-[10px] bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded-full font-bold tracking-wider';
-        } else {
-          els.exampleTypeBadge.innerText = '一般';
-          els.exampleTypeBadge.className = 'ml-2 text-[10px] bg-gray-100 text-gray-500 px-2 py-0.5 rounded-full font-bold tracking-wider';
-        }
       } else {
         els.exampleBlockWrapper.style.display = 'none';
       }
 
-      if (currentMode === 'study') {
-        setupStudyUI();
-      } else {
-        setupQuizUI();
-      }
+      currentMode === 'study' ? setupStudyUI() : setupQuizUI();
     }
 
     function setupStudyUI() {
-      els.flashcardWrapper.classList.remove('h-[420px]');
-      els.flashcardWrapper.classList.add('h-[380px]');
-
       els.flipHint.style.display = 'flex';
       els.quizOptionsContainer.style.display = 'none';
-      els.frontMiniPlayBtn.style.display = 'none';
-      
-      if (currentWordData.hanja) {
-        els.hanjaText.style.opacity = '1';
-        els.hanjaText.style.height = 'auto';
-        els.hanjaText.style.paddingBottom = '0.25rem';
-        els.hanjaText.style.marginBottom = '0.25rem';
-        els.hanjaText.style.borderBottomWidth = '1px';
-      }
-      
+      els.frontMiniPlayBtn.classList.add('hidden');
       els.actionButtons.classList.replace('opacity-100', 'opacity-0');
-      els.actionButtons.classList.replace('pointer-events-auto', 'pointer-events-none');
+      els.actionButtons.classList.add('pointer-events-none');
       els.frontPlayBtn.style.display = 'flex';
-      
       els.cardContainer.onclick = toggleFlip;
     }
 
     function setupQuizUI() {
-      els.flashcardWrapper.classList.remove('h-[380px]');
-      els.flashcardWrapper.classList.add('h-[420px]');
-
       els.flipHint.style.display = 'none';
       els.quizOptionsContainer.style.display = 'flex';
-      els.frontMiniPlayBtn.style.display = 'block'; 
-      
-      els.hanjaText.style.opacity = '0';
-      els.hanjaText.style.height = '0';
-      els.hanjaText.style.paddingBottom = '0';
-      els.hanjaText.style.marginBottom = '0';
-      els.hanjaText.style.borderBottomWidth = '0';
-      
-      els.actionButtons.classList.replace('opacity-100', 'opacity-0');
-      els.actionButtons.classList.replace('pointer-events-auto', 'pointer-events-none');
-      els.frontPlayBtn.style.display = 'none';
-      
+      els.frontMiniPlayBtn.classList.remove('hidden');
+      els.actionButtons.classList.add('opacity-0', 'pointer-events-none');
       els.cardContainer.onclick = null; 
       generateQuizOptions();
     }
 
     function generateQuizOptions() {
-      const wrongOptions = masterVocabList
-        .filter(w => w.word !== currentWordData.word)
-        .sort(() => 0.5 - Math.random())
-        .slice(0, 2);
-      
-      const allOptions = [
-        { text: currentWordData.meaning, isCorrect: true },
-        ...wrongOptions.map(w => ({ text: w.meaning, isCorrect: false }))
-      ].sort(() => 0.5 - Math.random()); 
-
+      const wrongOptions = masterVocabList.filter(w => w.word !== currentWordData.word).sort(() => 0.5 - Math.random()).slice(0, 2);
+      const allOptions = [ { text: currentWordData.meaning, isCorrect: true }, ...wrongOptions.map(w => ({ text: w.meaning, isCorrect: false })) ].sort(() => 0.5 - Math.random()); 
       els.quizOptionsContainer.innerHTML = '';
-      
       allOptions.forEach(opt => {
         const btn = document.createElement('button');
-        btn.className = 'quiz-option w-full py-2.5 px-4 border border-gray-200 rounded-xl text-gray-700 text-[14px] font-medium text-left bg-white hover:bg-gray-50 shadow-sm';
+        btn.className = 'quiz-option w-full py-3 px-4 border border-gray-200 rounded-2xl text-gray-700 text-sm font-bold text-center bg-white shadow-sm';
         btn.innerText = opt.text;
         btn.onclick = (e) => handleQuizAnswer(e, btn, opt.isCorrect);
         els.quizOptionsContainer.appendChild(btn);
@@ -406,68 +327,41 @@
       event.stopPropagation();
       if (quizAnswered) return;
       quizAnswered = true;
-
-      const allBtns = els.quizOptionsContainer.querySelectorAll('button');
-      
       if (isCorrect) {
         btnElement.classList.add('quiz-correct');
-        markAs('remember', null, true); 
+        markAs('remember', null, true);
       } else {
         btnElement.classList.add('quiz-wrong');
-        allBtns.forEach(b => {
-          if (b.innerText === currentWordData.meaning) b.classList.add('quiz-correct');
-        });
+        els.quizOptionsContainer.querySelectorAll('button').forEach(b => { if (b.innerText === currentWordData.meaning) b.classList.add('quiz-correct'); });
         markAs('forget', null, true);
       }
     }
 
-    function handleCardClick() {
-      if (currentMode === 'study') toggleFlip();
-    }
-
+    function handleCardClick() { if (currentMode === 'study') toggleFlip(); }
     function toggleFlip() {
       isFlipped = !isFlipped;
+      els.cardContainer.style.transform = isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)';
       if (isFlipped) {
-        els.cardContainer.classList.add('rotate-y-180');
         els.actionButtons.classList.replace('opacity-0', 'opacity-100');
-        els.actionButtons.classList.replace('pointer-events-none', 'pointer-events-auto');
+        els.actionButtons.classList.remove('pointer-events-none');
         els.frontPlayBtn.style.display = 'none';
       } else {
-        els.cardContainer.classList.remove('rotate-y-180');
         els.actionButtons.classList.replace('opacity-100', 'opacity-0');
-        els.actionButtons.classList.replace('pointer-events-auto', 'pointer-events-none');
+        els.actionButtons.classList.add('pointer-events-none');
         els.frontPlayBtn.style.display = 'flex';
       }
     }
 
-    function forceCloseCard() {
-      isFlipped = false;
-      els.cardContainer.classList.remove('rotate-y-180');
-      if (currentMode === 'study') {
-        els.actionButtons.classList.replace('opacity-100', 'opacity-0');
-        els.actionButtons.classList.replace('pointer-events-auto', 'pointer-events-none');
-        els.frontPlayBtn.style.display = 'flex';
-      }
-    }
+    function forceCloseCard() { isFlipped = false; els.cardContainer.style.transform = 'rotateY(0deg)'; toggleFlip(); toggleFlip(); }
 
     function markAs(status, event, isFromQuiz = false) {
-      if (event) event.stopPropagation(); 
+      if (event) event.stopPropagation();
       const word = studyQueue.shift();
-
-      if (status === 'remember') {
-        learnedCount++;
-        streakCount++;
-        checkStreak();
-      } else {
-        studyQueue.push(word);
-        streakCount = 0;
-      }
-
+      if (status === 'remember') { learnedCount++; streakCount++; } 
+      else { studyQueue.push(word); streakCount = 0; }
       updateProgress();
-      
-      const delay = isFromQuiz ? 1200 : 150;
       if (!isFromQuiz) forceCloseCard();
-      setTimeout(() => loadNextWord(), delay);
+      setTimeout(() => loadNextWord(), isFromQuiz ? 1200 : 200);
     }
 
     function updateProgress() {
@@ -476,56 +370,19 @@
       els.progressBar.style.width = `${percentage}%`;
     }
 
-    function checkStreak() {
-      // 💡 呢度我改咗，只傳入文字，唔使再傳 Emoji
-      if (streakCount === 3) showMascot("手感好順喔！");
-      else if (streakCount === 5) showMascot("太強啦！滿分！");
-    }
-
-    // 💡 呢個 Function 亦都更新咗，唔會再去改圖片嘅 src，只會令佢彈出嚟
-    function showMascot(msg) {
-      els.mascotMessage.innerText = msg;
-      els.mascotChat.classList.remove('opacity-0');
-      els.mascotIcon.classList.add('animate-bounce-custom');
-      setTimeout(() => {
-        els.mascotChat.classList.add('opacity-0');
-        els.mascotIcon.classList.remove('animate-bounce-custom');
-      }, 3000);
-    }
-
     function showCompletionScreen(title) {
       els.koreanWord.innerText = title;
-      els.wordTag.innerText = "完成";
-      els.frequencyStars.innerHTML = '';
-      
-      els.hanjaText.style.opacity = '0';
-      els.hanjaText.style.height = '0';
-      
-      els.koreanWordBack.innerText = "任務完成！";
-      els.hanjaTextBack.style.display = 'none';
-      els.chineseMeaning.innerText = "呢個分類嘅單字已經清空囉。";
-      
-      if (els.exampleBlockWrapper) els.exampleBlockWrapper.style.display = 'none';
-      els.quizOptionsContainer.style.display = 'none';
-      els.quizOptionsContainer.innerHTML = ''; 
-      els.frontMiniPlayBtn.style.display = 'none';
+      els.chineseMeaning.innerText = "做得好！今日嘅任務已經完成。";
+      els.exampleBlockWrapper.style.display = 'none';
       els.flipHint.style.display = 'none';
-      els.actionButtons.classList.replace('opacity-100', 'opacity-0');
-      els.frontPlayBtn.style.display = 'none';
-      
-      els.flashcardWrapper.classList.remove('h-[420px]');
-      els.flashcardWrapper.classList.add('h-[380px]');
-      
-      if (isFlipped) forceCloseCard();
-      els.cardContainer.onclick = null; 
+      els.actionButtons.style.opacity = '0';
     }
 
     function playCurrentWordAudio(event) {
       if (event) event.stopPropagation();
       if (!currentWordData) return;
       const audioUrl = `https://translate.google.com/translate_tts?ie=UTF-8&tl=ko&client=tw-ob&q=${encodeURIComponent(currentWordData.word)}`;
-      const audio = new Audio(audioUrl);
-      audio.play().catch(e => console.log("播放失敗", e));
+      new Audio(audioUrl).play().catch(e => console.log("播放失敗", e));
     }
 
     window.onload = initApp;
