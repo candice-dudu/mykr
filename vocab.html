@@ -188,7 +188,7 @@
     async function initApp() {
       try {
         // 加一個隨機參數防止快取 (Cache) 導致看不到更新
-        const response = await fetch(`word.json?v=${new Date().getTime()}`);
+        const response = await fetch('word.json');
         if (!response.ok) throw new Error("找不到 word.json");
         masterVocabList = await response.json();
         
