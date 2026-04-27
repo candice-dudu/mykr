@@ -59,4 +59,24 @@
     "example_zh": "", 
     "example_type": "normal"
   }
+  {
+    "word": "공사",
+    "meaning": "工程 / 施工",
+    "tag": "生活",
+    "frequency": 3,
+    "hanja": "工事",
+    "example_ko": "도서관 3층에서 공사를 할 예정입니다.",
+    "example_zh": "圖書館3樓預計進行施工。",
+    "example_type": "topik"
+  },
+  {
+    "word": "모집하다",
+    "meaning": "招募 / 募集",
+    "tag": "生活",
+    "frequency": 3,
+    "hanja": "募集--",
+    "example_ko": "우리 동아리에서 신입 회원을 모집합니다.",
+    "example_zh": "我們社團正在招收新會員。",
+    "example_type": "topik"
+  }
 ]
