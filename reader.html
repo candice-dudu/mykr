@@ -105,11 +105,28 @@
     let iosAudioUnlocked = false; // 新增：用於記錄 iOS 是否已經解鎖語音權限
     let koreanVoice = null; // 新增：用來儲存系統的韓文語音包
 
-    // 嘗試預先載入語音包 (解決 iOS 預設用英文/中文發音引擎導致不讀韓文的問題)
+    // 嘗試預先載入語音包，並嚴格篩選女主播聲音
     function initVoices() {
       const voices = window.speechSynthesis.getVoices();
-      // 尋找包含 ko 的語音包 (ko-KR, ko_KR 等)
-      koreanVoice = voices.find(v => v.lang === 'ko-KR' || v.lang === 'ko_KR' || v.lang.includes('ko'));
+      
+      // 先過濾出所有韓文語音
+      const koVoices = voices.filter(v => v.lang === 'ko-KR' || v.lang === 'ko_KR' || v.lang.includes('ko'));
+      
+      if (koVoices.length > 0) {
+        // 優先尋找名稱包含 Sora 或 Yuna，且帶有 Premium 或 Enhanced 標籤的高音質版本
+        let bestVoice = koVoices.find(v => 
+          (v.name.includes('Sora') || v.name.includes('Yuna')) && 
+          (v.name.includes('Premium') || v.name.includes('Enhanced'))
+        );
+
+        // 如果冇高音質版本，就退而求其次搵普通版嘅 Sora 或 Yuna
+        if (!bestVoice) {
+          bestVoice = koVoices.find(v => v.name.includes('Sora') || v.name.includes('Yuna'));
+        }
+
+        // 如果連 Sora 同 Yuna 都冇，先至無奈用系統第一個韓文聲
+        koreanVoice = bestVoice || koVoices[0];
+      }
     }
     
     // 監聽系統語音包載入完成事件
@@ -223,14 +240,12 @@
     function toggleAudio() {
       if (isPlaying) {
         // 【iOS 修正 2】: 避開 bug 滿滿的 pause()，改用 cancel() 直接中斷。
-        // 這樣做的額外好處是：下次按「繼續」時，會從這句韓文的開頭重新讀一次。
         window.speechSynthesis.cancel();
         isPlaying = false;
         updatePlayButtonUI();
       } else {
         // 開始或繼續播放
         if (sentencesQueue.length === 0) {
-          // 第一次撳，將文章斬件
           const fullText = currentArticle.title + "。 " + currentArticle.content;
           sentencesQueue = fullText.match(/[^.!?\n]+[.!?\n]*/g)
                                    ?.map(s => s.trim())
@@ -238,8 +253,7 @@
           currentSentenceIndex = 0;
         }
         
-        // 【iOS 修正 3】: 加入微小延遲 (50 毫秒)。
-        // 為了防止系統連續執行 cancel 後馬上 speak 導致永遠無聲的 Bug
+        // 【iOS 修正 3】: 加入微小延遲，防止 cancel 後馬上 speak 導致無聲 Bug
         setTimeout(() => {
           playNextSentence();
         }, 50);
@@ -256,10 +270,9 @@
       updatePlayButtonUI();
 
       const textChunk = sentencesQueue[currentSentenceIndex];
-      
       const utterance = new SpeechSynthesisUtterance(textChunk);
       
-      // 【iOS 修正 4】: 強制指定韓文語音包
+      // 【iOS 修正 4】: 強制指定韓文語音包 (而家 initVoices 已經寫得好聰明，會自動揀 Sora/Yuna)
       if (!koreanVoice) {
         initVoices(); // 播放前再嘗試獲取一次
       }
@@ -300,6 +313,20 @@
         els.playIcon.className = "ph-fill ph-play text-xl";
         els.playText.innerText = currentSentenceIndex > 0 ? "繼續朗讀" : "開始朗讀";
       }
+    }
+
+    // --- 新增：防止 iOS 全螢幕 App 模式下點擊連結(如首頁按鈕)跳出 Safari ---
+    if (("standalone" in window.navigator) && window.navigator.standalone) {
+      document.addEventListener('click', function(event) {
+        let target = event.target;
+        while (target && target.tagName !== 'A') {
+          target = target.parentNode;
+        }
+        if (target && target.tagName === 'A' && target.href && !target.getAttribute('target')) {
+          event.preventDefault();
+          window.location = target.href;
+        }
+      }, false);
     }
 
     window.onload = initApp;
