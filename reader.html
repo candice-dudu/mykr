@@ -103,6 +103,19 @@
     let currentSentenceIndex = 0;
     let isPlaying = false;
     let iosAudioUnlocked = false; // 新增：用於記錄 iOS 是否已經解鎖語音權限
+    let koreanVoice = null; // 新增：用來儲存系統的韓文語音包
+
+    // 嘗試預先載入語音包 (解決 iOS 預設用英文/中文發音引擎導致不讀韓文的問題)
+    function initVoices() {
+      const voices = window.speechSynthesis.getVoices();
+      // 尋找包含 ko 的語音包 (ko-KR, ko_KR 等)
+      koreanVoice = voices.find(v => v.lang === 'ko-KR' || v.lang === 'ko_KR' || v.lang.includes('ko'));
+    }
+    
+    // 監聽系統語音包載入完成事件
+    if (speechSynthesis.onvoiceschanged !== undefined) {
+      speechSynthesis.onvoiceschanged = initVoices;
+    }
 
     const els = {
       listView: document.getElementById('listView'),
@@ -245,6 +258,15 @@
       const textChunk = sentencesQueue[currentSentenceIndex];
       
       const utterance = new SpeechSynthesisUtterance(textChunk);
+      
+      // 【iOS 修正 4】: 強制指定韓文語音包
+      if (!koreanVoice) {
+        initVoices(); // 播放前再嘗試獲取一次
+      }
+      if (koreanVoice) {
+        utterance.voice = koreanVoice; // 指定使用韓文人聲
+      }
+      
       utterance.lang = 'ko-KR'; // 韓文
       utterance.rate = 0.9;     // 語速
 
