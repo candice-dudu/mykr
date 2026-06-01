@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-      <!-- 讓網頁以全螢幕 App 模式開啟 (隱藏網址列) -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <!-- 設定頂部狀態欄顏色 (透明或與背景色融合) -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="referrer" content="no-referrer">
+  
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
   <title>慣用語解密卡</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -87,18 +88,17 @@
 </head>
 <body class="h-[100dvh] w-screen flex flex-col items-center py-4 px-4 relative overflow-hidden">
 
-  <!-- 🏠 懸浮返回主頁按鈕 -->
+  <audio id="globalAudio" playsinline style="display:none"></audio>
+
   <a href="index.html" class="absolute top-4 left-4 z-40 w-10 h-10 bg-white rounded-full flex justify-center items-center shadow-sm border border-[#D0C9D6] text-[var(--primary-light)] hover:text-[var(--primary)] active:scale-95 transition-all">
     <i class="ph-bold ph-house text-xl"></i>
   </a>
 
-  <!-- Loading 遮罩 -->
   <div id="loadingOverlay" class="absolute inset-0 bg-[var(--bg-idiom)] z-50 flex flex-col items-center justify-center transition-opacity duration-300">
     <div class="loader mb-4"></div>
     <p class="text-[var(--primary)] font-medium font-bold" id="loadingText">正在載入慣用語庫...</p>
   </div>
 
-  <!-- 頂部：主模式切換 -->
   <div class="w-full max-w-sm mt-10 mb-4 shrink-0">
     <div class="nav-switch">
       <button id="tabStudy" onclick="switchMode('study')" class="nav-btn active flex justify-center items-center gap-1.5">
@@ -110,18 +110,13 @@
     </div>
   </div>
 
-  <!-- ========================================== -->
-  <!-- 模塊 A：學習解密 (Study Mode) -->
-  <!-- ========================================== -->
   <div id="studyArea" class="w-full max-w-sm flex-1 min-h-0 flex flex-col relative pb-4">
     <div class="idiom-card w-full h-full bg-white rounded-3xl shadow-lg border-t-8 border-[var(--primary)] p-6 flex flex-col overflow-y-auto no-scrollbar relative">
       
-      <!-- 進度 -->
       <div class="absolute top-4 right-5 text-xs font-bold text-gray-400">
         <span id="currentIndex">1</span> / <span id="totalIndex">0</span>
       </div>
 
-      <!-- 韓文慣用語 + 發音按鈕 -->
       <div class="mt-6 mb-6 text-center shrink-0 flex flex-col items-center">
         <div class="flex items-center justify-center gap-2 mb-3">
           <h2 id="koreanIdiom" class="text-3xl font-bold text-gray-800 tracking-wide">--</h2>
@@ -130,20 +125,17 @@
           </button>
         </div>
         
-        <!-- 字面意思 -->
         <div class="inline-flex items-center gap-1.5 bg-gray-50 text-gray-500 px-3 py-1.5 rounded-full text-sm font-medium border border-gray-200">
           <i class="ph-fill ph-translate"></i>
           <span class="font-bold">字面解：</span> <span id="literalMeaning">--</span>
         </div>
       </div>
 
-      <!-- 真正意思 (點擊揭曉) -->
       <div id="revealBtn" onclick="revealMeaning()" class="reveal-box bg-[var(--primary-bg)] border-2 border-dashed border-[var(--primary-border)] rounded-2xl p-6 mb-6 text-center cursor-pointer hover:bg-[#E0D9E6] shrink-0">
         <p class="text-xs text-[var(--primary-light)] font-bold mb-3 tracking-widest uppercase"><i class="ph-bold ph-eye"></i> 點擊揭曉真正意思</p>
         <p id="actualMeaning" class="hidden-meaning text-xl font-bold text-[var(--primary)]">--</p>
       </div>
 
-      <!-- 例句與情境 (揭曉後才顯示) -->
       <div id="exampleArea" class="hidden flex-col gap-4 mt-auto shrink-0 pb-2">
         <div class="bg-white border border-gray-100 rounded-xl p-4 shadow-sm">
           <p class="text-xs text-gray-400 font-bold mb-2">📖 應用例句</p>
@@ -151,7 +143,6 @@
           <p id="exampleZh" class="text-sm text-gray-500">--</p>
         </div>
         
-        <!-- TOPIK 考試情境提示 -->
         <div class="bg-orange-50 border border-orange-100 rounded-xl p-4">
           <p class="text-xs text-orange-600 font-bold mb-1.5 flex items-center gap-1"><i class="ph-bold ph-lightbulb"></i> 考試常見情境</p>
           <p id="topikHint" class="text-sm text-orange-800 font-medium leading-relaxed">--</p>
@@ -159,7 +150,6 @@
       </div>
     </div>
 
-    <!-- 底部按鈕 -->
     <div class="w-full mt-4 shrink-0 px-1">
       <button onclick="nextCard()" class="w-full bg-[var(--primary)] text-white font-bold py-3.5 rounded-2xl shadow-md btn-action flex justify-center items-center gap-2 text-lg tracking-wide hover:bg-[#5A4B6E]">
         下一張卡片 <i class="ph-bold ph-arrow-right"></i>
@@ -167,46 +157,38 @@
     </div>
   </div>
 
-  <!-- ========================================== -->
-  <!-- 模塊 B：小測驗 (Quiz Mode) -->
-  <!-- ========================================== -->
   <div id="quizArea" class="w-full max-w-sm flex-1 min-h-0 hidden flex-col relative pb-4">
     <div class="idiom-card w-full h-full bg-white rounded-3xl shadow-lg border-t-8 border-[var(--primary-light)] p-6 flex flex-col overflow-y-auto no-scrollbar relative">
       
-      <!-- 進度 -->
       <div class="absolute top-4 right-5 text-xs font-bold text-gray-400">
         <span id="quizIndexDisplay">1</span> / <span id="quizTotalDisplay">0</span>
       </div>
       
       <div class="mt-4 mb-6">
         <span class="bg-[var(--primary-bg)] text-[var(--primary)] text-xs px-3 py-1.5 rounded-md font-bold tracking-wider inline-block mb-4 border border-[var(--primary-border)]"><i class="ph-bold ph-target"></i> 找出對應的慣用語</span>
-        <p class="text-sm font-bold text-gray-400 mb-2">請問以下意思應該用哪一句慣用語？</p>
+        <p class="text-sm font-bold text-gray-400 mb-2">請問以下意思應該用哪句慣用語？</p>
         
-        <!-- 問題 (真正意思) -->
         <div class="bg-[var(--primary-bg)] rounded-2xl p-5 border border-[var(--primary-border)] text-center shadow-inner">
           <p id="quizQuestion" class="text-xl font-bold text-[var(--primary)] leading-snug">--</p>
         </div>
       </div>
 
-      <!-- 選項按鈕區 -->
       <div id="quizOptions" class="flex flex-col gap-3 mt-auto mb-2">
-        <!-- JS 動態生成按鈕 -->
-      </div>
+        </div>
 
     </div>
   </div>
 
   <script>
     let idiomDatabase = [];
-    
-    // 學習模式變數
     let currentIndex = 0;
-    
-    // 測驗模式變數
     let currentMode = 'study';
     let quizQueue = [];
     let currentQuizData = null;
     let isQuizAnswered = false;
+
+    // 🎤 共用音訊播放器
+    const audioPlayer = document.getElementById('globalAudio');
 
     const els = {
       loadingOverlay: document.getElementById('loadingOverlay'),
@@ -214,8 +196,6 @@
       tabQuiz: document.getElementById('tabQuiz'),
       studyArea: document.getElementById('studyArea'),
       quizArea: document.getElementById('quizArea'),
-      
-      // Study UI
       currentIndex: document.getElementById('currentIndex'),
       totalIndex: document.getElementById('totalIndex'),
       koreanIdiom: document.getElementById('koreanIdiom'),
@@ -226,8 +206,6 @@
       exampleKo: document.getElementById('exampleKo'),
       exampleZh: document.getElementById('exampleZh'),
       topikHint: document.getElementById('topikHint'),
-      
-      // Quiz UI
       quizIndexDisplay: document.getElementById('quizIndexDisplay'),
       quizTotalDisplay: document.getElementById('quizTotalDisplay'),
       quizQuestion: document.getElementById('quizQuestion'),
@@ -236,11 +214,11 @@
 
     async function initApp() {
       try {
-        const response = await fetch('idiom.json');
+        const response = await fetch(`idiom.json?v=${new Date().getTime()}`);
         if (!response.ok) throw new Error("HTTP error");
         idiomDatabase = await response.json();
       } catch (error) {
-        console.warn("無法讀取 idiom.json，使用預設資料。");
+        console.warn("使用預設資料。");
         idiomDatabase = [
           { idiom: "귀가 얇다", literal: "耳朵薄", actual: "耳根子軟 / 容易相信別人", example_ko: "그는 귀가 얇다.", example_zh: "他容易信人。", hint: "測試" },
           { idiom: "발이 넓다", literal: "腳很寬", actual: "人脈廣 / 交際廣闊", example_ko: "발이 넓다.", example_zh: "人脈廣。", hint: "測試" },
@@ -256,8 +234,12 @@
       }
     }
 
-    // --- 切換模式 ---
     function switchMode(mode) {
+      // 點擊切換時順便激活播放器授權
+      if (audioPlayer) {
+        audioPlayer.play().then(() => audioPlayer.pause()).catch(() => {});
+      }
+      
       currentMode = mode;
       if (mode === 'study') {
         els.tabStudy.classList.add('active');
@@ -278,9 +260,6 @@
       }
     }
 
-    // ==========================================
-    // 📖 學習模式邏輯
-    // ==========================================
     function loadStudyCard() {
       if(idiomDatabase.length === 0) return;
       const data = idiomDatabase[currentIndex];
@@ -294,8 +273,6 @@
       els.topikHint.innerText = data.hint;
 
       els.actualMeaning.classList.remove('revealed');
-      
-      // 重置按鈕顏色
       els.revealBtn.style.backgroundColor = "var(--primary-bg)";
       els.revealBtn.style.borderColor = "var(--primary-border)";
       
@@ -305,11 +282,8 @@
 
     function revealMeaning() {
       els.actualMeaning.classList.add('revealed');
-      
-      // 揭曉後顏色變深少少
       els.revealBtn.style.backgroundColor = "#E0D9E6";
       els.revealBtn.style.borderColor = "var(--primary-light)";
-      
       els.exampleArea.classList.remove('hidden');
       els.exampleArea.classList.add('flex');
       
@@ -326,16 +300,12 @@
       loadStudyCard();
     }
 
-    // ==========================================
-    // 🎯 測驗模式邏輯
-    // ==========================================
     function startQuizSession() {
       if(idiomDatabase.length < 3) {
         alert("請至少在 idiom.json 準備 3 句慣用語才能開始測驗喔！");
         switchMode('study');
         return;
       }
-      
       quizQueue = [...idiomDatabase].sort(() => Math.random() - 0.5);
       els.quizTotalDisplay.innerText = quizQueue.length;
       loadNextQuiz();
@@ -352,7 +322,6 @@
       currentQuizData = quizQueue[0];
       const currentIndexDisplay = idiomDatabase.length - quizQueue.length + 1;
       els.quizIndexDisplay.innerText = currentIndexDisplay;
-      
       els.quizQuestion.innerText = currentQuizData.actual;
 
       const wrongOptions = idiomDatabase.filter(item => item.idiom !== currentQuizData.idiom).sort(() => 0.5 - Math.random()).slice(0, 2);
@@ -379,7 +348,6 @@
       isQuizAnswered = true;
       
       playAudioText(idiomText, null);
-
       const allBtns = els.quizOptions.querySelectorAll('.quiz-option');
       
       if (isCorrect) {
@@ -399,7 +367,7 @@
     }
 
     // ==========================================
-    // 🔊 發音引擎 (Google TTS)
+    // 🔊 🌟 升級版雙引擎發音系統
     // ==========================================
     function playAudio(mode) {
       const word = mode === 'study' ? idiomDatabase[currentIndex].idiom : currentQuizData.idiom;
@@ -407,13 +375,48 @@
     }
     
     function playAudioText(text, event) {
-      if(event) event.stopPropagation(); 
-      const audioUrl = `https://translate.google.com/translate_tts?ie=UTF-8&tl=ko&client=tw-ob&q=${encodeURIComponent(text)}`;
-      const audio = new Audio(audioUrl);
-      audio.play().catch(e => console.log("播放失敗", e));
+      if (event) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      if (!text) return;
+
+      const engineA = `https://translate.google.com/translate_tts?ie=UTF-8&tl=ko&client=tw-ob&q=${encodeURIComponent(text)}`;
+      const engineB = `https://translate.google.com/translate_tts?ie=UTF-8&tl=ko&client=gtx&q=${encodeURIComponent(text)}`;
+      
+      const p = document.getElementById('globalAudio') || audioPlayer;
+      if (!p) return;
+
+      p.pause();
+      p.src = engineA;
+      
+      p.play().catch(error => {
+        console.warn("慣用語音訊引擎 A 失敗，切換至引擎 B...");
+        p.src = engineB;
+        p.play().catch(e => {
+          console.error("所有慣用語發音引擎均失效");
+        });
+      });
     }
 
     window.onload = initApp;
+  </script>
+
+  <script>
+  (function(doc, nav, standalone) {
+      if ((standalone in nav) && nav[standalone]) {
+          doc.addEventListener('click', function(e) {
+              var el = e.target;
+              while (el && el.nodeName !== 'A') {
+                  el = el.parentNode;
+              }
+              if (el && el.nodeName === 'A' && el.getAttribute('href') && el.hostname === window.location.hostname) {
+                  e.preventDefault();
+                  window.location.href = el.href;
+              }
+          }, false);
+      }
+  })(document, window.navigator, 'standalone');
   </script>
 </body>
 </html>
