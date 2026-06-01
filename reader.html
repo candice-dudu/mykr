@@ -98,10 +98,9 @@
     let articlesDatabase = [];
     let currentArticle = null;
     
-    // --- Google 音頻接力系統變數 ---
+    // --- 瀏覽器原生語音系統變數 ---
     let sentencesQueue = [];
     let currentSentenceIndex = 0;
-    let currentAudioObj = null;
     let isPlaying = false;
 
     const els = {
@@ -187,12 +186,9 @@
       els.listView.classList.remove('hidden');
     }
 
-    // --- 核心：Google 語音接力系統 ---
+    // --- 核心：瀏覽器原生語音接力系統 (Web Speech API) ---
     function stopAudio() {
-      if (currentAudioObj) {
-        currentAudioObj.pause();
-        currentAudioObj = null;
-      }
+      window.speechSynthesis.cancel(); // 強制停止所有原生語音
       isPlaying = false;
       currentSentenceIndex = 0;
       sentencesQueue = [];
@@ -202,12 +198,17 @@
     function toggleAudio() {
       if (isPlaying) {
         // 暫停
-        if (currentAudioObj) currentAudioObj.pause();
+        window.speechSynthesis.pause();
         isPlaying = false;
         updatePlayButtonUI();
       } else {
         // 開始或繼續
-        if (sentencesQueue.length === 0) {
+        if (window.speechSynthesis.paused && sentencesQueue.length > 0) {
+          // 如果是暫停狀態，就恢復播放
+          window.speechSynthesis.resume();
+          isPlaying = true;
+          updatePlayButtonUI();
+        } else if (sentencesQueue.length === 0) {
           // 第一次撳，將文章斬件
           const fullText = currentArticle.title + "。 " + currentArticle.content;
           // 利用 Regex 將文章按 . ? ! 或者換行符號 斬開
@@ -215,12 +216,10 @@
                                    ?.map(s => s.trim())
                                    .filter(s => s.length > 0) || [fullText];
           currentSentenceIndex = 0;
+          
+          // 確保開始前清空之前可能卡住的語音
+          window.speechSynthesis.cancel(); 
           playNextSentence();
-        } else if (currentAudioObj) {
-          // 繼續播
-          currentAudioObj.play();
-          isPlaying = true;
-          updatePlayButtonUI();
         }
       }
     }
@@ -236,28 +235,26 @@
       updatePlayButtonUI();
 
       const textChunk = sentencesQueue[currentSentenceIndex];
-      // 呼叫 Google TTS API (同單字卡一樣)
-      const url = `https://translate.google.com/translate_tts?ie=UTF-8&tl=ko&client=tw-ob&q=${encodeURIComponent(textChunk)}`;
       
-      currentAudioObj = new Audio(url);
-      
+      // 使用瀏覽器原生的 SpeechSynthesisUtterance
+      const utterance = new SpeechSynthesisUtterance(textChunk);
+      utterance.lang = 'ko-KR'; // 設定語言為韓文
+      utterance.rate = 0.9;     // 語速 (1.0 是正常，0.9 稍微慢少少，方便聽讀)
+
       // 讀完一句，自動 index+1 讀下一句 (接力賽)
-      currentAudioObj.onended = () => {
+      utterance.onend = () => {
         currentSentenceIndex++;
         playNextSentence();
       };
 
-      currentAudioObj.onerror = () => {
-        console.warn("此句音檔載入失敗，跳過並朗讀下一句...");
+      utterance.onerror = (e) => {
+        console.warn("此句語音發音失敗，跳過並朗讀下一句...", e);
         currentSentenceIndex++;
         playNextSentence();
       };
 
-      currentAudioObj.play().catch(e => {
-        console.error("播放失敗:", e);
-        isPlaying = false;
-        updatePlayButtonUI();
-      });
+      // 呼叫原生 API 發音
+      window.speechSynthesis.speak(utterance);
     }
 
     function updatePlayButtonUI() {
