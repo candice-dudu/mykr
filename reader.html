@@ -102,6 +102,7 @@
     let sentencesQueue = [];
     let currentSentenceIndex = 0;
     let isPlaying = false;
+    let iosAudioUnlocked = false; // 新增：用於記錄 iOS 是否已經解鎖語音權限
 
     const els = {
       listView: document.getElementById('listView'),
@@ -180,13 +181,24 @@
       stopAudio(); // 重置語音
     }
 
+    // 【iOS 修正 1】: 必須由使用者的第一次觸碰來「無聲喚醒」語音引擎
+    const unlockAudio = () => {
+      if (!iosAudioUnlocked) {
+        window.speechSynthesis.speak(new SpeechSynthesisUtterance(''));
+        iosAudioUnlocked = true;
+      }
+    };
+    // 綁定全螢幕點擊或滑動事件來解鎖
+    document.addEventListener('touchstart', unlockAudio, { once: true });
+    document.addEventListener('click', unlockAudio, { once: true });
+
     function backToList() {
       stopAudio(); 
       els.detailView.classList.replace('flex', 'hidden');
       els.listView.classList.remove('hidden');
     }
 
-    // --- 核心：瀏覽器原生語音接力系統 (Web Speech API) ---
+    // --- 核心：針對行動裝置/iOS 優化的 Web Speech API ---
     function stopAudio() {
       window.speechSynthesis.cancel(); // 強制停止所有原生語音
       isPlaying = false;
@@ -197,37 +209,33 @@
 
     function toggleAudio() {
       if (isPlaying) {
-        // 暫停
-        window.speechSynthesis.pause();
+        // 【iOS 修正 2】: 避開 bug 滿滿的 pause()，改用 cancel() 直接中斷。
+        // 這樣做的額外好處是：下次按「繼續」時，會從這句韓文的開頭重新讀一次。
+        window.speechSynthesis.cancel();
         isPlaying = false;
         updatePlayButtonUI();
       } else {
-        // 開始或繼續
-        if (window.speechSynthesis.paused && sentencesQueue.length > 0) {
-          // 如果是暫停狀態，就恢復播放
-          window.speechSynthesis.resume();
-          isPlaying = true;
-          updatePlayButtonUI();
-        } else if (sentencesQueue.length === 0) {
+        // 開始或繼續播放
+        if (sentencesQueue.length === 0) {
           // 第一次撳，將文章斬件
           const fullText = currentArticle.title + "。 " + currentArticle.content;
-          // 利用 Regex 將文章按 . ? ! 或者換行符號 斬開
           sentencesQueue = fullText.match(/[^.!?\n]+[.!?\n]*/g)
                                    ?.map(s => s.trim())
                                    .filter(s => s.length > 0) || [fullText];
           currentSentenceIndex = 0;
-          
-          // 確保開始前清空之前可能卡住的語音
-          window.speechSynthesis.cancel(); 
-          playNextSentence();
         }
+        
+        // 【iOS 修正 3】: 加入微小延遲 (50 毫秒)。
+        // 為了防止系統連續執行 cancel 後馬上 speak 導致永遠無聲的 Bug
+        setTimeout(() => {
+          playNextSentence();
+        }, 50);
       }
     }
 
     function playNextSentence() {
       if (currentSentenceIndex >= sentencesQueue.length) {
-        // 讀完晒成篇
-        stopAudio();
+        stopAudio(); // 全部讀完
         return;
       }
 
@@ -236,24 +244,29 @@
 
       const textChunk = sentencesQueue[currentSentenceIndex];
       
-      // 使用瀏覽器原生的 SpeechSynthesisUtterance
       const utterance = new SpeechSynthesisUtterance(textChunk);
-      utterance.lang = 'ko-KR'; // 設定語言為韓文
-      utterance.rate = 0.9;     // 語速 (1.0 是正常，0.9 稍微慢少少，方便聽讀)
+      utterance.lang = 'ko-KR'; // 韓文
+      utterance.rate = 0.9;     // 語速
 
-      // 讀完一句，自動 index+1 讀下一句 (接力賽)
       utterance.onend = () => {
-        currentSentenceIndex++;
-        playNextSentence();
+        // 確保只有在正在播放的狀態下才繼續下一句 (避免被 cancel 暫停時還繼續跑)
+        if(isPlaying) {
+          currentSentenceIndex++;
+          playNextSentence();
+        }
       };
 
       utterance.onerror = (e) => {
-        console.warn("此句語音發音失敗，跳過並朗讀下一句...", e);
-        currentSentenceIndex++;
-        playNextSentence();
+        // 如果是被我們的手動暫停(cancel)打斷的，不要當作錯誤
+        if (e.error !== 'canceled') {
+          console.warn("此句發音發生問題:", e);
+          if(isPlaying) {
+            currentSentenceIndex++;
+            playNextSentence();
+          }
+        }
       };
 
-      // 呼叫原生 API 發音
       window.speechSynthesis.speak(utterance);
     }
 
