@@ -158,5 +158,35 @@
     "example_ko": "조금 떨어진 곳에서 볼 때 점들이 섞여 보라색으로 보이도록 한 것이다.", 
     "example_zh": "這是為了讓人在稍遠的地方觀看時，色點會混合在一起，呈現出紫色。", 
     "example_type": "topik"
+  },
+  { 
+    "word": "성장", 
+    "hanja": "[成長]", 
+    "meaning": "增長 / 發展", 
+    "tag": "經濟", 
+    "frequency": 5, 
+    "example_ko": "경제 성장을 위해서는 국가가 시장을 주도해야 한다.", 
+    "example_zh": "為了實現經濟增長，國家必須主導市場。", 
+    "example_type": "topik"
+  },
+  { 
+    "word": "의견", 
+    "hanja": "意見", 
+    "meaning": "意見 / 看法", 
+    "tag": "新聞", 
+    "frequency": 5, 
+    "example_ko": "정치적 사안에 대해 그때드때 의견을 바꾸는 것은 사회 발전을 저해한다.", 
+    "example_zh": "針對政治議題經常隨時改變意見，會阻礙社會的發展。", 
+    "example_type": "topik"
+  },
+    { 
+    "word": "인간", 
+    "hanja": "人間", 
+    "meaning": "人類 / 人", 
+    "tag": "其他", 
+    "frequency": 5, 
+    "example_ko": "시간 부족은 인간의 시야를 좁혀 부정적인 영향을 미칠 수 있다.", 
+    "example_zh": "時間不足會縮窄人類的視野，從而帶來負面影響。", 
+    "example_type": "topik"
   }
 ]
