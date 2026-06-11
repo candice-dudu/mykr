@@ -78,5 +78,85 @@
     "example_ko": "사람들은 구매한 물건을 일상에서 사용함으로써 사회 문제에 대한 입장을 표현한다.", 
     "example_zh": "人們透過在日常生活中使用所購買的物品，來表達自己對社會議題的立場。", 
     "example_type": "topik"
+  },
+     { 
+    "word": "경제", 
+    "hanja": "[經濟]", 
+    "meaning": "經濟", 
+    "tag": "經濟", 
+    "frequency": 5, 
+    "example_ko": "1인 미디어 운영자는 향후 경제 변화를 이끌 핵심 시장으로의 성장이 예상된다.", 
+    "example_zh": "自媒體營運者預計將成長為引領未來經濟轉變的核心市場。", 
+    "example_type": "topik"
+  },
+  { 
+    "word": "다양하다", 
+    "hanja": "[多樣]", 
+    "meaning": "多樣化 / 各式各樣", 
+    "tag": "其他", 
+    "frequency": 5, 
+    "example_ko": "나이가 어린 아이들은 아직 다양한 능력들이 완전히 발달하지 못해 온몸의 감각을 동원하여 정보를 얻는다.", 
+    "example_zh": "年紀較小的兒童由於各項能力尚未發育完全，因此會動用全身的感官來獲取資訊。", 
+    "example_type": "topik"
+  },
+    { 
+    "word": "정책", 
+    "hanja": "[政策]", 
+    "meaning": "政策", 
+    "tag": "社會", 
+    "frequency": 5, 
+    "example_ko": "정부는 일자리를 늘리고자 새로운 정책을 수립했다.", 
+    "example_zh": "政府為了增加就業職位，制定了新的政策。", 
+    "example_type": "topik"
+  },
+   { 
+    "word": "자신", 
+    "hanja": "", 
+    "meaning": "自己", 
+    "tag": "其他", 
+    "frequency": 5, 
+    "example_ko": "자신의 아이가 또래보다 글자를 더 빨리 깨치기를 바라며 문자 교육에 열을 올린다.", 
+    "example_zh": "（家長們）期望自己的孩子能比同齡人更快學會認字，因而熱衷於進行文字教育。", 
+    "example_type": "topik"
+  },
+  { 
+    "word": "새롭다", 
+    "hanja": "", 
+    "meaning": "新", 
+    "tag": "其他", 
+    "frequency": 5, 
+    "example_ko": "아이들은 각자 다른 방법으로 새로운 것들을 해 보면서 자유롭게 놉니다.", 
+    "example_zh": "孩子們各自以不同的方式嘗試新事物，自由自在地玩耍。", 
+    "example_type": "topik"
+  },
+  { 
+    "word": "기술", 
+    "hanja": "[技術]", 
+    "meaning": "技術", 
+    "tag": "科學", 
+    "frequency": 5, 
+    "example_ko": "화성 탐사선에 종이 접기 기술이 유용하게 활용된다", 
+    "example_zh": "摺紙技術在火星探測船上得到了極具價值的應用。", 
+    "example_type": "topik"
+  },
+    { 
+    "word": "내용", 
+    "hanja": "[內容]", 
+    "meaning": "內容", 
+    "tag": "文學", 
+    "frequency": 5, 
+    "example_ko": "내용을 합리적인 방식으로 설명했다.", 
+    "example_zh": "（作者／講者）以合理的方式說明了內容。", 
+    "example_type": "topik"
+  },
+  { 
+    "word": "보이다", 
+    "hanja": "", 
+    "meaning": "呈現 / 看起來", 
+    "tag": "其他", 
+    "frequency": 5, 
+    "example_ko": "조금 떨어진 곳에서 볼 때 점들이 섞여 보라색으로 보이도록 한 것이다.", 
+    "example_zh": "這是為了讓人在稍遠的地方觀看時，色點會混合在一起，呈現出紫色。", 
+    "example_type": "topik"
   }
 ]
