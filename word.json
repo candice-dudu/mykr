@@ -58,5 +58,25 @@
     "example_ko": "", 
     "example_zh": "", 
     "example_type": "normal"
-  }
+  },
+    { 
+    "word": "기업", 
+    "hanja": "企業", 
+    "meaning": "企業", 
+    "tag": "經濟", 
+    "frequency": 5, 
+    "example_ko": "근 시장 환경이 변하면서 의사 결정 속도가 곧 기업의 경쟁력인 시대가 되었다.", 
+    "example_zh": "近期市場環境發生轉變，決策速度已成為企業競爭力的關鍵時代。", 
+    "example_type": "topik"
+  },
+   { 
+    "word": "사회", 
+    "hanja": "社會", 
+    "meaning": "社會", 
+    "tag": "社會", 
+    "frequency": 5, 
+    "example_ko": "사람들은 구매한 물건을 일상에서 사용함으로써 사회 문제에 대한 입장을 표현한다.", 
+    "example_zh": "人們透過在日常生活中使用所購買的物品，來表達自己對社會議題的立場。", 
+    "example_type": "topik"
+  },
 ]
