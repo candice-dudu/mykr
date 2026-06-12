@@ -171,7 +171,7 @@
   },
   { 
     "word": "의견", 
-    "hanja": "意見", 
+    "hanja": "[意見]", 
     "meaning": "意見 / 看法", 
     "tag": "新聞", 
     "frequency": 5, 
@@ -181,12 +181,132 @@
   },
     { 
     "word": "인간", 
-    "hanja": "人間", 
+    "hanja": "[人間]", 
     "meaning": "人類 / 人", 
     "tag": "其他", 
     "frequency": 5, 
     "example_ko": "시간 부족은 인간의 시야를 좁혀 부정적인 영향을 미칠 수 있다.", 
     "example_zh": "時間不足會縮窄人類的視野，從而帶來負面影響。", 
+    "example_type": "topik"
+  },
+  { 
+    "word": "관계", 
+    "hanja": "[關係]", 
+    "meaning": "關係", 
+    "tag": "其他", 
+    "frequency": 5, 
+    "example_ko": "의사소통은 서로의 관계를 유지하고 발전시키는 데 중요한 요인이 된다.", 
+    "example_zh": "溝通是維持和發展彼此關係的重要因素。", 
+    "example_type": "topik"
+  },
+  { 
+    "word": "사업", 
+    "hanja": "[事業]", 
+    "meaning": "計劃 / 項目 / 事業", 
+    "tag": "經濟", 
+    "frequency": 5, 
+    "example_ko": "재학생을 대상으로 한 창업 지원 사업은 사전 교육을 강화하는 방향으로 가야 한다.", 
+    "example_zh": "以在校生為對象的創業支援計劃，應該朝著加強事前培訓的方向發展。", 
+    "example_type": "topik"
+  },
+  { 
+    "word": "최근", 
+    "hanja": "[最近]", 
+    "meaning": "最近", 
+    "tag": "新聞", 
+    "frequency": 5, 
+    "example_ko": "최근 한국의 편의점 업체가 해외로 진출하면서 현지에서 큰 인기를 끌고 있다.", 
+    "example_zh": "最近，韓國的便利店企業進軍海外，在當地大受歡迎。", 
+    "example_type": "topik"
+  },
+  { 
+    "word": "가치", 
+    "hanja": "[價值]", 
+    "meaning": "價值", 
+    "tag": "經濟", 
+    "frequency": 5, 
+    "example_ko": "그들에게 힙합은 자신의 존재 가치를 확인하게 해 주는 의식과도 같다.", 
+    "example_zh": "對他們來說，嘻哈音樂就像是讓他們確認自身存在價值的儀式一樣。", 
+    "example_type": "topik"
+  },
+  { 
+    "word": "제품", 
+    "hanja": "[製品]", 
+    "meaning": "產品", 
+    "tag": "經濟", 
+    "frequency": 5, 
+    "example_ko": "마케팅도 중요하지만 제품의 품질이 더 중요하다.", 
+    "example_zh": "雖然市場營銷也很重要，但產品的品質更為重要。", 
+    "example_type": "topik"
+  },
+  { 
+    "word": "행동", 
+    "hanja": "[行動]", 
+    "meaning": "行為 / 舉動", 
+    "tag": "其他", 
+    "frequency": 5, 
+    "example_ko": "안전을 확인시켜 주기 위한 행동이 오늘날에는 반가움과  존중을 표시하는 인사법이 되었다.", 
+    "example_zh": "為了讓對方確認安全而做出的行為，在今天已經演變成表達高興與尊重的問候方式。", 
+    "example_type": "topik"
+  },
+  { 
+    "word": "비용", 
+    "hanja": "[費用]", 
+    "meaning": "費用 / 金錢 / 開支", 
+    "tag": "經濟", 
+    "frequency": 5, 
+    "example_ko": "동물을 돌보는 데에 시간과 비용이 많이 든다.", 
+    "example_zh": "照顧動物需要花費大量的時間和金錢。", 
+    "example_type": "topik"
+  },
+  { 
+    "word": "지역", 
+    "hanja": "[地域]", 
+    "meaning": "地區 / 區域", 
+    "tag": "新聞", 
+    "frequency": 5, 
+    "example_ko": "승객은 다른 지역에서 온 열차를 탈 때마다 자기 지역의 시간과 열차 시간이 달라 불편을 겪었다.", 
+    "example_zh": "乘客每次搭乘從其他地區駛來的列車時，都因為自己所在地區的時間與列車時間不同而感到不便。", 
+    "example_type": "topik"
+  },
+  { 
+    "word": "기록", 
+    "hanja": "[記錄]", 
+    "meaning": "記錄 / 文獻", 
+    "tag": "新聞", 
+    "frequency": 5, 
+    "example_ko": "심지어 왕이라도 자신과 관련된 기록조차 절대로 볼 수 없었다.", 
+    "example_zh": "甚至連國王本人，也絕對不能查閱與自己相關的記錄。", 
+    "example_type": "topik"
+  },
+   { 
+    "word": "삶", 
+    "hanja": "", 
+    "meaning": "生活 / 生命", 
+    "tag": "其他", 
+    "frequency": 5, 
+    "example_ko": "적정 인구를 계산할 때는 국민들의 삶의 질도 함께 고려해야 합니다.", 
+    "example_zh": "在計算適當人口（數量）時，也必須同時考慮國民的生活質素。", 
+    "example_type": "topik"
+  },
+  { 
+    "word": "삶", 
+    "hanja": "", 
+    "meaning": "生活 / 生命", 
+    "tag": "其他", 
+    "frequency": 5, 
+    "example_ko": "적정 인구를 계산할 때는 국민들의 삶의 질도 함께 고려해야 합니다.", 
+    "example_zh": "在計算適當人口（數量）時，也必須同時考慮國民的生活質素。", 
+    "example_type": "topik"
+  },
+  { 
+    "word": "설명하다", 
+    "hanja": "[說明]", 
+    "meaning": "說明 / 解釋", 
+    "tag": "其他", 
+    "frequency": 5, 
+    "example_ko": "저축의 방식을 가로 저축과 세로 저축으로 나눠 비유하여 설명할 수 있다.", 
+    "example_zh": "我們可以把儲蓄的方式區分為「橫向儲蓄」與「縱向儲蓄」，並以此作比喻來進行說明。", 
     "example_type": "topik"
   }
 ]
