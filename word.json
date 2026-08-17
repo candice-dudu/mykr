@@ -1,312 +1,5594 @@
 [
-  { 
-    "word": "대책", 
-    "hanja": "[對策]", 
-    "meaning": "對策、措施", 
-    "tag": "社會", 
-    "frequency": 5, 
-    "example_ko": "정부는 청년 실업 문제에 대한 대책을 마련해야 한다.", 
-    "example_zh": "政府必須針對青年失業問題制定對策。", 
+  {
+    "word": "사회",
+    "hanja": [
+      "社會"
+    ],
+    "meaning": "社會",
+    "tag": "社會",
+    "frequency": 5,
+    "example_ko": "한국 사회는 빠르게 변하고 있다.",
+    "example_zh": "韓國社會正在快速變化。",
     "example_type": "topik"
   },
-  { 
-    "word": "불가피하다", 
-    "hanja": "[不可避--]", 
-    "meaning": "不可避免的", 
-    "tag": "新聞", 
-    "frequency": 4, 
-    "example_ko": "물가 상승으로 인해 금리 인상이 불가피한 상황입니다.", 
-    "example_zh": "由於物價上漲，升息是不可避免的情況。", 
+  {
+    "word": "경우",
+    "hanja": [
+      "境遇"
+    ],
+    "meaning": "情況、場合",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "이럴 경우에는 어떻게 해야 해?",
+    "example_zh": "在這種情況下應該怎麼做？",
     "example_type": "topik"
   },
-    { 
-    "word": "활성화", 
-    "hanja": "[活性化]", 
-    "meaning": "活絡、活化", 
-    "tag": "經濟", 
-    "frequency": 5, 
-    "example_ko": "전통 시장을 활성화합시다.", 
-    "example_zh": "讓我們活絡傳統市場吧。", 
-    "example_type": "normal" 
-  },
-  { 
-    "word": "우려하다", 
-    "hanja": "[憂慮--]", 
-    "meaning": "擔憂、憂慮", 
-    "tag": "新聞", 
-    "frequency": 4, 
-    "example_ko": "전문가들은 환경 오염의 심각성을 크게 우려하고 있다.", 
-    "example_zh": "專家們非常擔憂環境污染的嚴重性。", 
+  {
+    "word": "그녀",
+    "hanja": [],
+    "meaning": "她；（口語）女朋友",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "그녀는 오늘 도서관에 갔어.",
+    "example_zh": "她今天去了圖書館。",
     "example_type": "topik"
   },
-    { 
-    "word": "기업", 
-    "hanja": "[企業]", 
-    "meaning": "企業", 
-    "tag": "經濟", 
-    "frequency": 5, 
-    "example_ko": "근 시장 환경이 변하면서 의사 결정 속도가 곧 기업의 경쟁력인 시대가 되었다.", 
-    "example_zh": "近期市場環境發生轉變，決策速度已成為企業競爭力的關鍵時代。", 
+  {
+    "word": "인간",
+    "hanja": [
+      "人間"
+    ],
+    "meaning": "人類、人",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "인간은 사회적 동물이다.",
+    "example_zh": "人類是社會性的動物。",
     "example_type": "topik"
   },
-   { 
-    "word": "사회", 
-    "hanja": "[社會]", 
-    "meaning": "社會", 
-    "tag": "社會", 
-    "frequency": 5, 
-    "example_ko": "사람들은 구매한 물건을 일상에서 사용함으로써 사회 문제에 대한 입장을 표현한다.", 
-    "example_zh": "人們透過在日常生活中使用所購買的物品，來表達自己對社會議題的立場。", 
+  {
+    "word": "사실",
+    "hanja": [
+      "事實"
+    ],
+    "meaning": "事實",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "사실은 그가 먼저 시작했어.",
+    "example_zh": "事實是他先開始的。",
     "example_type": "topik"
   },
-     { 
-    "word": "경제", 
-    "hanja": "[經濟]", 
-    "meaning": "經濟", 
-    "tag": "經濟", 
-    "frequency": 5, 
-    "example_ko": "1인 미디어 운영자는 향후 경제 변화를 이끌 핵심 시장으로의 성장이 예상된다.", 
-    "example_zh": "自媒體營運者預計將成長為引領未來經濟轉變的核心市場。", 
+  {
+    "word": "의하다",
+    "hanja": [
+      "依"
+    ],
+    "meaning": "根據；依據",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "결과는 통계에 의한다.",
+    "example_zh": "結果是根據統計。",
     "example_type": "topik"
   },
-    { 
-    "word": "기술", 
-    "hanja": "[技術]", 
-    "meaning": "技術", 
-    "tag": "科學", 
-    "frequency": 5, 
-    "example_ko": "화성 탐사선에 종이 접기 기술이 유용하게 활용된다", 
-    "example_zh": "摺紙技術在火星探測船上得到了極具價值的應用。", 
+  {
+    "word": "시대",
+    "hanja": [
+      "時代"
+    ],
+    "meaning": "時代、年代",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "우리는 새로운 시대에 살고 있다.",
+    "example_zh": "我們生活在新的時代。",
     "example_type": "topik"
   },
-    { 
-    "word": "내용", 
-    "hanja": "[內容]", 
-    "meaning": "內容", 
-    "tag": "文學", 
-    "frequency": 5, 
-    "example_ko": "내용을 합리적인 방식으로 설명했다.", 
-    "example_zh": "（作者／講者）以合理的方式說明了內容。", 
+  {
+    "word": "이러하다",
+    "hanja": [],
+    "meaning": "這樣、如此",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "이러한 상황에서는 조심해야 해.",
+    "example_zh": "在這種情況下要小心。",
     "example_type": "topik"
   },
-  { 
-    "word": "다양하다", 
-    "hanja": "[多樣]", 
-    "meaning": "多樣化 / 各式各樣", 
-    "tag": "其他", 
-    "frequency": 5, 
-    "example_ko": "나이가 어린 아이들은 아직 다양한 능력들이 완전히 발달하지 못해 온몸의 감각을 동원하여 정보를 얻는다.", 
-    "example_zh": "年紀較小的兒童由於各項能力尚未發育完全，因此會動用全身的感官來獲取資訊。", 
+  {
+    "word": "대통령",
+    "hanja": [
+      "大統領"
+    ],
+    "meaning": "總統",
+    "tag": "政治",
+    "frequency": 5,
+    "example_ko": "대통령은 연설을 했다.",
+    "example_zh": "總統發表了演說。",
     "example_type": "topik"
   },
-    { 
-    "word": "정책", 
-    "hanja": "[政策]", 
-    "meaning": "政策", 
-    "tag": "社會", 
-    "frequency": 5, 
-    "example_ko": "정부는 일자리를 늘리고자 새로운 정책을 수립했다.", 
-    "example_zh": "政府為了增加就業職位，制定了新的政策。", 
+  {
+    "word": "정부",
+    "hanja": [
+      "政府"
+    ],
+    "meaning": "政府",
+    "tag": "政治",
+    "frequency": 5,
+    "example_ko": "정부는 새로운 정책을 발표했다.",
+    "example_zh": "政府公布了新的政策。",
     "example_type": "topik"
   },
-  { 
-    "word": "모순", 
-    "hanja": "[矛盾]", 
-    "meaning": "矛盾", 
-    "tag": "抽象", 
-    "frequency": 3, 
-    "example_ko": "그의 말은 모순투성이다.", 
-    "example_zh": "他的話充滿了矛盾。", 
-    "example_type": "normal" 
-  },
-   { 
-    "word": "자신", 
-    "hanja": "", 
-    "meaning": "自己", 
-    "tag": "其他", 
-    "frequency": 5, 
-    "example_ko": "자신의 아이가 또래보다 글자를 더 빨리 깨치기를 바라며 문자 교육에 열을 올린다.", 
-    "example_zh": "（家長們）期望自己的孩子能比同齡人更快學會認字，因而熱衷於進行文字教育。", 
+  {
+    "word": "국가",
+    "hanja": [
+      "國家"
+    ],
+    "meaning": "國家",
+    "tag": "政治",
+    "frequency": 5,
+    "example_ko": "국가는 국민의 안전을 지켜야 한다.",
+    "example_zh": "國家應該保障國民的安全。",
     "example_type": "topik"
   },
-    { 
-    "word": "까다롭다", 
-    "hanja": "", 
-    "meaning": "挑剔的、棘手的", 
-    "tag": "形容詞", 
-    "frequency": 4, 
-    "example_ko": "", 
-    "example_zh": "", 
-    "example_type": "normal"
-  },
-  { 
-    "word": "새롭다", 
-    "hanja": "", 
-    "meaning": "新", 
-    "tag": "其他", 
-    "frequency": 5, 
-    "example_ko": "아이들은 각자 다른 방법으로 새로운 것들을 해 보면서 자유롭게 놉니다.", 
-    "example_zh": "孩子們各自以不同的方式嘗試新事物，自由自在地玩耍。", 
+  {
+    "word": "여성",
+    "hanja": [
+      "女性"
+    ],
+    "meaning": "女性",
+    "tag": "社會",
+    "frequency": 5,
+    "example_ko": "여성의 권리가 중요하다.",
+    "example_zh": "女性的權利很重要。",
     "example_type": "topik"
   },
-  { 
-    "word": "보이다", 
-    "hanja": "", 
-    "meaning": "呈現 / 看起來", 
-    "tag": "其他", 
-    "frequency": 5, 
-    "example_ko": "조금 떨어진 곳에서 볼 때 점들이 섞여 보라색으로 보이도록 한 것이다.", 
-    "example_zh": "這是為了讓人在稍遠的地方觀看時，色點會混合在一起，呈現出紫色。", 
+  {
+    "word": "지역",
+    "hanja": [
+      "地域"
+    ],
+    "meaning": "地區、區域",
+    "tag": "生活",
+    "frequency": 5,
+    "example_ko": "지역 주민들이 모여 회의를 했다.",
+    "example_zh": "地區居民聚在一起開會。",
     "example_type": "topik"
   },
-  { 
-    "word": "성장", 
-    "hanja": "[成長]", 
-    "meaning": "增長 / 發展", 
-    "tag": "經濟", 
-    "frequency": 5, 
-    "example_ko": "경제 성장을 위해서는 국가가 시장을 주도해야 한다.", 
-    "example_zh": "為了實現經濟增長，國家必須主導市場。", 
+  {
+    "word": "모습",
+    "hanja": [],
+    "meaning": "樣子、外貌",
+    "tag": "生活",
+    "frequency": 5,
+    "example_ko": "그의 모습이 많이 변했다.",
+    "example_zh": "他的樣子變了很多。",
     "example_type": "topik"
   },
-  { 
-    "word": "의견", 
-    "hanja": "[意見]", 
-    "meaning": "意見 / 看法", 
-    "tag": "新聞", 
-    "frequency": 5, 
-    "example_ko": "정치적 사안에 대해 그때드때 의견을 바꾸는 것은 사회 발전을 저해한다.", 
-    "example_zh": "針對政治議題經常隨時改變意見，會阻礙社會的發展。", 
+  {
+    "word": "새롭다",
+    "hanja": [],
+    "meaning": "新的、新穎",
+    "tag": "生活",
+    "frequency": 5,
+    "example_ko": "새로운 가게가 문을 열었다.",
+    "example_zh": "新的店舖開門了。",
     "example_type": "topik"
   },
-    { 
-    "word": "인간", 
-    "hanja": "[人間]", 
-    "meaning": "人類 / 人", 
-    "tag": "其他", 
-    "frequency": 5, 
-    "example_ko": "시간 부족은 인간의 시야를 좁혀 부정적인 영향을 미칠 수 있다.", 
-    "example_zh": "時間不足會縮窄人類的視野，從而帶來負面影響。", 
+  {
+    "word": "과정",
+    "hanja": [
+      "過程"
+    ],
+    "meaning": "過程、流程",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "연구 과정에서 많은 문제가 생겼다.",
+    "example_zh": "在研究過程中出現了很多問題。",
     "example_type": "topik"
   },
-  { 
-    "word": "관계", 
-    "hanja": "[關係]", 
-    "meaning": "關係", 
-    "tag": "其他", 
-    "frequency": 5, 
-    "example_ko": "의사소통은 서로의 관계를 유지하고 발전시키는 데 중요한 요인이 된다.", 
-    "example_zh": "溝通是維持和發展彼此關係的重要因素。", 
+  {
+    "word": "삶",
+    "hanja": [],
+    "meaning": "生活、人生",
+    "tag": "生活",
+    "frequency": 5,
+    "example_ko": "삶은 때로 힘들다.",
+    "example_zh": "人生有時很辛苦。",
     "example_type": "topik"
   },
-  { 
-    "word": "사업", 
-    "hanja": "[事業]", 
-    "meaning": "計劃 / 項目 / 事業", 
-    "tag": "經濟", 
-    "frequency": 5, 
-    "example_ko": "재학생을 대상으로 한 창업 지원 사업은 사전 교육을 강화하는 방향으로 가야 한다.", 
-    "example_zh": "以在校生為對象的創業支援計劃，應該朝著加強事前培訓的方向發展。", 
+  {
+    "word": "교육",
+    "hanja": [
+      "敎育"
+    ],
+    "meaning": "教育",
+    "tag": "教育",
+    "frequency": 5,
+    "example_ko": "교육은 사회 발전에 중요하다.",
+    "example_zh": "教育對社會發展很重要。",
     "example_type": "topik"
   },
-  { 
-    "word": "최근", 
-    "hanja": "[最近]", 
-    "meaning": "最近", 
-    "tag": "新聞", 
-    "frequency": 5, 
-    "example_ko": "최근 한국의 편의점 업체가 해외로 진출하면서 현지에서 큰 인기를 끌고 있다.", 
-    "example_zh": "最近，韓國的便利店企業進軍海外，在當地大受歡迎。", 
+  {
+    "word": "경제",
+    "hanja": [
+      "經濟"
+    ],
+    "meaning": "經濟",
+    "tag": "經濟",
+    "frequency": 5,
+    "example_ko": "경제를 살리기 위한 대책이 필요하다.",
+    "example_zh": "需要振興經濟的對策。",
     "example_type": "topik"
   },
-  { 
-    "word": "가치", 
-    "hanja": "[價值]", 
-    "meaning": "價值", 
-    "tag": "經濟", 
-    "frequency": 5, 
-    "example_ko": "그들에게 힙합은 자신의 존재 가치를 확인하게 해 주는 의식과도 같다.", 
-    "example_zh": "對他們來說，嘻哈音樂就像是讓他們確認自身存在價值的儀式一樣。", 
+  {
+    "word": "예술",
+    "hanja": [
+      "藝術"
+    ],
+    "meaning": "藝術",
+    "tag": "藝術",
+    "frequency": 5,
+    "example_ko": "그는 예술을 공부하고 있다.",
+    "example_zh": "他在學習藝術。",
     "example_type": "topik"
   },
-  { 
-    "word": "제품", 
-    "hanja": "[製品]", 
-    "meaning": "產品", 
-    "tag": "經濟", 
-    "frequency": 5, 
-    "example_ko": "마케팅도 중요하지만 제품의 품질이 더 중요하다.", 
-    "example_zh": "雖然市場營銷也很重要，但產品的品質更為重要。", 
+  {
+    "word": "밝히다",
+    "hanja": [],
+    "meaning": "揭露；查明（真相等）",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "그는 사건의 진상을 밝히기 위해 노력했다.",
+    "example_zh": "他為了查明事件的真相而努力。",
     "example_type": "topik"
   },
-  { 
-    "word": "행동", 
-    "hanja": "[行動]", 
-    "meaning": "行為 / 舉動", 
-    "tag": "其他", 
-    "frequency": 5, 
-    "example_ko": "안전을 확인시켜 주기 위한 행동이 오늘날에는 반가움과  존중을 표시하는 인사법이 되었다.", 
-    "example_zh": "為了讓對方確認安全而做出的行為，在今天已經演變成表達高興與尊重的問候方式。", 
+  {
+    "word": "이미",
+    "hanja": [
+      "已經"
+    ],
+    "meaning": "已經",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "나는 이미 그 소식을 들었다.",
+    "example_zh": "我已經聽到那個消息。",
     "example_type": "topik"
   },
-  { 
-    "word": "비용", 
-    "hanja": "[費用]", 
-    "meaning": "費用 / 金錢 / 開支", 
-    "tag": "經濟", 
-    "frequency": 5, 
-    "example_ko": "동물을 돌보는 데에 시간과 비용이 많이 든다.", 
-    "example_zh": "照顧動物需要花費大量的時間和金錢。", 
+  {
+    "word": "정치",
+    "hanja": [
+      "政治"
+    ],
+    "meaning": "政治",
+    "tag": "政治",
+    "frequency": 5,
+    "example_ko": "정치는 국민의 삶에 큰 영향을 준다.",
+    "example_zh": "政治對國民的生活有很大影響。",
     "example_type": "topik"
   },
-  { 
-    "word": "지역", 
-    "hanja": "[地域]", 
-    "meaning": "地區 / 區域", 
-    "tag": "新聞", 
-    "frequency": 5, 
-    "example_ko": "승객은 다른 지역에서 온 열차를 탈 때마다 자기 지역의 시간과 열차 시간이 달라 불편을 겪었다.", 
-    "example_zh": "乘客每次搭乘從其他地區駛來的列車時，都因為自己所在地區的時間與列車時間不同而感到不便。", 
+  {
+    "word": "국민",
+    "hanja": [
+      "國民"
+    ],
+    "meaning": "國民；公民",
+    "tag": "社會",
+    "frequency": 5,
+    "example_ko": "국민들은 선거에 참여할 권리가 있다.",
+    "example_zh": "國民有參與選舉的權利。",
     "example_type": "topik"
   },
-  { 
-    "word": "기록", 
-    "hanja": "[記錄]", 
-    "meaning": "記錄 / 文獻", 
-    "tag": "新聞", 
-    "frequency": 5, 
-    "example_ko": "심지어 왕이라도 자신과 관련된 기록조차 절대로 볼 수 없었다.", 
-    "example_zh": "甚至連國王本人，也絕對不能查閱與自己相關的記錄。", 
+  {
+    "word": "생명",
+    "hanja": [
+      "生命"
+    ],
+    "meaning": "生命；性命",
+    "tag": "醫學",
+    "frequency": 5,
+    "example_ko": "그는 생명을 구하기 위해 헌신했다.",
+    "example_zh": "他為了拯救生命而獻身。",
     "example_type": "topik"
   },
-   { 
-    "word": "삶", 
-    "hanja": "", 
-    "meaning": "生活 / 生命", 
-    "tag": "其他", 
-    "frequency": 5, 
-    "example_ko": "적정 인구를 계산할 때는 국민들의 삶의 질도 함께 고려해야 합니다.", 
-    "example_zh": "在計算適當人口（數量）時，也必須同時考慮國民的生活質素。", 
+  {
+    "word": "연구",
+    "hanja": [
+      "硏究"
+    ],
+    "meaning": "研究；調查",
+    "tag": "科學",
+    "frequency": 5,
+    "example_ko": "그 대학에서는 암 치료법을 연구하고 있다.",
+    "example_zh": "那間大學正在研究癌症治療方法。",
     "example_type": "topik"
   },
-  { 
-    "word": "삶", 
-    "hanja": "", 
-    "meaning": "生活 / 生命", 
-    "tag": "其他", 
-    "frequency": 5, 
-    "example_ko": "적정 인구를 계산할 때는 국민들의 삶의 질도 함께 고려해야 합니다.", 
-    "example_zh": "在計算適當人口（數量）時，也必須同時考慮國民的生活質素。", 
+  {
+    "word": "사건",
+    "hanja": [
+      "事件"
+    ],
+    "meaning": "事件；案子",
+    "tag": "新聞",
+    "frequency": 5,
+    "example_ko": "그 사건은 경찰 수사로 해결되었다.",
+    "example_zh": "那宗事件經警方調查後解決了。",
     "example_type": "topik"
   },
-  { 
-    "word": "설명하다", 
-    "hanja": "[說明]", 
-    "meaning": "說明 / 解釋", 
-    "tag": "其他", 
-    "frequency": 5, 
-    "example_ko": "저축의 방식을 가로 저축과 세로 저축으로 나눠 비유하여 설명할 수 있다.", 
-    "example_zh": "我們可以把儲蓄的方式區分為「橫向儲蓄」與「縱向儲蓄」，並以此作比喻來進行說明。", 
+  {
+    "word": "및",
+    "hanja": [
+      "及"
+    ],
+    "meaning": "以及；和（書面用）",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "보고서에는 문제점 및 해결책이 모두 적혀 있다.",
+    "example_zh": "報告中把問題及解決方法都寫了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "세상",
+    "hanja": [
+      "世上"
+    ],
+    "meaning": "世界；世間",
+    "tag": "生活",
+    "frequency": 5,
+    "example_ko": "그는 세상을 여행하며 많은 것을 배웠다.",
+    "example_zh": "他周遊世界，學到很多東西。",
+    "example_type": "topik"
+  },
+  {
+    "word": "작품",
+    "hanja": [
+      "作品"
+    ],
+    "meaning": "作品（文學或藝術）",
+    "tag": "藝術",
+    "frequency": 5,
+    "example_ko": "이 작가는 새로운 작품을 발표했다.",
+    "example_zh": "這位作家發表了新的作品。",
+    "example_type": "topik"
+  },
+  {
+    "word": "상황",
+    "hanja": [
+      "狀況"
+    ],
+    "meaning": "情況；狀況",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "상황이 나빠지면 계획을 변경하자.",
+    "example_zh": "情況變壞的話就改變計劃吧。",
+    "example_type": "topik"
+  },
+  {
+    "word": "즉",
+    "hanja": [
+      "卽"
+    ],
+    "meaning": "即；也就是（解釋用）",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "그의 말은 즉 행동이 필요하다는 뜻이다.",
+    "example_zh": "他的話就是表示需要行動。",
+    "example_type": "topik"
+  },
+  {
+    "word": "상태",
+    "hanja": [
+      "狀態"
+    ],
+    "meaning": "狀態；情況（物體或人的）",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "기계의 상태를 점검해야 한다.",
+    "example_zh": "要檢查機器的狀態。",
+    "example_type": "topik"
+  },
+  {
+    "word": "이후",
+    "hanja": [
+      "以後"
+    ],
+    "meaning": "之後；以後",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "시험 이후에 여행을 갈 계획이다.",
+    "example_zh": "考試之後計劃去旅行。",
+    "example_type": "topik"
+  },
+  {
+    "word": "문학",
+    "hanja": [
+      "文學"
+    ],
+    "meaning": "文學",
+    "tag": "文學",
+    "frequency": 5,
+    "example_ko": "한국 문학은 다양한 주제를 다룬다.",
+    "example_zh": "韓國文學處理各種不同的主題。",
+    "example_type": "topik"
+  },
+  {
+    "word": "더욱",
+    "hanja": [],
+    "meaning": "更加；更加地",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "이 문제는 더욱 신중히 다뤄야 한다.",
+    "example_zh": "這個問題要更加慎重處理。",
+    "example_type": "topik"
+  },
+  {
+    "word": "최근",
+    "hanja": [
+      "最近"
+    ],
+    "meaning": "最近；近來",
+    "tag": "新聞",
+    "frequency": 5,
+    "example_ko": "최근 날씨가 많이 변했다.",
+    "example_zh": "最近天氣變化很大。",
+    "example_type": "topik"
+  },
+  {
+    "word": "현실",
+    "hanja": [
+      "現實"
+    ],
+    "meaning": "現實；現況",
+    "tag": "社會",
+    "frequency": 5,
+    "example_ko": "꿈과 현실은 다를 때가 많다.",
+    "example_zh": "夢想和現實常常不同。",
+    "example_type": "topik"
+  },
+  {
+    "word": "환경",
+    "hanja": [
+      "環境"
+    ],
+    "meaning": "環境；周遭條件",
+    "tag": "環境",
+    "frequency": 5,
+    "example_ko": "환경 보호는 우리 모두의 책임이다.",
+    "example_zh": "環境保護是我們大家的責任。",
+    "example_type": "topik"
+  },
+  {
+    "word": "남다",
+    "hanja": [],
+    "meaning": "剩下；留下",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "옥상에 몇 개의 상자가 남아 있다.",
+    "example_zh": "屋頂上還剩幾個箱子。",
+    "example_type": "topik"
+  },
+  {
+    "word": "부분",
+    "hanja": [
+      "部分"
+    ],
+    "meaning": "部分；一部分",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "이 책의 첫 부분이 가장 흥미로웠다.",
+    "example_zh": "這本書的第一部分最有趣。",
+    "example_type": "topik"
+  },
+  {
+    "word": "기업",
+    "hanja": [
+      "企業"
+    ],
+    "meaning": "企業；公司",
+    "tag": "經濟",
+    "frequency": 5,
+    "example_ko": "그 기업은 직원 복지가 좋다.",
+    "example_zh": "那間企業的員工福利很好。",
+    "example_type": "topik"
+  },
+  {
+    "word": "변화",
+    "hanja": [
+      "變化"
+    ],
+    "meaning": "變化；改變",
+    "tag": "社會",
+    "frequency": 5,
+    "example_ko": "기후 변화가 전 세계에 영향을 준다.",
+    "example_zh": "氣候變化對全世界有影響。",
+    "example_type": "topik"
+  },
+  {
+    "word": "활동",
+    "hanja": [
+      "活動"
+    ],
+    "meaning": "活動；行動",
+    "tag": "社會",
+    "frequency": 5,
+    "example_ko": "학생들은 동아리 활동에 적극적으로 참여한다.",
+    "example_zh": "學生們積極參加社團活動。",
+    "example_type": "topik"
+  },
+  {
+    "word": "역시",
+    "hanja": [
+      "亦是"
+    ],
+    "meaning": "果然；畢竟；還是",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "그 영화는 역시 재미있었다.",
+    "example_zh": "那部電影果然很有趣。",
+    "example_type": "topik"
+  },
+  {
+    "word": "정신",
+    "hanja": [
+      "精神"
+    ],
+    "meaning": "精神；心智；意識",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "그는 정신을 차리지 못하고 있었다.",
+    "example_zh": "他無法集中精神。",
+    "example_type": "topik"
+  },
+  {
+    "word": "이루다",
+    "hanja": [],
+    "meaning": "達成；完成；組成",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "그는 큰 목표를 이루었다.",
+    "example_zh": "他達成了重大的目標。",
+    "example_type": "topik"
+  },
+  {
+    "word": "기술",
+    "hanja": [
+      "技術"
+    ],
+    "meaning": "技術；技能；技巧",
+    "tag": "科學",
+    "frequency": 5,
+    "example_ko": "이 기술은 생산성을 높이는 데 도움이 된다.",
+    "example_zh": "這項技術有助提高生產力。",
+    "example_type": "topik"
+  },
+  {
+    "word": "전체",
+    "hanja": [
+      "全體"
+    ],
+    "meaning": "整體；全部",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "전체 학생 수는 이백 명이다.",
+    "example_zh": "全體學生人數是兩百人。",
+    "example_type": "topik"
+  },
+  {
+    "word": "얻다",
+    "hanja": [],
+    "meaning": "得到；獲得；取得",
+    "tag": "生活",
+    "frequency": 5,
+    "example_ko": "그는 이번 대회에서 좋은 경험을 얻었다.",
+    "example_zh": "他在這次比賽獲得了很好的經驗。",
+    "example_type": "topik"
+  },
+  {
+    "word": "민족",
+    "hanja": [
+      "民族"
+    ],
+    "meaning": "民族；族群",
+    "tag": "社會",
+    "frequency": 5,
+    "example_ko": "그 나라는 다양한 민족이 함께 산다.",
+    "example_zh": "那個國家有不同民族一起生活。",
+    "example_type": "topik"
+  },
+  {
+    "word": "그대로",
+    "hanja": [],
+    "meaning": "照原樣；就那樣；如實",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "그 물건은 그대로 책상 위에 있다.",
+    "example_zh": "那樣的東西就放在書桌上。",
+    "example_type": "topik"
+  },
+  {
+    "word": "년대",
+    "hanja": [
+      "年代"
+    ],
+    "meaning": "年代；年代期（如1990年代）",
+    "tag": "社會",
+    "frequency": 5,
+    "example_ko": "이 가수는 1990년대에 가장 인기가 있었다.",
+    "example_zh": "這位歌手在1990年代最受歡迎。",
+    "example_type": "topik"
+  },
+  {
+    "word": "구조",
+    "hanja": [
+      "構造"
+    ],
+    "meaning": "結構；構造；架構",
+    "tag": "科學",
+    "frequency": 5,
+    "example_ko": "이 건물의 구조가 매우 튼튼하다.",
+    "example_zh": "這棟建築的結構非常堅固。",
+    "example_type": "topik"
+  },
+  {
+    "word": "결국",
+    "hanja": [
+      "結局"
+    ],
+    "meaning": "結果；最後（表轉折或結論）",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "그는 노력했지만 결국 실패했다.",
+    "example_zh": "他努力了，但最後還是失敗了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "오히려",
+    "hanja": [],
+    "meaning": "反而；倒不如；寧可",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "생각보다 오히려 쉬웠다.",
+    "example_zh": "比想像中反而容易。",
+    "example_type": "topik"
+  },
+  {
+    "word": "이루어지다",
+    "hanja": [],
+    "meaning": "被實現；由……組成；形成（被動）",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "회의는 예정대로 이루어졌다.",
+    "example_zh": "會議按預定舉行了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "바라보다",
+    "hanja": [],
+    "meaning": "看；凝視；注視",
+    "tag": "生活",
+    "frequency": 5,
+    "example_ko": "하늘을 바라보며 소원을 빌었다.",
+    "example_zh": "望著天空許下願望。",
+    "example_type": "topik"
+  },
+  {
+    "word": "알아보다",
+    "hanja": [],
+    "meaning": "認出；打聽；查明",
+    "tag": "生活",
+    "frequency": 5,
+    "example_ko": "그 사람을 멀리서도 알아보았다.",
+    "example_zh": "那個人即使從遠處也認得出來。",
+    "example_type": "topik"
+  },
+  {
+    "word": "산업",
+    "hanja": [
+      "産業"
+    ],
+    "meaning": "產業；工業",
+    "tag": "經濟",
+    "frequency": 5,
+    "example_ko": "그 지역은 자동차 산업이 발달했다.",
+    "example_zh": "那個地區的汽車工業發達。",
+    "example_type": "topik"
+  },
+  {
+    "word": "표정",
+    "hanja": [
+      "表情"
+    ],
+    "meaning": "表情；臉部表情",
+    "tag": "生活",
+    "frequency": 5,
+    "example_ko": "그의 표정이 갑자기 어두워졌다.",
+    "example_zh": "他的表情突然變得沉重。",
+    "example_type": "topik"
+  },
+  {
+    "word": "일부",
+    "hanja": [
+      "一部"
+    ],
+    "meaning": "部分；一部分",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "일부 사람들은 그 계획에 반대했다.",
+    "example_zh": "部分人反對那個計劃。",
+    "example_type": "topik"
+  },
+  {
+    "word": "고개",
+    "hanja": [],
+    "meaning": "頭部；山坡（口語）",
+    "tag": "生活",
+    "frequency": 5,
+    "example_ko": "그는 고개를 숙이고 길을 건넜다.",
+    "example_zh": "他低著頭過了馬路。",
+    "example_type": "topik"
+  },
+  {
+    "word": "세기",
+    "hanja": [
+      "世紀"
+    ],
+    "meaning": "世紀",
+    "tag": "社會",
+    "frequency": 5,
+    "example_ko": "20세기는 큰 변화의 시기였다.",
+    "example_zh": "20世紀是大變革的時期。",
+    "example_type": "topik"
+  },
+  {
+    "word": "향하다",
+    "hanja": [
+      "向"
+    ],
+    "meaning": "朝向；前往",
+    "tag": "生活",
+    "frequency": 5,
+    "example_ko": "열차는 서울을 향해 출발했다.",
+    "example_zh": "列車出發朝首爾前進。",
+    "example_type": "topik"
+  },
+  {
+    "word": "관련",
+    "hanja": [
+      "關聯"
+    ],
+    "meaning": "關聯；有關",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "그 사건과 관련된 증거를 제출했다.",
+    "example_zh": "提交了與那起事件有關的證據。",
+    "example_type": "topik"
+  },
+  {
+    "word": "형태",
+    "hanja": [
+      "形態"
+    ],
+    "meaning": "形態；形式",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "이 제품은 다양한 형태로 제공된다.",
+    "example_zh": "這個產品以多種形態提供。",
+    "example_type": "topik"
+  },
+  {
+    "word": "작업",
+    "hanja": [
+      "作業"
+    ],
+    "meaning": "作業；工作；操作",
+    "tag": "生活",
+    "frequency": 5,
+    "example_ko": "오늘은 중요한 작업을 끝내야 한다.",
+    "example_zh": "今天必須完成重要的工作。",
+    "example_type": "topik"
+  },
+  {
+    "word": "그러하다",
+    "hanja": [],
+    "meaning": "那樣；如此",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "그의 말로 보아 상황이 그러하다.",
+    "example_zh": "從他的話看來，情況就是那樣。",
+    "example_type": "topik"
+  },
+  {
+    "word": "믿다",
+    "hanja": [],
+    "meaning": "相信；信任",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "나는 친구를 끝까지 믿었다.",
+    "example_zh": "我一直相信朋友。",
+    "example_type": "topik"
+  },
+  {
+    "word": "낳다",
+    "hanja": [],
+    "meaning": "生（孩子）；產生",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "그녀는 올해 아들을 낳았다.",
+    "example_zh": "她今年生了一名兒子。",
+    "example_type": "topik"
+  },
+  {
+    "word": "역할",
+    "hanja": [
+      "役割"
+    ],
+    "meaning": "角色；職責",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "그는 팀에서 중요한 역할을 맡고 있다.",
+    "example_zh": "他在團隊中擔任重要角色。",
+    "example_type": "topik"
+  },
+  {
+    "word": "행동",
+    "hanja": [
+      "行動"
+    ],
+    "meaning": "行為；舉止",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "그의 행동은 다른 사람들에게 영향을 미쳤다.",
+    "example_zh": "他的行為影響了其他人。",
+    "example_type": "topik"
+  },
+  {
+    "word": "비하다",
+    "hanja": [
+      "比"
+    ],
+    "meaning": "比；相比",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "작년에 비하면 매출이 늘었다.",
+    "example_zh": "與去年相比，銷售額增加了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "입장",
+    "hanja": [
+      "入場"
+    ],
+    "meaning": "入場；立場（語義多樣，視語境）",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "그는 회사의 입장을 설명했다.",
+    "example_zh": "他說明了公司的立場。",
+    "example_type": "topik"
+  },
+  {
+    "word": "방식",
+    "hanja": [
+      "方式"
+    ],
+    "meaning": "方式；方法",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "이 문제를 해결하는 새로운 방식을 찾아야 한다.",
+    "example_zh": "要找到解決這個問題的新方法。",
+    "example_type": "topik"
+  },
+  {
+    "word": "영향",
+    "hanja": [
+      "影響"
+    ],
+    "meaning": "影響；作用",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "환경 오염은 사람의 건강에 큰 영향을 준다.",
+    "example_zh": "環境污染對人的健康有很大影響。",
+    "example_type": "topik"
+  },
+  {
+    "word": "나서다",
+    "hanja": [],
+    "meaning": "出面；開始行動；介入",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "그는 문제가 생기자 직접 나서서 해결했다.",
+    "example_zh": "他一有問題就親自出面解決。",
+    "example_type": "topik"
+  },
+  {
+    "word": "흐르다",
+    "hanja": [],
+    "meaning": "流動；流淌",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "강물이 천천히 흐른다.",
+    "example_zh": "河水慢慢流動。",
+    "example_type": "topik"
+  },
+  {
+    "word": "깊다",
+    "hanja": [],
+    "meaning": "深；深厚",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "그 호수는 매우 깊다.",
+    "example_zh": "那個湖很深。",
+    "example_type": "topik"
+  },
+  {
+    "word": "조건",
+    "hanja": [
+      "條件"
+    ],
+    "meaning": "條件",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "그는 계약 전에 조건을 꼼꼼히 확인했다.",
+    "example_zh": "他在簽約前仔細確認了條件。",
+    "example_type": "topik"
+  },
+  {
+    "word": "단계",
+    "hanja": [
+      "段階"
+    ],
+    "meaning": "階段；步驟",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "프로젝트는 총 세 단계로 진행된다.",
+    "example_zh": "專案總共分三個階段進行。",
+    "example_type": "topik"
+  },
+  {
+    "word": "올리다",
+    "hanja": [],
+    "meaning": "上傳；提高；送上",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "내가 사진을 인터넷에 올렸어.",
+    "example_zh": "我已經把照片上載到網上。",
+    "example_type": "topik"
+  },
+  {
+    "word": "교사",
+    "hanja": [
+      "敎師"
+    ],
+    "meaning": "教師；老師",
+    "tag": "教育",
+    "frequency": 5,
+    "example_ko": "교사는 학생들의 질문에 성실히 답한다.",
+    "example_zh": "老師誠懇地回答學生的問題。",
+    "example_type": "topik"
+  },
+  {
+    "word": "마을",
+    "hanja": [],
+    "meaning": "村莊；村落",
+    "tag": "社會",
+    "frequency": 5,
+    "example_ko": "우리 마을에는 작은 가게가 많다.",
+    "example_zh": "我們村裡有很多小商店。",
+    "example_type": "topik"
+  },
+  {
+    "word": "대표",
+    "hanja": [
+      "代表"
+    ],
+    "meaning": "代表",
+    "tag": "社會",
+    "frequency": 5,
+    "example_ko": "그는 회사의 대표로 회의에 참석했다.",
+    "example_zh": "他以公司的代表身分出席了會議。",
+    "example_type": "topik"
+  },
+  {
+    "word": "가능성",
+    "hanja": [
+      "可能性"
+    ],
+    "meaning": "可能性",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "이번 방법이 성공할 가능성이 높다.",
+    "example_zh": "這次的方法成功的可能性很高。",
+    "example_type": "topik"
+  },
+  {
+    "word": "방향",
+    "hanja": [
+      "方向"
+    ],
+    "meaning": "方向；方位",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "지도에서 목적지의 방향을 확인했다.",
+    "example_zh": "在地圖上確認了目的地的方向。",
+    "example_type": "topik"
+  },
+  {
+    "word": "노력",
+    "hanja": [
+      "努力"
+    ],
+    "meaning": "努力",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "그녀는 목표를 위해 매일 노력한다.",
+    "example_zh": "她為了目標每天努力。",
+    "example_type": "topik"
+  },
+  {
+    "word": "단체",
+    "hanja": [
+      "團體"
+    ],
+    "meaning": "團體；組織",
+    "tag": "社會",
+    "frequency": 5,
+    "example_ko": "그 단체는 환경 보호 활동을 하고 있다.",
+    "example_zh": "那個團體正在從事環境保護活動。",
+    "example_type": "topik"
+  },
+  {
+    "word": "가능하다",
+    "hanja": [
+      "可能"
+    ],
+    "meaning": "可能；能夠",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "그 계획은 실현 가능하다.",
+    "example_zh": "那個計劃是可以實現的。",
+    "example_type": "topik"
+  },
+  {
+    "word": "자식",
+    "hanja": [
+      "子息"
+    ],
+    "meaning": "子女；孩子",
+    "tag": "社會",
+    "frequency": 5,
+    "example_ko": "부모는 자식에게 좋은 환경을 제공하려고 한다.",
+    "example_zh": "父母想要為孩子提供良好的環境。",
+    "example_type": "topik"
+  },
+  {
+    "word": "주민",
+    "hanja": [
+      "住民"
+    ],
+    "meaning": "居民；住戶",
+    "tag": "社會",
+    "frequency": 5,
+    "example_ko": "이 건물의 주민들이 회의를 열었다.",
+    "example_zh": "這棟建築的居民舉行了會議。",
+    "example_type": "topik"
+  },
+  {
+    "word": "제품",
+    "hanja": [
+      "製品"
+    ],
+    "meaning": "產品；製品",
+    "tag": "經濟",
+    "frequency": 5,
+    "example_ko": "이 회사의 제품은 품질이 좋다.",
+    "example_zh": "這間公司的產品品質很好。",
+    "example_type": "topik"
+  },
+  {
+    "word": "사업",
+    "hanja": [
+      "事業"
+    ],
+    "meaning": "事業；生意",
+    "tag": "經濟",
+    "frequency": 5,
+    "example_ko": "그는 작은 가게로 사업을 시작했다.",
+    "example_zh": "他以一家小店開始了事業。",
+    "example_type": "topik"
+  },
+  {
+    "word": "수준",
+    "hanja": [
+      "水準"
+    ],
+    "meaning": "水準；程度",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "그 학생의 영어 수준이 많이 높아졌다.",
+    "example_zh": "那位學生的英語水準提高了很多。",
+    "example_type": "topik"
+  },
+  {
+    "word": "지난해",
+    "hanja": [],
+    "meaning": "去年",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "지난해 우리는 가족과 함께 여행을 갔다.",
+    "example_zh": "去年我們和家人一起去旅行。",
+    "example_type": "topik"
+  },
+  {
+    "word": "기능",
+    "hanja": [
+      "機能"
+    ],
+    "meaning": "功能；機能",
+    "tag": "科學",
+    "frequency": 5,
+    "example_ko": "이 기계의 기능을 제대로 설명해 주세요.",
+    "example_zh": "請把這台機器的功能好好說明。",
+    "example_type": "topik"
+  },
+  {
+    "word": "순간",
+    "hanja": [
+      "瞬間"
+    ],
+    "meaning": "瞬間；片刻",
+    "tag": "其他",
+    "frequency": 5,
+    "example_ko": "그 순간 모든 소음이 사라졌다.",
+    "example_zh": "那一瞬間所有的噪音都消失了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "전쟁",
+    "hanja": [
+      "戰爭"
+    ],
+    "meaning": "戰爭",
+    "tag": "政治",
+    "frequency": 5,
+    "example_ko": "그 나라는 오랜 전쟁을 겪었다.",
+    "example_zh": "那個國家經歷了長期的戰爭。",
+    "example_type": "topik"
+  },
+  {
+    "word": "연극",
+    "hanja": [
+      "演劇"
+    ],
+    "meaning": "戲劇；劇場表演",
+    "tag": "藝術",
+    "frequency": 4,
+    "example_ko": "어제 연극을 보러 갔는데 배우 연기가 정말 인상적이었다.",
+    "example_zh": "昨天去看了戲劇，演員的演技真的令人印象深刻。",
+    "example_type": "topik"
+  },
+  {
+    "word": "마찬가지",
+    "hanja": [],
+    "meaning": "一樣；同樣",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "네가 힘들다고 했지만 나도 마찬가지야.",
+    "example_zh": "你說很辛苦，但我也一樣。",
+    "example_type": "topik"
+  },
+  {
+    "word": "노동",
+    "hanja": [
+      "勞動"
+    ],
+    "meaning": "勞動；工作",
+    "tag": "經濟",
+    "frequency": 4,
+    "example_ko": "노동 시간이 길어지면 피로가 쌓인다.",
+    "example_zh": "勞動時間變長的話會累積疲勞。",
+    "example_type": "topik"
+  },
+  {
+    "word": "이때",
+    "hanja": [],
+    "meaning": "這時；此時",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "이때 결정을 잘해야 문제가 없다.",
+    "example_zh": "這時候決定好就不會有問題。",
+    "example_type": "topik"
+  },
+  {
+    "word": "가치",
+    "hanja": [
+      "價値"
+    ],
+    "meaning": "價值；價值觀",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "그 작품의 가치는 시간이 지나도 변하지 않는다.",
+    "example_zh": "那件作品的價值即使過了時間也不會改變。",
+    "example_type": "topik"
+  },
+  {
+    "word": "현대",
+    "hanja": [
+      "現代"
+    ],
+    "meaning": "現代；當代",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "현대 사회는 기술이 빠르게 발전하고 있다.",
+    "example_zh": "現代社會的技術正在快速發展。",
+    "example_type": "topik"
+  },
+  {
+    "word": "살펴보다",
+    "hanja": [],
+    "meaning": "檢查；察看；觀察",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "문제를 자세히 살펴봐야 해결할 수 있다.",
+    "example_zh": "必須仔細檢視問題才能解決。",
+    "example_type": "topik"
+  },
+  {
+    "word": "차이",
+    "hanja": [
+      "差異"
+    ],
+    "meaning": "差異；不同",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "두 제품 사이에는 성능에 큰 차이가 있다.",
+    "example_zh": "兩個產品之間在性能上有很大的差異。",
+    "example_type": "topik"
+  },
+  {
+    "word": "근데",
+    "hanja": [],
+    "meaning": "順便說；話說回來（口語）",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "영화가 재미있었어, 근데 너무 길었어.",
+    "example_zh": "電影很有趣，但太長了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "작가",
+    "hanja": [
+      "作家"
+    ],
+    "meaning": "作家；作者",
+    "tag": "文學",
+    "frequency": 4,
+    "example_ko": "그 작가는 사회 현실을 주제로 소설을 쓴다.",
+    "example_zh": "那位作家以社會現實為主題寫小說。",
+    "example_type": "topik"
+  },
+  {
+    "word": "효과",
+    "hanja": [
+      "效果"
+    ],
+    "meaning": "效果；效用",
+    "tag": "科學",
+    "frequency": 4,
+    "example_ko": "약의 효과를 확인하려면 실험이 필요하다.",
+    "example_zh": "要確認藥的效果需要實驗。",
+    "example_type": "topik"
+  },
+  {
+    "word": "불교",
+    "hanja": [
+      "佛敎"
+    ],
+    "meaning": "佛教",
+    "tag": "社會",
+    "frequency": 4,
+    "example_ko": "불교 문화는 한국 역사에 큰 영향을 주었다.",
+    "example_zh": "佛教文化對韓國歷史有很大的影響。",
+    "example_type": "topik"
+  },
+  {
+    "word": "끌다",
+    "hanja": [],
+    "meaning": "拉；吸引（注意等）",
+    "tag": "生活",
+    "frequency": 4,
+    "example_ko": "그 광고는 사람들의 관심을 끌었다.",
+    "example_zh": "那則廣告吸引了人們的注意。",
+    "example_type": "topik"
+  },
+  {
+    "word": "우주",
+    "hanja": [
+      "宇宙"
+    ],
+    "meaning": "宇宙；太空",
+    "tag": "科學",
+    "frequency": 4,
+    "example_ko": "과학자들은 우주의 기원을 연구하고 있다.",
+    "example_zh": "科學家們正在研究宇宙的起源。",
+    "example_type": "topik"
+  },
+  {
+    "word": "마치",
+    "hanja": [],
+    "meaning": "彷彿；好像",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "그는 마치 아무 일도 없었다는 듯이 웃었다.",
+    "example_zh": "他彷彿什麼事也沒發生一樣地笑了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "생산",
+    "hanja": [
+      "生産"
+    ],
+    "meaning": "生產；製造",
+    "tag": "經濟",
+    "frequency": 4,
+    "example_ko": "공장은 하루에 많은 상품을 생산한다.",
+    "example_zh": "工廠每天生產很多商品。",
+    "example_type": "topik"
+  },
+  {
+    "word": "강하다",
+    "hanja": [],
+    "meaning": "強；強烈",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "그는 의지가 강하다.",
+    "example_zh": "他意志堅強。",
+    "example_type": "topik"
+  },
+  {
+    "word": "나타내다",
+    "hanja": [],
+    "meaning": "表現；顯示；表示",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "그 화가는 작품으로 자신의 감정을 나타낸다.",
+    "example_zh": "那位畫家用作品表現自己的感情。",
+    "example_type": "topik"
+  },
+  {
+    "word": "다양하다",
+    "hanja": [],
+    "meaning": "多樣；各式各樣",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "이 가게에는 색깔이 다양한 옷이 많다.",
+    "example_zh": "這間店有很多顏色各異的衣服。",
+    "example_type": "topik"
+  },
+  {
+    "word": "농민",
+    "hanja": [
+      "農民"
+    ],
+    "meaning": "農民；農夫",
+    "tag": "社會",
+    "frequency": 4,
+    "example_ko": "농민들은 제철에 맞춰 농사를 짓는다.",
+    "example_zh": "農民們依季節種田。",
+    "example_type": "topik"
+  },
+  {
+    "word": "법",
+    "hanja": [
+      "法"
+    ],
+    "meaning": "法律；法規",
+    "tag": "政治",
+    "frequency": 4,
+    "example_ko": "새로운 법이 다음 달부터 시행된다.",
+    "example_zh": "新法律將於下個月開始施行。",
+    "example_type": "topik"
+  },
+  {
+    "word": "질서",
+    "hanja": [
+      "秩序"
+    ],
+    "meaning": "秩序；規矩",
+    "tag": "社會",
+    "frequency": 4,
+    "example_ko": "공공 장소에서는 질서를 지켜야 한다.",
+    "example_zh": "在公共場所要保持秩序。",
+    "example_type": "topik"
+  },
+  {
+    "word": "담다",
+    "hanja": [],
+    "meaning": "裝、盛（放進容器）",
+    "tag": "生活",
+    "frequency": 4,
+    "example_ko": "밥을 도시락에 담아 가져가자.",
+    "example_zh": "把飯裝進便當盒帶去吧。",
+    "example_type": "topik"
+  },
+  {
+    "word": "회장",
+    "hanja": [
+      "會長"
+    ],
+    "meaning": "會長；董事長（社團或組織的首長）",
+    "tag": "社會",
+    "frequency": 4,
+    "example_ko": "이번 회장 선거에 누구가 출마했어?",
+    "example_zh": "這次會長選舉誰參加了？",
+    "example_type": "topik"
+  },
+  {
+    "word": "스스로",
+    "hanja": [],
+    "meaning": "自己；親自（靠自己）",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "스스로 문제를 해결해야 한다.",
+    "example_zh": "要自己解決問題。",
+    "example_type": "topik"
+  },
+  {
+    "word": "제대로",
+    "hanja": [],
+    "meaning": "好好地、正確地",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "숙제를 제대로 하지 않아서 선생님이 화냈다.",
+    "example_zh": "因為沒好好做功課，老師生氣了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "던지다",
+    "hanja": [],
+    "meaning": "丟、投擲",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "그는 공을 세게 던졌다.",
+    "example_zh": "他把球用力丟了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "맡다",
+    "hanja": [],
+    "meaning": "負責、承擔（任務或工作）",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "이번 프로젝트를 내가 맡을게.",
+    "example_zh": "這次專案我來負責。",
+    "example_type": "topik"
+  },
+  {
+    "word": "한편",
+    "hanja": [],
+    "meaning": "一方面；另一方面",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "한편으로는 공부하고, 한편으로는 아르바이트를 한다.",
+    "example_zh": "一方面讀書，一方面打工。",
+    "example_type": "topik"
+  },
+  {
+    "word": "훨씬",
+    "hanja": [],
+    "meaning": "更……得多；遠遠（表示差距）",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "이번 시험은 지난번보다 훨씬 쉬웠다.",
+    "example_zh": "這次考試比上次容易得多。",
+    "example_type": "topik"
+  },
+  {
+    "word": "면",
+    "hanja": [
+      "麵",
+      "面"
+    ],
+    "meaning": "麵（麵食）；一面、方面",
+    "tag": "生活",
+    "frequency": 4,
+    "example_ko": "한국에서는 면 요리를 자주 먹는다.",
+    "example_zh": "在韓國經常吃麵食。",
+    "example_type": "topik"
+  },
+  {
+    "word": "통일",
+    "hanja": [
+      "統一"
+    ],
+    "meaning": "統一（指國家或地區的統一）",
+    "tag": "政治",
+    "frequency": 4,
+    "example_ko": "통일 문제는 오랜 시간 논의되어 왔다.",
+    "example_zh": "統一問題已經討論了很長一段時間。",
+    "example_type": "topik"
+  },
+  {
+    "word": "대신",
+    "hanja": [
+      "代身"
+    ],
+    "meaning": "代替；作為代替（替代某人或某事）",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "너 대신 내가 그 일을 하겠다.",
+    "example_zh": "我會替你做那份工作。",
+    "example_type": "topik"
+  },
+  {
+    "word": "원인",
+    "hanja": [
+      "原因"
+    ],
+    "meaning": "原因；起因",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "사고의 원인을 조사 중이다.",
+    "example_zh": "正在調查事故的原因。",
+    "example_type": "topik"
+  },
+  {
+    "word": "차례",
+    "hanja": [
+      "次例"
+    ],
+    "meaning": "次序；輪到；順序",
+    "tag": "生活",
+    "frequency": 4,
+    "example_ko": "자기 차례가 올 때까지 기다려.",
+    "example_zh": "等到自己輪到為止。",
+    "example_type": "topik"
+  },
+  {
+    "word": "재산",
+    "hanja": [
+      "財産"
+    ],
+    "meaning": "財產；資產",
+    "tag": "經濟",
+    "frequency": 4,
+    "example_ko": "그는 재산을 모두 기부했다.",
+    "example_zh": "他把財產全部捐出了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "언어",
+    "hanja": [
+      "言語"
+    ],
+    "meaning": "語言（口語或文字系統）",
+    "tag": "教育",
+    "frequency": 4,
+    "example_ko": "새로운 언어를 배우는 것은 어렵다.",
+    "example_zh": "學習新語言很難。",
+    "example_type": "topik"
+  },
+  {
+    "word": "감독",
+    "hanja": [
+      "監督"
+    ],
+    "meaning": "導演；監督（電影、드라마等負責人）",
+    "tag": "藝術",
+    "frequency": 4,
+    "example_ko": "그 감독은 유명한 영화를 만들었다.",
+    "example_zh": "那位導演拍了知名的電影。",
+    "example_type": "topik"
+  },
+  {
+    "word": "사실",
+    "hanja": [
+      "事實"
+    ],
+    "meaning": "事實；實情",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "그의 말은 사실과 다르다.",
+    "example_zh": "他的說法與事實不同。",
+    "example_type": "topik"
+  },
+  {
+    "word": "당하다",
+    "hanja": [],
+    "meaning": "遭受；受到（不好的事發生在某人身上）",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "그는 사기를 당했다.",
+    "example_zh": "他被騙了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "일으키다",
+    "hanja": [],
+    "meaning": "扶起；使...站起；引起",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "아기가 넘어지자 엄마가 아기를 일으켰다.",
+    "example_zh": "嬰兒跌倒後媽媽把嬰兒扶起來。",
+    "example_type": "topik"
+  },
+  {
+    "word": "일단",
+    "hanja": [
+      "一旦"
+    ],
+    "meaning": "首先；暫且、先",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "일단 기초부터 배우자.",
+    "example_zh": "首先從基礎學起吧。",
+    "example_type": "topik"
+  },
+  {
+    "word": "공장",
+    "hanja": [
+      "工廠"
+    ],
+    "meaning": "工廠",
+    "tag": "經濟",
+    "frequency": 4,
+    "example_ko": "그 회사는 새로운 공장을 지었다.",
+    "example_zh": "那家公司蓋了新的工廠。",
+    "example_type": "topik"
+  },
+  {
+    "word": "변하다",
+    "hanja": [],
+    "meaning": "改變；變化",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "날씨가 갑자기 변했다.",
+    "example_zh": "天氣突然變了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "그래도",
+    "hanja": [],
+    "meaning": "儘管如此；還是",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "비싸다. 그래도 사고 싶다.",
+    "example_zh": "很貴，但我還是想買。",
+    "example_type": "topik"
+  },
+  {
+    "word": "아무리",
+    "hanja": [],
+    "meaning": "不管多麼；不論如何",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "아무리 노력해도 결과가 같았다.",
+    "example_zh": "不管怎麼努力，結果都一樣。",
+    "example_type": "topik"
+  },
+  {
+    "word": "맞추다",
+    "hanja": [],
+    "meaning": "對準；調整；組裝",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "아이들이 퍼즐을 맞추고 있다.",
+    "example_zh": "孩子們正在拼拼圖。",
+    "example_type": "topik"
+  },
+  {
+    "word": "일반",
+    "hanja": [
+      "一般"
+    ],
+    "meaning": "一般；普通",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "그는 일반 회사원이다.",
+    "example_zh": "他是普通公司職員。",
+    "example_type": "topik"
+  },
+  {
+    "word": "막다",
+    "hanja": [],
+    "meaning": "擋住；阻止；封鎖",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "경찰이 길을 막았다.",
+    "example_zh": "警察封鎖了道路。",
+    "example_type": "topik"
+  },
+  {
+    "word": "달리",
+    "hanja": [],
+    "meaning": "另外；不同地",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "그 문제는 달리 해결할 방법이 없다.",
+    "example_zh": "對那個問題沒有其他解決方法。",
+    "example_type": "topik"
+  },
+  {
+    "word": "전국",
+    "hanja": [
+      "全國"
+    ],
+    "meaning": "全國",
+    "tag": "社會",
+    "frequency": 4,
+    "example_ko": "전국에 비가 내렸다.",
+    "example_zh": "全國下雨了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "가정",
+    "hanja": [
+      "家庭"
+    ],
+    "meaning": "家庭；家",
+    "tag": "生活",
+    "frequency": 4,
+    "example_ko": "가정의 역할이 중요하다.",
+    "example_zh": "家庭的角色很重要。",
+    "example_type": "topik"
+  },
+  {
+    "word": "빠지다",
+    "hanja": [],
+    "meaning": "掉入；陷入；迷上；缺席／落下",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "그는 그녀에게 빠졌다.",
+    "example_zh": "他愛上了她。",
+    "example_type": "topik"
+  },
+  {
+    "word": "오늘날",
+    "hanja": [],
+    "meaning": "現今；如今；今天",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "오늘날 사람들은 스마트폰을 자주 사용한다.",
+    "example_zh": "現今人們經常使用智能手機。",
+    "example_type": "topik"
+  },
+  {
+    "word": "대다",
+    "hanja": [],
+    "meaning": "碰觸；接觸；（大致）估算",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "문에 손을 대지 마.",
+    "example_zh": "不要碰門。",
+    "example_type": "topik"
+  },
+  {
+    "word": "식",
+    "hanja": [
+      "式"
+    ],
+    "meaning": "公式；方法；式",
+    "tag": "科學",
+    "frequency": 4,
+    "example_ko": "이 식을 풀어 보자.",
+    "example_zh": "我們來解這個公式。",
+    "example_type": "topik"
+  },
+  {
+    "word": "의견",
+    "hanja": [
+      "意見"
+    ],
+    "meaning": "意見；看法",
+    "tag": "社會",
+    "frequency": 4,
+    "example_ko": "회의에서 의견을 말했다.",
+    "example_zh": "他在會議上發表了意見。",
+    "example_type": "topik"
+  },
+  {
+    "word": "무대",
+    "hanja": [
+      "舞台"
+    ],
+    "meaning": "舞台",
+    "tag": "藝術",
+    "frequency": 4,
+    "example_ko": "배우가 무대 위에 올랐다.",
+    "example_zh": "演員登上了舞台。",
+    "example_type": "topik"
+  },
+  {
+    "word": "주장",
+    "hanja": [
+      "主張"
+    ],
+    "meaning": "主張；主張的意見；（隊）隊長",
+    "tag": "社會",
+    "frequency": 4,
+    "example_ko": "그는 자신의 주장을 끝까지 지켰다.",
+    "example_zh": "他堅持自己的主張到底。",
+    "example_type": "topik"
+  },
+  {
+    "word": "인하다",
+    "hanja": [
+      "因"
+    ],
+    "meaning": "由於；因為；起因於",
+    "tag": "社會",
+    "frequency": 4,
+    "example_ko": "교통사고는 과속으로 인한 것이다.",
+    "example_zh": "交通事故是因為超速造成的。",
+    "example_type": "topik"
+  },
+  {
+    "word": "잇다",
+    "hanja": [],
+    "meaning": "連接；接續",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "두 마을을 잇는 다리가 완공되었다.",
+    "example_zh": "連接兩個村落的橋已經完工。",
+    "example_type": "topik"
+  },
+  {
+    "word": "태도",
+    "hanja": [
+      "態度"
+    ],
+    "meaning": "態度；姿態",
+    "tag": "社會",
+    "frequency": 4,
+    "example_ko": "그는 수업에서 항상 무례한 태도를 보인다.",
+    "example_zh": "他在課堂上總是表現出無禮的態度。",
+    "example_type": "topik"
+  },
+  {
+    "word": "남성",
+    "hanja": [
+      "男性"
+    ],
+    "meaning": "男性；男士；男生",
+    "tag": "社會",
+    "frequency": 4,
+    "example_ko": "남성 참가자는 모두 신분증을 제시해야 한다.",
+    "example_zh": "男性參加者都必須出示身分證。",
+    "example_type": "topik"
+  },
+  {
+    "word": "대책",
+    "hanja": [
+      "對策"
+    ],
+    "meaning": "對策；應對措施",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "정부는 실업 문제에 대한 대책을 발표했다.",
+    "example_zh": "政府公佈了針對失業問題的對策。",
+    "example_type": "topik"
+  },
+  {
+    "word": "각각",
+    "hanja": [
+      "各各"
+    ],
+    "meaning": "各自；各別；分別",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "학생들은 각각 다른 주제를 발표했다.",
+    "example_zh": "學生們各自發表了不同的主題。",
+    "example_type": "topik"
+  },
+  {
+    "word": "결코",
+    "hanja": [],
+    "meaning": "絕不；決不",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "나는 그 약속을 결코 잊지 않을 것이다.",
+    "example_zh": "我絕不會忘記那個約定。",
+    "example_type": "topik"
+  },
+  {
+    "word": "경쟁",
+    "hanja": [
+      "競爭"
+    ],
+    "meaning": "競爭；比賽",
+    "tag": "社會",
+    "frequency": 4,
+    "example_ko": "두 회사가 시장에서 치열하게 경쟁하고 있다.",
+    "example_zh": "兩間公司在市場上激烈競爭。",
+    "example_type": "topik"
+  },
+  {
+    "word": "아니",
+    "hanja": [],
+    "meaning": "不；不是；不是的",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "아니, 그건 내가 한 일이 아니다.",
+    "example_zh": "不，那不是我做的事。",
+    "example_type": "topik"
+  },
+  {
+    "word": "자라다",
+    "hanja": [],
+    "meaning": "長大；成長；生長",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "나는 시골에서 자랐다.",
+    "example_zh": "我在鄉下長大。",
+    "example_type": "topik"
+  },
+  {
+    "word": "구체적",
+    "hanja": [
+      "具體的"
+    ],
+    "meaning": "具體的；詳細的",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "구체적인 계획을 세워야 한다.",
+    "example_zh": "要制定具體的計畫。",
+    "example_type": "topik"
+  },
+  {
+    "word": "기회",
+    "hanja": [
+      "機會"
+    ],
+    "meaning": "機會；時機",
+    "tag": "生活",
+    "frequency": 4,
+    "example_ko": "해외에서 일할 기회를 얻었다.",
+    "example_zh": "我獲得了在海外工作的機會。",
+    "example_type": "topik"
+  },
+  {
+    "word": "지구",
+    "hanja": [
+      "地球"
+    ],
+    "meaning": "地球；地球圈",
+    "tag": "科學",
+    "frequency": 4,
+    "example_ko": "지구 온난화가 심각해지고 있다.",
+    "example_zh": "地球暖化變得嚴重。",
+    "example_type": "topik"
+  },
+  {
+    "word": "소비자",
+    "hanja": [
+      "消費者"
+    ],
+    "meaning": "消費者；顧客",
+    "tag": "經濟",
+    "frequency": 4,
+    "example_ko": "소비자는 상품의 품질을 먼저 본다.",
+    "example_zh": "消費者首先會看商品的品質。",
+    "example_type": "topik"
+  },
+  {
+    "word": "기준",
+    "hanja": [
+      "基準"
+    ],
+    "meaning": "基準；標準；準則",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "합격 기준을 미리 공지했다.",
+    "example_zh": "已事先公佈合格標準。",
+    "example_type": "topik"
+  },
+  {
+    "word": "반드시",
+    "hanja": [],
+    "meaning": "一定；必定；務必",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "내일 회의에 반드시 참석해.",
+    "example_zh": "明天會議一定要出席。",
+    "example_type": "topik"
+  },
+  {
+    "word": "갖추다",
+    "hanja": [],
+    "meaning": "具備；配備；準備好",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "그 회사는 최신 설비를 갖추고 있다.",
+    "example_zh": "那間公司具備最新的設備。",
+    "example_type": "topik"
+  },
+  {
+    "word": "받아들이다",
+    "hanja": [],
+    "meaning": "接受；接納；採納",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "회사는 그의 제안을 결국 받아들였다.",
+    "example_zh": "公司最終接受了他的提案。",
+    "example_type": "topik"
+  },
+  {
+    "word": "현장",
+    "hanja": [
+      "現場"
+    ],
+    "meaning": "現場；實地；工地",
+    "tag": "社會",
+    "frequency": 4,
+    "example_ko": "기자는 사고 현장을 취재했다.",
+    "example_zh": "記者採訪了事故現場。",
+    "example_type": "topik"
+  },
+  {
+    "word": "건설",
+    "hanja": [
+      "建設"
+    ],
+    "meaning": "建設；興建；施工",
+    "tag": "經濟",
+    "frequency": 4,
+    "example_ko": "회사는 새 공장 건설을 시작했다.",
+    "example_zh": "公司開始興建新工廠。",
+    "example_type": "topik"
+  },
+  {
+    "word": "노동자",
+    "hanja": [
+      "勞動者"
+    ],
+    "meaning": "勞動者；工人；勞工",
+    "tag": "社會",
+    "frequency": 4,
+    "example_ko": "노동자들은 더 나은 근로 조건을 요구했다.",
+    "example_zh": "勞工要求更好的勞動條件。",
+    "example_type": "topik"
+  },
+  {
+    "word": "완전히",
+    "hanja": [
+      "完全"
+    ],
+    "meaning": "完全地；徹底地",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "문제가 완전히 해결되었다.",
+    "example_zh": "問題已經完全解決了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "한마디",
+    "hanja": [],
+    "meaning": "一句話；一句話的話",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "그에게 한마디만 해 줘.",
+    "example_zh": "只跟他說一句話。",
+    "example_type": "topik"
+  },
+  {
+    "word": "대중",
+    "hanja": [
+      "大衆"
+    ],
+    "meaning": "大眾；公眾",
+    "tag": "社會",
+    "frequency": 4,
+    "example_ko": "대중의 의견을 무시하면 안 된다.",
+    "example_zh": "不能忽視大眾的意見。",
+    "example_type": "topik"
+  },
+  {
+    "word": "늘어나다",
+    "hanja": [],
+    "meaning": "增加；增長；延伸",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "인구가 빠르게 늘어났다.",
+    "example_zh": "人口迅速增加了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "각종",
+    "hanja": [
+      "各種"
+    ],
+    "meaning": "各種；各式各樣的",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "각종 서류를 준비해야 한다.",
+    "example_zh": "要準備各種文件。",
+    "example_type": "topik"
+  },
+  {
+    "word": "빛",
+    "hanja": [],
+    "meaning": "光；光線",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "빛이 방 안에 들어왔다.",
+    "example_zh": "光線進入了房間。",
+    "example_type": "topik"
+  },
+  {
+    "word": "아니",
+    "hanja": [],
+    "meaning": "不，否定（口語）",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "아니, 나는 모른다.",
+    "example_zh": "不是，我不知道。",
+    "example_type": "topik"
+  },
+  {
+    "word": "피하다",
+    "hanja": [
+      "避"
+    ],
+    "meaning": "避開；躲避；避免",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "문제를 피하지 말고 해결해야 한다.",
+    "example_zh": "不要逃避問題，要去解決。",
+    "example_type": "topik"
+  },
+  {
+    "word": "거치다",
+    "hanja": [],
+    "meaning": "經過；通過；遭遇",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "그는 군 복무를 거쳤다.",
+    "example_zh": "他服過兵役。",
+    "example_type": "topik"
+  },
+  {
+    "word": "나아가다",
+    "hanja": [],
+    "meaning": "前進；繼續前進；向前發展",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "문제를 해결하고 나아가야 한다.",
+    "example_zh": "要解決問題然後繼續前進。",
+    "example_type": "topik"
+  },
+  {
+    "word": "지식",
+    "hanja": [
+      "知識"
+    ],
+    "meaning": "知識；學識",
+    "tag": "教育",
+    "frequency": 4,
+    "example_ko": "지식을 쌓는 것은 중요하다.",
+    "example_zh": "累積知識很重要。",
+    "example_type": "topik"
+  },
+  {
+    "word": "여전히",
+    "hanja": [
+      "如前"
+    ],
+    "meaning": "仍然；依舊",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "그는 여전히 그 자리에 앉아 있다.",
+    "example_zh": "他仍然坐在那個位置。",
+    "example_type": "topik"
+  },
+  {
+    "word": "선",
+    "hanja": [
+      "線"
+    ],
+    "meaning": "線；界線；劃線",
+    "tag": "生活",
+    "frequency": 4,
+    "example_ko": "도로에 하얀 선이 그어져 있다.",
+    "example_zh": "路上畫了白線。",
+    "example_type": "topik"
+  },
+  {
+    "word": "인류",
+    "hanja": [
+      "人類"
+    ],
+    "meaning": "人類；全人類",
+    "tag": "社會",
+    "frequency": 4,
+    "example_ko": "인류의 역사는 오래되었다.",
+    "example_zh": "人類的歷史很久遠。",
+    "example_type": "topik"
+  },
+  {
+    "word": "마련하다",
+    "hanja": [],
+    "meaning": "準備；籌備；設置",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "행사를 위해 장소를 마련했다.",
+    "example_zh": "為了活動準備了場地。",
+    "example_type": "topik"
+  },
+  {
+    "word": "주제",
+    "hanja": [
+      "主題"
+    ],
+    "meaning": "主題；議題；題目",
+    "tag": "教育",
+    "frequency": 4,
+    "example_ko": "오늘 토론의 주제는 환경 문제다.",
+    "example_zh": "今天討論的主題是環境問題。",
+    "example_type": "topik"
+  },
+  {
+    "word": "겪다",
+    "hanja": [],
+    "meaning": "經歷；遭受；體驗",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "어려움을 많이 겪었다.",
+    "example_zh": "經歷了許多困難。",
+    "example_type": "topik"
+  },
+  {
+    "word": "기본",
+    "hanja": [
+      "基本"
+    ],
+    "meaning": "基本；基礎",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "기본을 잘 이해해야 한다.",
+    "example_zh": "要好好理解基礎。",
+    "example_type": "topik"
+  },
+  {
+    "word": "사라지다",
+    "hanja": [],
+    "meaning": "消失；不見了",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "그의 흔적이 갑자기 사라졌다.",
+    "example_zh": "他的痕跡突然消失了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "어떠하다",
+    "hanja": [
+      "如何"
+    ],
+    "meaning": "如何；怎樣",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "그의 생각은 어떠한가?",
+    "example_zh": "他的想法如何？",
+    "example_type": "topik"
+  },
+  {
+    "word": "감정",
+    "hanja": [
+      "感情"
+    ],
+    "meaning": "情感；感情",
+    "tag": "生活",
+    "frequency": 4,
+    "example_ko": "그는 감정을 숨기지 못하고 울었다.",
+    "example_zh": "他無法隱藏情感而哭了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "기억",
+    "hanja": [
+      "記憶"
+    ],
+    "meaning": "記憶；回憶",
+    "tag": "生活",
+    "frequency": 4,
+    "example_ko": "어린 시절의 기억이 아직도 선명하다.",
+    "example_zh": "童年時期的記憶仍然很鮮明。",
+    "example_type": "topik"
+  },
+  {
+    "word": "놈",
+    "hanja": [],
+    "meaning": "傢伙；人（口語、帶貶義）",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "그 놈 때문에 약속에 늦었다.",
+    "example_zh": "因為那個傢伙，我遲到了約會。",
+    "example_type": "topik"
+  },
+  {
+    "word": "구성",
+    "hanja": [
+      "構成"
+    ],
+    "meaning": "構成；組成",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "이 소설의 구성은 복잡하지 않다.",
+    "example_zh": "這部小說的構成不複雜。",
+    "example_type": "topik"
+  },
+  {
+    "word": "실제로",
+    "hanja": [
+      "實際"
+    ],
+    "meaning": "實際上；其實",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "그는 말과는 달리 실제로 매우 친절하다.",
+    "example_zh": "他與說的不同，實際上非常親切。",
+    "example_type": "topik"
+  },
+  {
+    "word": "관리",
+    "hanja": [
+      "管理"
+    ],
+    "meaning": "管理；經營",
+    "tag": "社會",
+    "frequency": 4,
+    "example_ko": "회사는 직원 관리를 체계적으로 해야 한다.",
+    "example_zh": "公司要有系統地管理員工。",
+    "example_type": "topik"
+  },
+  {
+    "word": "과연",
+    "hanja": [
+      "果然"
+    ],
+    "meaning": "果然；不出所料",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "과연 그가 정답을 맞혔다.",
+    "example_zh": "果然他答對了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "이전",
+    "hanja": [
+      "以前"
+    ],
+    "meaning": "以前；先前",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "이전 기록을 다시 확인해 봐.",
+    "example_zh": "把之前的記錄再確認一下。",
+    "example_type": "topik"
+  },
+  {
+    "word": "중앙",
+    "hanja": [
+      "中央"
+    ],
+    "meaning": "中央；中間（中央政府或中心位置）",
+    "tag": "政治",
+    "frequency": 4,
+    "example_ko": "중앙 정부가 새로운 정책을 발표했다.",
+    "example_zh": "中央政府發表了新的政策。",
+    "example_type": "topik"
+  },
+  {
+    "word": "그룹",
+    "hanja": [],
+    "meaning": "團體；組（外來語）",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "우리는 같은 그룹에서 프로젝트를 진행한다.",
+    "example_zh": "我們在同一個小組進行專案。",
+    "example_type": "topik"
+  },
+  {
+    "word": "인생",
+    "hanja": [
+      "人生"
+    ],
+    "meaning": "人生；一生",
+    "tag": "生活",
+    "frequency": 4,
+    "example_ko": "그는 인생을 바꾸기로 결심했다.",
+    "example_zh": "他決定改變自己的人生。",
+    "example_type": "topik"
+  },
+  {
+    "word": "전통",
+    "hanja": [
+      "傳統"
+    ],
+    "meaning": "傳統；習俗",
+    "tag": "社會",
+    "frequency": 4,
+    "example_ko": "전통 음식은 명절마다 먹는다.",
+    "example_zh": "傳統食物在每個節日都會吃。",
+    "example_type": "topik"
+  },
+  {
+    "word": "커다랗다",
+    "hanja": [],
+    "meaning": "非常大；巨大",
+    "tag": "生活",
+    "frequency": 4,
+    "example_ko": "하늘에 커다란 달이 떠 있었다.",
+    "example_zh": "天空上掛着一個很大的月亮。",
+    "example_type": "topik"
+  },
+  {
+    "word": "시인",
+    "hanja": [
+      "詩人"
+    ],
+    "meaning": "詩人",
+    "tag": "文學",
+    "frequency": 4,
+    "example_ko": "그 시인은 자연을 주제로 시를 썼다.",
+    "example_zh": "那位詩人以自然為主題寫了詩。",
+    "example_type": "topik"
+  },
+  {
+    "word": "평가",
+    "hanja": [
+      "評價"
+    ],
+    "meaning": "評價；評估",
+    "tag": "教育",
+    "frequency": 4,
+    "example_ko": "교수는 학생의 발표를 평가했다.",
+    "example_zh": "教授評價了學生的報告。",
+    "example_type": "topik"
+  },
+  {
+    "word": "줄이다",
+    "hanja": [],
+    "meaning": "減少；縮小（使……變少）",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "회사는 비용을 줄이기 위해 계획을 바꿨다.",
+    "example_zh": "公司為了減少成本而改變了計劃。",
+    "example_type": "topik"
+  },
+  {
+    "word": "달라지다",
+    "hanja": [],
+    "meaning": "改變；變化",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "기후가 점점 달라지고 있다.",
+    "example_zh": "氣候正逐漸改變。",
+    "example_type": "topik"
+  },
+  {
+    "word": "비다",
+    "hanja": [],
+    "meaning": "空；沒有東西",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "교실이 지금 비어 있다.",
+    "example_zh": "教室現在是空着的。",
+    "example_type": "topik"
+  },
+  {
+    "word": "통신",
+    "hanja": [
+      "通信"
+    ],
+    "meaning": "通訊；通信",
+    "tag": "科學",
+    "frequency": 4,
+    "example_ko": "인터넷 통신 속도가 빨라졌다.",
+    "example_zh": "互聯網通訊速度變快了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "웃음",
+    "hanja": [],
+    "meaning": "笑聲；笑",
+    "tag": "生活",
+    "frequency": 4,
+    "example_ko": "그의 농담에 모두 웃음이 터졌다.",
+    "example_zh": "大家因他的笑話都笑了出來。",
+    "example_type": "topik"
+  },
+  {
+    "word": "기계",
+    "hanja": [
+      "機械"
+    ],
+    "meaning": "機械；機器",
+    "tag": "科學",
+    "frequency": 4,
+    "example_ko": "이 공장에 새 기계가 들어왔다.",
+    "example_zh": "這間工廠有新的機械進來了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "물질",
+    "hanja": [
+      "物質"
+    ],
+    "meaning": "物質；物料",
+    "tag": "科學",
+    "frequency": 4,
+    "example_ko": "물질의 성질을 실험으로 확인했다.",
+    "example_zh": "用實驗確認了物質的性質。",
+    "example_type": "topik"
+  },
+  {
+    "word": "아나운서",
+    "hanja": [],
+    "meaning": "播音員；主播",
+    "tag": "新聞",
+    "frequency": 4,
+    "example_ko": "아나운서는 방송을 준비하고 있다.",
+    "example_zh": "播音員正在準備廣播。",
+    "example_type": "topik"
+  },
+  {
+    "word": "살아가다",
+    "hanja": [],
+    "meaning": "生活；活下去；過活",
+    "tag": "生活",
+    "frequency": 4,
+    "example_ko": "그는 가족을 위해 열심히 살아가고 있다.",
+    "example_zh": "他為了家人努力地生活著。",
+    "example_type": "topik"
+  },
+  {
+    "word": "종교",
+    "hanja": [
+      "宗教"
+    ],
+    "meaning": "宗教",
+    "tag": "社會",
+    "frequency": 4,
+    "example_ko": "종교는 사람들의 삶에 큰 영향을 준다.",
+    "example_zh": "宗教對人們的生活有很大影響。",
+    "example_type": "topik"
+  },
+  {
+    "word": "혹은",
+    "hanja": [],
+    "meaning": "或；或者",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "커피 혹은 차 중에서 어느 것을 마실래?",
+    "example_zh": "咖啡或茶你想喝哪一個？",
+    "example_type": "topik"
+  },
+  {
+    "word": "엄청나다",
+    "hanja": [],
+    "meaning": "非常；巨大；驚人",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "그 가게에는 손님이 엄청나다.",
+    "example_zh": "那間店有很多客人。",
+    "example_type": "topik"
+  },
+  {
+    "word": "실천",
+    "hanja": [
+      "實踐"
+    ],
+    "meaning": "實踐；實行",
+    "tag": "社會",
+    "frequency": 4,
+    "example_ko": "계획은 실천이 없으면 소용없다.",
+    "example_zh": "計劃如果沒有實行就沒用。",
+    "example_type": "topik"
+  },
+  {
+    "word": "보호",
+    "hanja": [
+      "保護"
+    ],
+    "meaning": "保護；防護",
+    "tag": "環境",
+    "frequency": 4,
+    "example_ko": "야생동물 보호가 필요하다.",
+    "example_zh": "需要保護野生動物。",
+    "example_type": "topik"
+  },
+  {
+    "word": "이웃",
+    "hanja": [],
+    "meaning": "鄰居；鄰近的人",
+    "tag": "社會",
+    "frequency": 4,
+    "example_ko": "이웃과 사이가 좋다.",
+    "example_zh": "和鄰居關係很好。",
+    "example_type": "topik"
+  },
+  {
+    "word": "공동",
+    "hanja": [
+      "共同"
+    ],
+    "meaning": "共同；共有",
+    "tag": "社會",
+    "frequency": 4,
+    "example_ko": "그 회사들은 공동으로 제품을 개발했다.",
+    "example_zh": "那些公司共同開發了產品。",
+    "example_type": "topik"
+  },
+  {
+    "word": "분명하다",
+    "hanja": [],
+    "meaning": "清楚；明確",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "그의 설명은 분명해서 이해하기 쉬웠다.",
+    "example_zh": "他的說明很清楚，所以容易理解。",
+    "example_type": "topik"
+  },
+  {
+    "word": "지나가다",
+    "hanja": [],
+    "meaning": "經過；通過；走過",
+    "tag": "生活",
+    "frequency": 4,
+    "example_ko": "버스가 역을 지나가고 있다.",
+    "example_zh": "巴士正在經過車站。",
+    "example_type": "topik"
+  },
+  {
+    "word": "훌륭하다",
+    "hanja": [],
+    "meaning": "優秀；出色；了不起",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "그 선생님은 학생들에게 훌륭한 본보기가 된다.",
+    "example_zh": "那位老師成為學生們的優秀榜樣。",
+    "example_type": "topik"
+  },
+  {
+    "word": "관계자",
+    "hanja": [
+      "關係者"
+    ],
+    "meaning": "有關人員；關係者",
+    "tag": "新聞",
+    "frequency": 4,
+    "example_ko": "관계자는 아직 입장을 밝히지 않았다.",
+    "example_zh": "有關人員還未表明立場。",
+    "example_type": "topik"
+  },
+  {
+    "word": "이어지다",
+    "hanja": [],
+    "meaning": "連接；持續；接續",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "비가 이틀째 이어지고 있다.",
+    "example_zh": "雨已連續下了兩天。",
+    "example_type": "topik"
+  },
+  {
+    "word": "요구",
+    "hanja": [
+      "要求"
+    ],
+    "meaning": "要求；請求",
+    "tag": "社會",
+    "frequency": 4,
+    "example_ko": "그는 회사에 급여 인상을 요구했다.",
+    "example_zh": "他向公司要求加薪。",
+    "example_type": "topik"
+  },
+  {
+    "word": "키우다",
+    "hanja": [],
+    "meaning": "養育；栽培；培養",
+    "tag": "生活",
+    "frequency": 4,
+    "example_ko": "그는 아이를 혼자 키운다.",
+    "example_zh": "他獨自養育孩子。",
+    "example_type": "topik"
+  },
+  {
+    "word": "죽음",
+    "hanja": [],
+    "meaning": "死亡；逝世",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "그의 죽음에 많은 사람이 슬퍼했다.",
+    "example_zh": "許多人為他的死亡感到悲傷。",
+    "example_type": "topik"
+  },
+  {
+    "word": "고통",
+    "hanja": [
+      "苦痛"
+    ],
+    "meaning": "痛苦；疼痛；苦痛",
+    "tag": "醫學",
+    "frequency": 4,
+    "example_ko": "환자는 심한 고통을 호소했다.",
+    "example_zh": "病人訴說著劇烈的疼痛。",
+    "example_type": "topik"
+  },
+  {
+    "word": "멀리",
+    "hanja": [],
+    "meaning": "遠遠地；在遠處",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "바다가 멀리 보여서 기분이 좋다.",
+    "example_zh": "因為海看起來很遙遠，所以心情很好。",
+    "example_type": "topik"
+  },
+  {
+    "word": "예정",
+    "hanja": [
+      "豫定"
+    ],
+    "meaning": "預定；計劃",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "회의는 다음 주로 예정되어 있다.",
+    "example_zh": "會議預定在下週舉行。",
+    "example_type": "topik"
+  },
+  {
+    "word": "흔히",
+    "hanja": [],
+    "meaning": "常常；通常",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "흔히 사람들은 아침에 커피를 마신다.",
+    "example_zh": "人們常常早上喝咖啡。",
+    "example_type": "topik"
+  },
+  {
+    "word": "바탕",
+    "hanja": [],
+    "meaning": "基礎；根據",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "경험을 바탕으로 글을 썼다.",
+    "example_zh": "以經驗為基礎寫了文章。",
+    "example_type": "topik"
+  },
+  {
+    "word": "갈등",
+    "hanja": [
+      "葛藤"
+    ],
+    "meaning": "衝突；矛盾",
+    "tag": "社會",
+    "frequency": 4,
+    "example_ko": "직장 내에서 갈등이 심해졌다.",
+    "example_zh": "職場內的衝突變得嚴重了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "의지",
+    "hanja": [
+      "意志"
+    ],
+    "meaning": "意志；意願",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "그는 성공하려는 강한 의지를 가지고 있다.",
+    "example_zh": "他有著強烈想要成功的意志。",
+    "example_type": "topik"
+  },
+  {
+    "word": "정확하다",
+    "hanja": [
+      "正確"
+    ],
+    "meaning": "正確；準確",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "그의 계산은 항상 정확하다.",
+    "example_zh": "他的計算總是很準確。",
+    "example_type": "topik"
+  },
+  {
+    "word": "초기",
+    "hanja": [
+      "初期"
+    ],
+    "meaning": "初期；起初",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "초기 단계에서는 문제가 잘 보이지 않았다.",
+    "example_zh": "在初期階段問題不太明顯。",
+    "example_type": "topik"
+  },
+  {
+    "word": "아무런",
+    "hanja": [],
+    "meaning": "任何（沒有）",
+    "tag": "其他",
+    "frequency": 4,
+    "example_ko": "그는 아무런 설명도 하지 않았다.",
+    "example_zh": "他沒有做任何解釋。",
+    "example_type": "topik"
+  },
+  {
+    "word": "언론",
+    "hanja": [
+      "言論"
+    ],
+    "meaning": "媒體；新聞界",
+    "tag": "新聞",
+    "frequency": 4,
+    "example_ko": "언론이 사건을 크게 보도했다.",
+    "example_zh": "媒體大肆報道了該事件。",
+    "example_type": "topik"
+  },
+  {
+    "word": "지원",
+    "hanja": [
+      "支援"
+    ],
+    "meaning": "支援；（也可指）申請",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "학생들은 장학금 지원을 신청했다.",
+    "example_zh": "學生申請了獎學金。",
+    "example_type": "topik"
+  },
+  {
+    "word": "경영",
+    "hanja": [
+      "經營"
+    ],
+    "meaning": "經營；管理",
+    "tag": "經濟",
+    "frequency": 3,
+    "example_ko": "그 회사를 경영하는 데 많은 어려움이 있다.",
+    "example_zh": "經營那家公司有很多困難。",
+    "example_type": "topik"
+  },
+  {
+    "word": "목표",
+    "hanja": [
+      "目標"
+    ],
+    "meaning": "目標；目的",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "올해 목표를 달성하기 위해 열심히 노력하고 있다.",
+    "example_zh": "為了達成今年的目標而努力工作。",
+    "example_type": "topik"
+  },
+  {
+    "word": "숲",
+    "hanja": [],
+    "meaning": "森林",
+    "tag": "環境",
+    "frequency": 3,
+    "example_ko": "아이들은 숲에서 뛰어노는 것을 좋아한다.",
+    "example_zh": "孩子們喜歡在森林裡奔跑玩耍。",
+    "example_type": "topik"
+  },
+  {
+    "word": "미치다",
+    "hanja": [],
+    "meaning": "發瘋；（口）失常",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "그 소식을 듣고 그는 미쳐 버릴 것 같았다.",
+    "example_zh": "聽到那個消息，他好像要發瘋了一樣。",
+    "example_type": "topik"
+  },
+  {
+    "word": "얼른",
+    "hanja": [],
+    "meaning": "趕快；立刻",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "얼른 와서 문을 닫아.",
+    "example_zh": "快點過來把門關上。",
+    "example_type": "topik"
+  },
+  {
+    "word": "피해",
+    "hanja": [
+      "被害"
+    ],
+    "meaning": "損害；受害",
+    "tag": "社會",
+    "frequency": 3,
+    "example_ko": "홍수로 많은 피해가 발생했다.",
+    "example_zh": "因洪水造成了大量損失。",
+    "example_type": "topik"
+  },
+  {
+    "word": "참다",
+    "hanja": [],
+    "meaning": "忍耐；忍受",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "고통을 참지 못하고 결국 병원에 갔다.",
+    "example_zh": "忍不住痛楚，最後去了醫院。",
+    "example_type": "topik"
+  },
+  {
+    "word": "속도",
+    "hanja": [
+      "速度"
+    ],
+    "meaning": "速度；速率",
+    "tag": "科學",
+    "frequency": 3,
+    "example_ko": "자동차의 속도를 줄여야 한다.",
+    "example_zh": "必須減慢汽車的速度。",
+    "example_type": "topik"
+  },
+  {
+    "word": "심각하다",
+    "hanja": [
+      "深刻"
+    ],
+    "meaning": "嚴重；嚴峻",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "그 문제는 생각보다 심각하다.",
+    "example_zh": "那個問題比想像中嚴重。",
+    "example_type": "topik"
+  },
+  {
+    "word": "소년",
+    "hanja": [
+      "少年"
+    ],
+    "meaning": "男孩；少年",
+    "tag": "社會",
+    "frequency": 3,
+    "example_ko": "그 소년은 매일 공원에서 축구를 한다.",
+    "example_zh": "那個男孩每天在公園踢足球。",
+    "example_type": "topik"
+  },
+  {
+    "word": "노인",
+    "hanja": [
+      "老人"
+    ],
+    "meaning": "老人；年長者",
+    "tag": "社會",
+    "frequency": 3,
+    "example_ko": "노인들이 공원 벤치에 모여 이야기했다.",
+    "example_zh": "老人們在公園長椅聚在一起聊天。",
+    "example_type": "topik"
+  },
+  {
+    "word": "살리다",
+    "hanja": [],
+    "meaning": "救活；使活著（挽救生命）",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "의사는 환자의 목숨을 살리기 위해 수술을 했다.",
+    "example_zh": "醫生為了救活病人做了手術。",
+    "example_type": "topik"
+  },
+  {
+    "word": "출신",
+    "hanja": [
+      "出身"
+    ],
+    "meaning": "出身；來自（某地或某背景）",
+    "tag": "社會",
+    "frequency": 3,
+    "example_ko": "그는 서울 출신이다.",
+    "example_zh": "他是首爾出身。",
+    "example_type": "topik"
+  },
+  {
+    "word": "기록",
+    "hanja": [
+      "記錄"
+    ],
+    "meaning": "紀錄；記載（成績或事實的記錄）",
+    "tag": "新聞",
+    "frequency": 3,
+    "example_ko": "그 선수는 대회에서 새로운 기록을 세웠다.",
+    "example_zh": "那名選手在比賽中創下了新的紀錄。",
+    "example_type": "topik"
+  },
+  {
+    "word": "나름",
+    "hanja": [],
+    "meaning": "視乎；依...而異（取決於）",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "행복은 사람 나름이다.",
+    "example_zh": "幸福因人而異。",
+    "example_type": "topik"
+  },
+  {
+    "word": "이미지",
+    "hanja": [],
+    "meaning": "形象；影像（外來語）",
+    "tag": "藝術",
+    "frequency": 3,
+    "example_ko": "그 회사는 이미지 관리를 위해 광고를 만들었다.",
+    "example_zh": "那間公司為了形象管理製作了廣告。",
+    "example_type": "topik"
+  },
+  {
+    "word": "터지다",
+    "hanja": [],
+    "meaning": "爆開；突然發生（爆裂、突發）",
+    "tag": "生活",
+    "frequency": 3,
+    "example_ko": "밤에 갑자기 불꽃놀이가 터졌다.",
+    "example_zh": "晚上突然有煙花爆開。",
+    "example_type": "topik"
+  },
+  {
+    "word": "업무",
+    "hanja": [
+      "業務"
+    ],
+    "meaning": "業務；工作上的職責或事務",
+    "tag": "經濟",
+    "frequency": 3,
+    "example_ko": "이 회사의 업무는 주로 해외 거래이다.",
+    "example_zh": "這間公司的業務主要是海外交易。",
+    "example_type": "topik"
+  },
+  {
+    "word": "입시",
+    "hanja": [
+      "入試"
+    ],
+    "meaning": "入試；入學考試",
+    "tag": "教育",
+    "frequency": 3,
+    "example_ko": "한국에서는 대학 입시 경쟁이 매우 치열하다.",
+    "example_zh": "在韓國，大學入學考試的競爭非常激烈。",
+    "example_type": "topik"
+  },
+  {
+    "word": "청소년",
+    "hanja": [
+      "靑少年"
+    ],
+    "meaning": "青少年；未成年人",
+    "tag": "社會",
+    "frequency": 3,
+    "example_ko": "청소년들은 스마트폰을 자주 사용한다.",
+    "example_zh": "青少年經常使用智能手機。",
+    "example_type": "topik"
+  },
+  {
+    "word": "이기다",
+    "hanja": [],
+    "meaning": "贏；戰勝",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "그는 시합에서 결국 이겼다.",
+    "example_zh": "他在比賽中最終贏了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "찾아보다",
+    "hanja": [],
+    "meaning": "尋找並查看；查找（嘗試找出）",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "필요한 자료를 도서관에서 찾아보았다.",
+    "example_zh": "在圖書館找了所需的資料。",
+    "example_type": "topik"
+  },
+  {
+    "word": "취하다",
+    "hanja": [],
+    "meaning": "醉；喝醉（也可作採取、取得等）",
+    "tag": "生活",
+    "frequency": 3,
+    "example_ko": "어제 술을 너무 마셔서 취했다.",
+    "example_zh": "昨天喝太多酒所以醉了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "다루다",
+    "hanja": [],
+    "meaning": "處理；論述、操作（對事物進行處置或討論）",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "이 책은 현대 사회 문제를 다루고 있다.",
+    "example_zh": "這本書在討論現代社會問題。",
+    "example_type": "topik"
+  },
+  {
+    "word": "그러므로",
+    "hanja": [],
+    "meaning": "因此；所以（連接詞）",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "그는 준비를 하지 않았다. 그러므로 실패했다.",
+    "example_zh": "他沒有準備，因此失敗了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "만약",
+    "hanja": [
+      "萬若"
+    ],
+    "meaning": "如果；假如（表示假設）",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "만약 비가 오면 내일 나가지 않겠다.",
+    "example_zh": "如果下雨的話，明天就不出去。",
+    "example_type": "topik"
+  },
+  {
+    "word": "세월",
+    "hanja": [
+      "歲月"
+    ],
+    "meaning": "歲月；時光（時間流逝）",
+    "tag": "生活",
+    "frequency": 3,
+    "example_ko": "세월은 사람의 얼굴을 바꾼다.",
+    "example_zh": "歲月會改變人的面容。",
+    "example_type": "topik"
+  },
+  {
+    "word": "깨닫다",
+    "hanja": [],
+    "meaning": "察覺；意識到（領悟、覺察）",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "그는 자신의 실수를 깨달았다.",
+    "example_zh": "他意識到自己的錯誤。",
+    "example_type": "topik"
+  },
+  {
+    "word": "왕",
+    "hanja": [
+      "王"
+    ],
+    "meaning": "國王；王（君主）",
+    "tag": "政治",
+    "frequency": 3,
+    "example_ko": "옛날에는 왕이 나라를 다스렸다.",
+    "example_zh": "從前，國王治理國家。",
+    "example_type": "topik"
+  },
+  {
+    "word": "점점",
+    "hanja": [
+      "漸漸"
+    ],
+    "meaning": "逐漸、漸漸",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "날씨가 점점 추워지고 있다.",
+    "example_zh": "天氣逐漸變冷。",
+    "example_type": "topik"
+  },
+  {
+    "word": "특별",
+    "hanja": [
+      "特別"
+    ],
+    "meaning": "特別、特殊",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "오늘은 특별한 일이 있다.",
+    "example_zh": "今天有特別的事情。",
+    "example_type": "topik"
+  },
+  {
+    "word": "너무나",
+    "hanja": [],
+    "meaning": "非常、很、太（強調）",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "그 음식은 너무나 맛있다.",
+    "example_zh": "那道菜非常好吃。",
+    "example_type": "topik"
+  },
+  {
+    "word": "높이다",
+    "hanja": [],
+    "meaning": "提高、使升高、增加（程度、數量）",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "그 회사는 생산량을 높이려고 한다.",
+    "example_zh": "那家公司想提高生產量。",
+    "example_type": "topik"
+  },
+  {
+    "word": "사정",
+    "hanja": [
+      "事情"
+    ],
+    "meaning": "情況、情形、緣由",
+    "tag": "社會",
+    "frequency": 3,
+    "example_ko": "사정이 있어서 참석하지 못했다.",
+    "example_zh": "因為有情況所以無法出席。",
+    "example_type": "topik"
+  },
+  {
+    "word": "도대체",
+    "hanja": [
+      "到底"
+    ],
+    "meaning": "究竟、到底（強烈追問）",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "도대체 왜 그랬어?",
+    "example_zh": "究竟為什麼那樣做？",
+    "example_type": "topik"
+  },
+  {
+    "word": "막",
+    "hanja": [],
+    "meaning": "胡亂地、隨便地、亂做（副詞）",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "그는 막 가방을 던졌다.",
+    "example_zh": "他亂丟了背包。",
+    "example_type": "topik"
+  },
+  {
+    "word": "수출",
+    "hanja": [
+      "輸出"
+    ],
+    "meaning": "出口（商品輸出）",
+    "tag": "經濟",
+    "frequency": 3,
+    "example_ko": "한국은 반도체를 많이 수출한다.",
+    "example_zh": "韓國大量出口半導體。",
+    "example_type": "topik"
+  },
+  {
+    "word": "비용",
+    "hanja": [
+      "費用"
+    ],
+    "meaning": "費用、成本",
+    "tag": "經濟",
+    "frequency": 3,
+    "example_ko": "이 프로젝트의 비용이 너무 높다.",
+    "example_zh": "這個項目的費用太高了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "옳다",
+    "hanja": [],
+    "meaning": "正確、對（形容詞）",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "그의 말이 옳다.",
+    "example_zh": "他的話是對的。",
+    "example_type": "topik"
+  },
+  {
+    "word": "원래",
+    "hanja": [
+      "原來"
+    ],
+    "meaning": "原本、原來、本來",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "원래 계획은 달랐다.",
+    "example_zh": "原本的計畫不同。",
+    "example_type": "topik"
+  },
+  {
+    "word": "처리",
+    "hanja": [
+      "處理"
+    ],
+    "meaning": "處理、辦理（事務的處置）",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "서류 처리는 다음 주까지 끝내겠다.",
+    "example_zh": "文件處理會在下週完成。",
+    "example_type": "topik"
+  },
+  {
+    "word": "최초",
+    "hanja": [
+      "最初"
+    ],
+    "meaning": "最初、首次、第一（名詞）",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "최초의 기록은 백 년 전이다.",
+    "example_zh": "最初的記錄是一百年前。",
+    "example_type": "topik"
+  },
+  {
+    "word": "놀이",
+    "hanja": [],
+    "meaning": "遊戲、玩耍、遊樂",
+    "tag": "生活",
+    "frequency": 3,
+    "example_ko": "아이들은 공원에서 놀이를 한다.",
+    "example_zh": "小孩子們在公園玩耍。",
+    "example_type": "topik"
+  },
+  {
+    "word": "뿌리",
+    "hanja": [],
+    "meaning": "根、根源、根部",
+    "tag": "科學",
+    "frequency": 3,
+    "example_ko": "나무의 뿌리는 깊게 자랐다.",
+    "example_zh": "樹的根長得很深。",
+    "example_type": "topik"
+  },
+  {
+    "word": "수입",
+    "hanja": [
+      "輸入",
+      "收入"
+    ],
+    "meaning": "進口（輸入）；收入（收人）",
+    "tag": "經濟",
+    "frequency": 3,
+    "example_ko": "한국은 원유를 수입한다.",
+    "example_zh": "韓國進口原油。",
+    "example_type": "topik"
+  },
+  {
+    "word": "그리하여",
+    "hanja": [],
+    "meaning": "因此、於是（連接詞）",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "그는 준비를 잘했다, 그리하여 발표를 잘 마쳤다.",
+    "example_zh": "他準備得很好，因此把報告完成得很出色。",
+    "example_type": "topik"
+  },
+  {
+    "word": "내부",
+    "hanja": [
+      "內部"
+    ],
+    "meaning": "內部、裡面、內部的（組織或空間）",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "회사의 내부 문제를 해결해야 한다.",
+    "example_zh": "必須解決公司的內部問題。",
+    "example_type": "topik"
+  },
+  {
+    "word": "상대",
+    "hanja": [
+      "相對"
+    ],
+    "meaning": "對方、對手、相對（的人或物）",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "그는 상대 팀보다 더 강하다.",
+    "example_zh": "他比對方球隊更強。",
+    "example_type": "topik"
+  },
+  {
+    "word": "피부",
+    "hanja": [
+      "皮膚"
+    ],
+    "meaning": "皮膚（人體或動物的表面組織）",
+    "tag": "醫學",
+    "frequency": 3,
+    "example_ko": "겨울에는 피부가 건조해진다.",
+    "example_zh": "冬天皮膚會乾燥。",
+    "example_type": "topik"
+  },
+  {
+    "word": "가득",
+    "hanja": [],
+    "meaning": "滿、充滿",
+    "tag": "生活",
+    "frequency": 3,
+    "example_ko": "컵에 물이 가득하다.",
+    "example_zh": "杯子裡滿滿的水。",
+    "example_type": "topik"
+  },
+  {
+    "word": "그저",
+    "hanja": [],
+    "meaning": "只是、僅僅",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "나는 그저 기다릴 뿐이다.",
+    "example_zh": "我只是等待而已。",
+    "example_type": "topik"
+  },
+  {
+    "word": "부담",
+    "hanja": [
+      "負擔"
+    ],
+    "meaning": "負擔、壓力",
+    "tag": "社會",
+    "frequency": 3,
+    "example_ko": "학비가 부모님에게 큰 부담이 된다.",
+    "example_zh": "學費對父母來說是很大的負擔。",
+    "example_type": "topik"
+  },
+  {
+    "word": "쳐다보다",
+    "hanja": [],
+    "meaning": "凝視、盯著看",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "그는 창밖을 뚫어지게 쳐다봤다.",
+    "example_zh": "他目不轉睛地望著窗外。",
+    "example_type": "topik"
+  },
+  {
+    "word": "충분히",
+    "hanja": [
+      "充分"
+    ],
+    "meaning": "充分、足夠",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "시험을 위해 충분히 공부했다.",
+    "example_zh": "為了考試我已經充分地讀書了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "신체",
+    "hanja": [
+      "身體"
+    ],
+    "meaning": "身體",
+    "tag": "醫學",
+    "frequency": 3,
+    "example_ko": "규칙적인 운동은 신체에 좋다.",
+    "example_zh": "規律的運動對身體有好處。",
+    "example_type": "topik"
+  },
+  {
+    "word": "에너지",
+    "hanja": [],
+    "meaning": "能量、精力",
+    "tag": "科學",
+    "frequency": 3,
+    "example_ko": "태양은 지구에 에너지를 제공한다.",
+    "example_zh": "太陽為地球提供能量。",
+    "example_type": "topik"
+  },
+  {
+    "word": "집안",
+    "hanja": [
+      "家庭"
+    ],
+    "meaning": "家裡、家庭",
+    "tag": "生活",
+    "frequency": 3,
+    "example_ko": "주말에는 집안일을 도와야 한다.",
+    "example_zh": "週末要幫忙做家務。",
+    "example_type": "topik"
+  },
+  {
+    "word": "배경",
+    "hanja": [
+      "背景"
+    ],
+    "meaning": "背景、出身",
+    "tag": "文學",
+    "frequency": 3,
+    "example_ko": "그의 성장 배경을 알게 되었다.",
+    "example_zh": "我了解了他的成長背景。",
+    "example_type": "topik"
+  },
+  {
+    "word": "죽이다",
+    "hanja": [],
+    "meaning": "殺死、殺害",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "농부가 병든 소를 죽였다.",
+    "example_zh": "農夫把生病的牛殺了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "단순하다",
+    "hanja": [
+      "單純"
+    ],
+    "meaning": "單純、簡單",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "문제는 생각보다 단순하다.",
+    "example_zh": "問題比想像中簡單。",
+    "example_type": "topik"
+  },
+  {
+    "word": "반대",
+    "hanja": [
+      "反對"
+    ],
+    "meaning": "反對、相反",
+    "tag": "政治",
+    "frequency": 3,
+    "example_ko": "나는 그 의견에 반대한다.",
+    "example_zh": "我反對那個意見。",
+    "example_type": "topik"
+  },
+  {
+    "word": "빠지다",
+    "hanja": [],
+    "meaning": "掉入、沈迷",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "그는 요즘 게임에 빠졌다.",
+    "example_zh": "他最近沉迷於遊戲。",
+    "example_type": "topik"
+  },
+  {
+    "word": "오염",
+    "hanja": [
+      "污染"
+    ],
+    "meaning": "污染",
+    "tag": "環境",
+    "frequency": 3,
+    "example_ko": "공장 폐수 때문에 강이 오염되었다.",
+    "example_zh": "因為工廠廢水，河流被污染了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "푸르다",
+    "hanja": [],
+    "meaning": "青翠、藍",
+    "tag": "環境",
+    "frequency": 3,
+    "example_ko": "봄이 되자 산이 푸르다.",
+    "example_zh": "一到春天，山就青翠了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "걔",
+    "hanja": [],
+    "meaning": "那個人（口語）",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "걔 누구야?",
+    "example_zh": "那個人是誰？",
+    "example_type": "topik"
+  },
+  {
+    "word": "범죄",
+    "hanja": [
+      "犯罪"
+    ],
+    "meaning": "犯罪",
+    "tag": "社會",
+    "frequency": 3,
+    "example_ko": "경찰은 최근 일어난 범죄를 조사하고 있다.",
+    "example_zh": "警方正在調查最近發生的犯罪。",
+    "example_type": "topik"
+  },
+  {
+    "word": "흔들다",
+    "hanja": [],
+    "meaning": "搖動、搖晃",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "아이들이 나무를 흔들었다.",
+    "example_zh": "孩子們搖晃著樹。",
+    "example_type": "topik"
+  },
+  {
+    "word": "기초",
+    "hanja": [
+      "基礎"
+    ],
+    "meaning": "基礎、根基",
+    "tag": "教育",
+    "frequency": 3,
+    "example_ko": "학생들은 기초부터 배워야 한다.",
+    "example_zh": "學生應該從基礎開始學習。",
+    "example_type": "topik"
+  },
+  {
+    "word": "뽑다",
+    "hanja": [],
+    "meaning": "拔出、選擇",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "회사가 새 직원을 뽑았다.",
+    "example_zh": "公司挑選了新員工。",
+    "example_type": "topik"
+  },
+  {
+    "word": "감각",
+    "hanja": [
+      "感覺"
+    ],
+    "meaning": "感覺；感官",
+    "tag": "生活",
+    "frequency": 3,
+    "example_ko": "그는 감각이 뛰어나서 음악을 잘 이해한다.",
+    "example_zh": "他感覺很敏銳，所以很懂音樂。",
+    "example_type": "topik"
+  },
+  {
+    "word": "법",
+    "hanja": [
+      "法"
+    ],
+    "meaning": "法律；法規",
+    "tag": "政治",
+    "frequency": 3,
+    "example_ko": "모든 국민은 법을 지켜야 한다.",
+    "example_zh": "所有國民都要遵守法律。",
+    "example_type": "topik"
+  },
+  {
+    "word": "오랜",
+    "hanja": [],
+    "meaning": "長久的；很久的",
+    "tag": "生活",
+    "frequency": 3,
+    "example_ko": "오랜 친구를 만나서 옛날 이야기를 했다.",
+    "example_zh": "遇見多年朋友，談了以前的事情。",
+    "example_type": "topik"
+  },
+  {
+    "word": "젊은이",
+    "hanja": [],
+    "meaning": "年輕人；青年",
+    "tag": "社會",
+    "frequency": 3,
+    "example_ko": "젊은이들은 미래에 대해 걱정한다.",
+    "example_zh": "年輕人對未來感到擔心。",
+    "example_type": "topik"
+  },
+  {
+    "word": "후보",
+    "hanja": [
+      "候補"
+    ],
+    "meaning": "候選人；候補",
+    "tag": "政治",
+    "frequency": 3,
+    "example_ko": "그는 시장 후보로 나왔다.",
+    "example_zh": "他以市長候選人身分出來參選。",
+    "example_type": "topik"
+  },
+  {
+    "word": "과제",
+    "hanja": [
+      "課題"
+    ],
+    "meaning": "課題；任務；作業",
+    "tag": "教育",
+    "frequency": 3,
+    "example_ko": "교수는 새로운 과제를 내주었다.",
+    "example_zh": "教授交了新的課題。",
+    "example_type": "topik"
+  },
+  {
+    "word": "다가오다",
+    "hanja": [],
+    "meaning": "接近；靠近；到來",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "봄이 다가오고 있다.",
+    "example_zh": "春天正在靠近。",
+    "example_type": "topik"
+  },
+  {
+    "word": "시각",
+    "hanja": [
+      "視覺"
+    ],
+    "meaning": "視覺；視力；（也可指）觀點",
+    "tag": "生活",
+    "frequency": 3,
+    "example_ko": "시각이 중요한 직업이 많다.",
+    "example_zh": "有很多職業對視力很重要。",
+    "example_type": "topik"
+  },
+  {
+    "word": "이끌다",
+    "hanja": [],
+    "meaning": "帶領；引導；牽引",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "그는 팀을 잘 이끌었다.",
+    "example_zh": "他很好地帶領團隊。",
+    "example_type": "topik"
+  },
+  {
+    "word": "종합",
+    "hanja": [
+      "綜合"
+    ],
+    "meaning": "綜合；總合；彙整",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "이 보고서는 여러 자료를 종합해서 만들었다.",
+    "example_zh": "這份報告綜合了多項資料而完成。",
+    "example_type": "topik"
+  },
+  {
+    "word": "수단",
+    "hanja": [
+      "手段"
+    ],
+    "meaning": "手段；方法；措施",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "그는 목표 달성을 위해 여러 수단을 사용했다.",
+    "example_zh": "他為了達成目標使用了多種手段。",
+    "example_type": "topik"
+  },
+  {
+    "word": "적극적",
+    "hanja": [
+      "積極的"
+    ],
+    "meaning": "積極的；主動的",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "그녀는 일에 적극적으로 참여한다.",
+    "example_zh": "她積極參與工作。",
+    "example_type": "topik"
+  },
+  {
+    "word": "판매",
+    "hanja": [
+      "販賣"
+    ],
+    "meaning": "販賣；銷售；出售",
+    "tag": "經濟",
+    "frequency": 3,
+    "example_ko": "이 제품은 온라인으로 판매되고 있다.",
+    "example_zh": "這個產品在網上販賣。",
+    "example_type": "topik"
+  },
+  {
+    "word": "기울이다",
+    "hanja": [],
+    "meaning": "傾斜；傾向；投入（精力）",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "책상에 몸을 기울여 공부했다.",
+    "example_zh": "他把身體傾向書桌讀書。",
+    "example_type": "topik"
+  },
+  {
+    "word": "길이",
+    "hanja": [],
+    "meaning": "長度；長短",
+    "tag": "生活",
+    "frequency": 3,
+    "example_ko": "이 방의 길이를 잰 뒤 가구를 놓았다.",
+    "example_zh": "量了這個房間的長度之後放了家具。",
+    "example_type": "topik"
+  },
+  {
+    "word": "점차",
+    "hanja": [
+      "漸次"
+    ],
+    "meaning": "逐漸；漸漸",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "날씨가 점차 따뜻해지고 있다.",
+    "example_zh": "天氣逐漸變暖了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "나머지",
+    "hanja": [],
+    "meaning": "剩餘；其餘",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "과제는 다 했고 나머지는 내일 하겠다.",
+    "example_zh": "作業都做完了，其餘的明天做。",
+    "example_type": "topik"
+  },
+  {
+    "word": "개방",
+    "hanja": [
+      "開放"
+    ],
+    "meaning": "開放；向公眾開放",
+    "tag": "社會",
+    "frequency": 3,
+    "example_ko": "도시는 공원을 시민에게 개방했다.",
+    "example_zh": "城市向市民開放了公園。",
+    "example_type": "topik"
+  },
+  {
+    "word": "흘리다",
+    "hanja": [],
+    "meaning": "流（液體）；流淚；滴落",
+    "tag": "生活",
+    "frequency": 3,
+    "example_ko": "그는 소식을 듣고 눈물을 흘렸다.",
+    "example_zh": "他聽到消息後流下眼淚。",
+    "example_type": "topik"
+  },
+  {
+    "word": "반응",
+    "hanja": [
+      "反應"
+    ],
+    "meaning": "反應；回應",
+    "tag": "生活",
+    "frequency": 3,
+    "example_ko": "사람들은 그의 발표에 다양한 반응을 보였다.",
+    "example_zh": "人們對他的發表表現出各種反應。",
+    "example_type": "topik"
+  },
+  {
+    "word": "주인공",
+    "hanja": [
+      "主人公"
+    ],
+    "meaning": "主角；（故事、戲劇的）主要人物",
+    "tag": "文學",
+    "frequency": 3,
+    "example_ko": "그 소설의 주인공은 용감한 소녀였다.",
+    "example_zh": "那部小說的主角是個勇敢的少女。",
+    "example_type": "topik"
+  },
+  {
+    "word": "당연하다",
+    "hanja": [
+      "當然"
+    ],
+    "meaning": "理所當然；應當如此",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "네가 화난 건 당연하다.",
+    "example_zh": "你生氣是理所當然的。",
+    "example_type": "topik"
+  },
+  {
+    "word": "세대",
+    "hanja": [
+      "世代"
+    ],
+    "meaning": "世代；一代人",
+    "tag": "社會",
+    "frequency": 3,
+    "example_ko": "젊은 세대는 다른 생각을 가진다.",
+    "example_zh": "年輕一代有不同的想法。",
+    "example_type": "topik"
+  },
+  {
+    "word": "놓이다",
+    "hanja": [],
+    "meaning": "被放置；放著（的狀態）",
+    "tag": "生活",
+    "frequency": 3,
+    "example_ko": "책이 책상 위에 놓였다.",
+    "example_zh": "書放在書桌上。",
+    "example_type": "topik"
+  },
+  {
+    "word": "당장",
+    "hanja": [
+      "當場"
+    ],
+    "meaning": "立刻；馬上／暫時、當下",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "그는 당장 떠나야 한다.",
+    "example_zh": "他必須馬上離開。",
+    "example_type": "topik"
+  },
+  {
+    "word": "무렵",
+    "hanja": [],
+    "meaning": "⋯⋯時候、左右（表示時間的前後）",
+    "tag": "生活",
+    "frequency": 3,
+    "example_ko": "저녁 무렵에 비가 오기 시작했다.",
+    "example_zh": "傍晚時分開始下雨。",
+    "example_type": "topik"
+  },
+  {
+    "word": "일반적",
+    "hanja": [
+      "一般的"
+    ],
+    "meaning": "一般的；普遍的",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "이 현상은 일반적이다.",
+    "example_zh": "這種現象是普遍的。",
+    "example_type": "topik"
+  },
+  {
+    "word": "바닥",
+    "hanja": [],
+    "meaning": "地板；底部、底層",
+    "tag": "生活",
+    "frequency": 3,
+    "example_ko": "바닥이 젖었다.",
+    "example_zh": "地板濕了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "심다",
+    "hanja": [
+      "植"
+    ],
+    "meaning": "種（植）；栽（種）",
+    "tag": "生活",
+    "frequency": 3,
+    "example_ko": "봄에 꽃을 심었다.",
+    "example_zh": "春天種了花。",
+    "example_type": "topik"
+  },
+  {
+    "word": "스스로",
+    "hanja": [],
+    "meaning": "自己；親自（自行）",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "그는 스스로 문제를 해결했다.",
+    "example_zh": "他自己解決了問題。",
+    "example_type": "topik"
+  },
+  {
+    "word": "견디다",
+    "hanja": [],
+    "meaning": "忍受；承受",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "그는 추위를 잘 견딘다.",
+    "example_zh": "他很能忍受寒冷。",
+    "example_type": "topik"
+  },
+  {
+    "word": "매체",
+    "hanja": [
+      "媒體"
+    ],
+    "meaning": "媒體；媒介",
+    "tag": "新聞",
+    "frequency": 3,
+    "example_ko": "매체는 정보를 전달하는 역할을 한다.",
+    "example_zh": "媒體扮演傳遞資訊的角色。",
+    "example_type": "topik"
+  },
+  {
+    "word": "뿌리다",
+    "hanja": [],
+    "meaning": "撒（種等）；噴灑；散布",
+    "tag": "生活",
+    "frequency": 3,
+    "example_ko": "씨를 뿌리면 새싹이 나온다.",
+    "example_zh": "播種後會長出幼芽。",
+    "example_type": "topik"
+  },
+  {
+    "word": "영역",
+    "hanja": [
+      "領域"
+    ],
+    "meaning": "領域；範圍（專業或活動範圍）",
+    "tag": "科學",
+    "frequency": 3,
+    "example_ko": "이 연구는 새로운 영역을 개척했다.",
+    "example_zh": "這項研究開拓了新的領域。",
+    "example_type": "topik"
+  },
+  {
+    "word": "체험",
+    "hanja": [
+      "體驗"
+    ],
+    "meaning": "親身體驗；實際經歷",
+    "tag": "教育",
+    "frequency": 3,
+    "example_ko": "이번 여행은 좋은 체험이 되었다.",
+    "example_zh": "這次旅行成為了很好的體驗。",
+    "example_type": "topik"
+  },
+  {
+    "word": "어쩌면",
+    "hanja": [],
+    "meaning": "也許；或許（表示可能性）",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "어쩌면 내가 틀렸을지도 모른다.",
+    "example_zh": "也許我錯了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "불법",
+    "hanja": [
+      "不法"
+    ],
+    "meaning": "非法；違法",
+    "tag": "社會",
+    "frequency": 3,
+    "example_ko": "그는 불법 행위로 체포되었다.",
+    "example_zh": "他因非法行為被逮捕了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "일정하다",
+    "hanja": [
+      "一定"
+    ],
+    "meaning": "一定的；固定的；穩定的",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "회의 시간은 일정하다.",
+    "example_zh": "會議時間是固定的。",
+    "example_type": "topik"
+  },
+  {
+    "word": "희다",
+    "hanja": [],
+    "meaning": "白色的；潔白",
+    "tag": "生活",
+    "frequency": 3,
+    "example_ko": "아침에 눈이 와서 모든 것이 희다.",
+    "example_zh": "早上下雪了，所有東西都是白的。",
+    "example_type": "topik"
+  },
+  {
+    "word": "가리키다",
+    "hanja": [],
+    "meaning": "指（向）；指出；指示",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "지도가 북쪽을 가리키고 있다.",
+    "example_zh": "地圖指向北方。",
+    "example_type": "topik"
+  },
+  {
+    "word": "발달",
+    "hanja": [
+      "發達"
+    ],
+    "meaning": "發展；成長（常指經濟、能力或身體的進步）",
+    "tag": "經濟",
+    "frequency": 3,
+    "example_ko": "아기의 발달이 빠르다.",
+    "example_zh": "嬰兒的發展很快。",
+    "example_type": "topik"
+  },
+  {
+    "word": "평화",
+    "hanja": [
+      "平和"
+    ],
+    "meaning": "和平；安寧（無戰爭或衝突的狀態）",
+    "tag": "社會",
+    "frequency": 3,
+    "example_ko": "세계 평화를 위해 노력해야 한다.",
+    "example_zh": "為了世界和平必須努力。",
+    "example_type": "topik"
+  },
+  {
+    "word": "공사",
+    "hanja": [
+      "工事"
+    ],
+    "meaning": "施工；建設工程（道路、建築等的工程作業）",
+    "tag": "經濟",
+    "frequency": 3,
+    "example_ko": "이 도로는 공사 중이다.",
+    "example_zh": "這條路在施工中。",
+    "example_type": "topik"
+  },
+  {
+    "word": "박사",
+    "hanja": [
+      "博士"
+    ],
+    "meaning": "博士（最高學位，Ph.D.）",
+    "tag": "教育",
+    "frequency": 3,
+    "example_ko": "그는 박사 학위를 받았다.",
+    "example_zh": "他取得了博士學位。",
+    "example_type": "topik"
+  },
+  {
+    "word": "전문가",
+    "hanja": [
+      "專門家"
+    ],
+    "meaning": "專家；行家（在某一領域有專門知識或技能的人）",
+    "tag": "社會",
+    "frequency": 3,
+    "example_ko": "전문가들은 문제를 분석했다.",
+    "example_zh": "專家們分析了問題。",
+    "example_type": "topik"
+  },
+  {
+    "word": "싸움",
+    "hanja": [],
+    "meaning": "打架；爭鬥（肢體或口頭衝突）",
+    "tag": "社會",
+    "frequency": 3,
+    "example_ko": "두 친구가 싸움을 했다.",
+    "example_zh": "兩個朋友打架了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "자꾸",
+    "hanja": [],
+    "meaning": "總是、常常（表示頻繁發生）",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "그는 자꾸 늦는다.",
+    "example_zh": "他總是遲到。",
+    "example_type": "topik"
+  },
+  {
+    "word": "그리",
+    "hanja": [],
+    "meaning": "那麼、如此（用於程度或方式的指示）",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "나는 그리 생각하지 않는다.",
+    "example_zh": "我並不那麼想。",
+    "example_type": "topik"
+  },
+  {
+    "word": "미소",
+    "hanja": [
+      "微笑"
+    ],
+    "meaning": "微笑（面部表情，表示愉快或友好）",
+    "tag": "生活",
+    "frequency": 3,
+    "example_ko": "그녀는 미소를 지었다.",
+    "example_zh": "她露出微笑。",
+    "example_type": "topik"
+  },
+  {
+    "word": "체육",
+    "hanja": [
+      "體育"
+    ],
+    "meaning": "體育（學校的體育課或體能活動）",
+    "tag": "教育",
+    "frequency": 3,
+    "example_ko": "오늘 체육 시간에 축구를 했다.",
+    "example_zh": "今天體育課踢了足球。",
+    "example_type": "topik"
+  },
+  {
+    "word": "독특하다",
+    "hanja": [
+      "獨特"
+    ],
+    "meaning": "獨特（有獨自的特點，與眾不同）",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "그 영화는 내용이 독특하다.",
+    "example_zh": "那部電影內容很獨特。",
+    "example_type": "topik"
+  },
+  {
+    "word": "평균",
+    "hanja": [
+      "平均"
+    ],
+    "meaning": "平均（總和除以數量得到的值）",
+    "tag": "科學",
+    "frequency": 3,
+    "example_ko": "학생들의 평균 점수는 80점이다.",
+    "example_zh": "學生的平均分是80分。",
+    "example_type": "topik"
+  },
+  {
+    "word": "훈련",
+    "hanja": [
+      "訓練"
+    ],
+    "meaning": "訓練；培訓（為某種技能或工作進行的練習或教育）",
+    "tag": "教育",
+    "frequency": 3,
+    "example_ko": "신입 사원들은 훈련을 받고 있다.",
+    "example_zh": "新進職員正在接受訓練。",
+    "example_type": "topik"
+  },
+  {
+    "word": "이익",
+    "hanja": [
+      "利益"
+    ],
+    "meaning": "利益；利潤（經濟上的好處或收益）",
+    "tag": "經濟",
+    "frequency": 3,
+    "example_ko": "회사는 큰 이익을 냈다.",
+    "example_zh": "公司賺了大量利潤。",
+    "example_type": "topik"
+  },
+  {
+    "word": "게다가",
+    "hanja": [],
+    "meaning": "而且、再者（表示附加或更進一步的情況）",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "그는 친절하고, 게다가 똑똑하다.",
+    "example_zh": "他很親切，而且很聰明。",
+    "example_type": "topik"
+  },
+  {
+    "word": "논문",
+    "hanja": [
+      "論文"
+    ],
+    "meaning": "論文（學術上的研究報告或文章）",
+    "tag": "教育",
+    "frequency": 3,
+    "example_ko": "그는 논문을 제출했다.",
+    "example_zh": "他提交了論文。",
+    "example_type": "topik"
+  },
+  {
+    "word": "멈추다",
+    "hanja": [],
+    "meaning": "停止；停下（動作或運動的終止）",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "버스가 갑자기 멈추었다.",
+    "example_zh": "公車突然停了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "혹시",
+    "hanja": [
+      "或是"
+    ],
+    "meaning": "或許、萬一（表示推測或禮貌的可能性）",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "혹시 시간이 있어?",
+    "example_zh": "你有沒有時間？",
+    "example_type": "topik"
+  },
+  {
+    "word": "올림픽",
+    "hanja": [],
+    "meaning": "奧林匹克；奧運會（國際性的綜合運動會）",
+    "tag": "生活",
+    "frequency": 3,
+    "example_ko": "올림픽은 네년에 한 번 열린다.",
+    "example_zh": "奧運會每四年舉行一次。",
+    "example_type": "topik"
+  },
+  {
+    "word": "이외",
+    "hanja": [
+      "以外"
+    ],
+    "meaning": "以外、除此之外（表示除某物以外）",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "이외에 다른 의견이 있니?",
+    "example_zh": "除此之外有其他意見嗎？",
+    "example_type": "topik"
+  },
+  {
+    "word": "기대",
+    "hanja": [
+      "期待"
+    ],
+    "meaning": "期待、期望",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "성공에 대한 기대가 크다.",
+    "example_zh": "對成功的期待很大。",
+    "example_type": "topik"
+  },
+  {
+    "word": "식물",
+    "hanja": [
+      "植物"
+    ],
+    "meaning": "植物",
+    "tag": "科學",
+    "frequency": 3,
+    "example_ko": "정원에 다양한 식물을 심었다.",
+    "example_zh": "在花園種了各種植物。",
+    "example_type": "topik"
+  },
+  {
+    "word": "옛",
+    "hanja": [],
+    "meaning": "舊的、從前的",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "옛 집이 아직 남아 있다.",
+    "example_zh": "舊房子還留著。",
+    "example_type": "topik"
+  },
+  {
+    "word": "외치다",
+    "hanja": [],
+    "meaning": "大聲喊、呼喊",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "그는 도움을 외쳤다.",
+    "example_zh": "他大聲呼救。",
+    "example_type": "topik"
+  },
+  {
+    "word": "적어도",
+    "hanja": [],
+    "meaning": "至少",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "적어도 두 시간은 걸릴 것이다.",
+    "example_zh": "至少要兩個小時。",
+    "example_type": "topik"
+  },
+  {
+    "word": "어려움",
+    "hanja": [],
+    "meaning": "困難、艱難",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "어려움을 극복하려고 노력했다.",
+    "example_zh": "努力克服困難。",
+    "example_type": "topik"
+  },
+  {
+    "word": "자원",
+    "hanja": [
+      "資源"
+    ],
+    "meaning": "資源",
+    "tag": "經濟",
+    "frequency": 3,
+    "example_ko": "회사는 인적 자원을 잘 관리해야 한다.",
+    "example_zh": "公司要好好管理人力資源。",
+    "example_type": "topik"
+  },
+  {
+    "word": "넘기다",
+    "hanja": [],
+    "meaning": "交給、轉交",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "서류를 다음 담당자에게 넘겼다.",
+    "example_zh": "把文件交給下一位負責人。",
+    "example_type": "topik"
+  },
+  {
+    "word": "분명히",
+    "hanja": [
+      "分明"
+    ],
+    "meaning": "清楚地、明確地",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "그 사실을 분명히 알렸다.",
+    "example_zh": "把那個事實說得很清楚。",
+    "example_type": "topik"
+  },
+  {
+    "word": "아무것",
+    "hanja": [],
+    "meaning": "任何東西",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "아무것도 먹고 싶지 않다.",
+    "example_zh": "什麼都不想吃。",
+    "example_type": "topik"
+  },
+  {
+    "word": "온",
+    "hanja": [],
+    "meaning": "整個、全部",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "그는 온몸으로 저항했다.",
+    "example_zh": "他用全身抵抗。",
+    "example_type": "topik"
+  },
+  {
+    "word": "젖다",
+    "hanja": [],
+    "meaning": "弄濕、濕透",
+    "tag": "生活",
+    "frequency": 3,
+    "example_ko": "비에 옷이 다 젖었다.",
+    "example_zh": "衣服被雨淋濕了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "최대",
+    "hanja": [
+      "最大"
+    ],
+    "meaning": "最大、最高",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "최대 인원은 서른 명이다.",
+    "example_zh": "最大人數是三十人。",
+    "example_type": "topik"
+  },
+  {
+    "word": "평소",
+    "hanja": [
+      "平素"
+    ],
+    "meaning": "平時、平常",
+    "tag": "生活",
+    "frequency": 3,
+    "example_ko": "평소보다 일찍 일어났다.",
+    "example_zh": "比平時早起了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "농사",
+    "hanja": [
+      "農事"
+    ],
+    "meaning": "農業、耕作",
+    "tag": "生活",
+    "frequency": 3,
+    "example_ko": "그는 농사를 지어서 생활한다.",
+    "example_zh": "他靠種田維生。",
+    "example_type": "topik"
+  },
+  {
+    "word": "어쨌든",
+    "hanja": [],
+    "meaning": "無論如何、總之",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "어쨌든 약속은 지켜라.",
+    "example_zh": "總之要守約。",
+    "example_type": "topik"
+  },
+  {
+    "word": "주택",
+    "hanja": [
+      "住宅"
+    ],
+    "meaning": "住宅、住房",
+    "tag": "生活",
+    "frequency": 3,
+    "example_ko": "주택 가격이 계속 오른다.",
+    "example_zh": "住宅價格持續上升。",
+    "example_type": "topik"
+  },
+  {
+    "word": "눈길",
+    "hanja": [],
+    "meaning": "目光、注意",
+    "tag": "生活",
+    "frequency": 3,
+    "example_ko": "그의 발표가 많은 사람의 눈길을 끌었다.",
+    "example_zh": "他的發表吸引了很多人的注意。",
+    "example_type": "topik"
+  },
+  {
+    "word": "밀다",
+    "hanja": [],
+    "meaning": "推、推動",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "문을 힘껏 밀었다.",
+    "example_zh": "用力推門。",
+    "example_type": "topik"
+  },
+  {
+    "word": "주어지다",
+    "hanja": [],
+    "meaning": "被給予、被分配",
+    "tag": "其他",
+    "frequency": 3,
+    "example_ko": "시험 시간이 주어졌다.",
+    "example_zh": "考試時間被給予了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "농촌",
+    "hanja": [
+      "農村"
+    ],
+    "meaning": "農村；鄉下",
+    "tag": "生活",
+    "frequency": 2,
+    "example_ko": "어릴 때 우리는 여름마다 농촌에 갔다.",
+    "example_zh": "小時候我們每年夏天都去農村。",
+    "example_type": "topik"
+  },
+  {
+    "word": "챙기다",
+    "hanja": [],
+    "meaning": "收拾；準備；照顧",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "여권을 꼭 챙겨.",
+    "example_zh": "一定要帶好護照。",
+    "example_type": "topik"
+  },
+  {
+    "word": "전망",
+    "hanja": [
+      "展望"
+    ],
+    "meaning": "前景；景色",
+    "tag": "經濟",
+    "frequency": 2,
+    "example_ko": "회사의 내년 매출 전망이 밝다.",
+    "example_zh": "公司的明年銷售前景很樂觀。",
+    "example_type": "topik"
+  },
+  {
+    "word": "마침내",
+    "hanja": [],
+    "meaning": "終於；最終",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "오랜 노력 끝에 그는 마침내 합격했다.",
+    "example_zh": "經過長期努力，他終於通過了考試。",
+    "example_type": "topik"
+  },
+  {
+    "word": "커지다",
+    "hanja": [],
+    "meaning": "變大；增大；擴大",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "회사 규모가 점점 커지고 있다.",
+    "example_zh": "公司的規模逐漸變大。",
+    "example_type": "topik"
+  },
+  {
+    "word": "검사",
+    "hanja": [
+      "檢査"
+    ],
+    "meaning": "檢查；檢驗",
+    "tag": "社會",
+    "frequency": 2,
+    "example_ko": "공장은 정기 검사를 받았다.",
+    "example_zh": "工廠接受了定期檢查。",
+    "example_type": "topik"
+  },
+  {
+    "word": "결론",
+    "hanja": [
+      "結論"
+    ],
+    "meaning": "結論",
+    "tag": "教育",
+    "frequency": 2,
+    "example_ko": "논의를 거쳐 우리는 결론을 내렸다.",
+    "example_zh": "經過討論我們得出了結論。",
+    "example_type": "topik"
+  },
+  {
+    "word": "맡기다",
+    "hanja": [],
+    "meaning": "委託；託付；交給保管",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "짐을 친구 집에 맡겼다.",
+    "example_zh": "把行李寄放在朋友家。",
+    "example_type": "topik"
+  },
+  {
+    "word": "소문",
+    "hanja": [
+      "所聞"
+    ],
+    "meaning": "謠言；傳聞；（口碑）名聲",
+    "tag": "社會",
+    "frequency": 2,
+    "example_ko": "그 소문은 사실이 아니었다.",
+    "example_zh": "那個謠言不是真的。",
+    "example_type": "topik"
+  },
+  {
+    "word": "싣다",
+    "hanja": [],
+    "meaning": "裝載；載運；刊載",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "책을 트럭에 싣고 출발했다.",
+    "example_zh": "把書裝上卡車出發了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "쌓다",
+    "hanja": [],
+    "meaning": "堆積；累積；建立（經驗）",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "경험을 쌓기 위해 다양한 일을 했다.",
+    "example_zh": "為了累積經驗做了各種工作。",
+    "example_type": "topik"
+  },
+  {
+    "word": "자녀",
+    "hanja": [
+      "子女"
+    ],
+    "meaning": "子女；孩子",
+    "tag": "生活",
+    "frequency": 2,
+    "example_ko": "자녀들은 부모의 결정을 존중해야 한다.",
+    "example_zh": "子女應該尊重父母的決定。",
+    "example_type": "topik"
+  },
+  {
+    "word": "희망",
+    "hanja": [
+      "希望"
+    ],
+    "meaning": "希望；期望",
+    "tag": "教育",
+    "frequency": 2,
+    "example_ko": "그는 희망을 가지고 다시 시작했다.",
+    "example_zh": "他帶著希望重新開始了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "군대",
+    "hanja": [
+      "軍隊"
+    ],
+    "meaning": "軍隊；部隊",
+    "tag": "社會",
+    "frequency": 2,
+    "example_ko": "그는 지난 해 군대에 갔다.",
+    "example_zh": "他去年入伍了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "그만큼",
+    "hanja": [],
+    "meaning": "那麼多；那麼程度；相應地",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "열심히 공부했으니 그만큼 시험을 잘 볼 거야.",
+    "example_zh": "努力讀書了，所以考試會相應地考好。",
+    "example_type": "topik"
+  },
+  {
+    "word": "상대방",
+    "hanja": [
+      "相對方"
+    ],
+    "meaning": "對方；對手",
+    "tag": "社會",
+    "frequency": 2,
+    "example_ko": "축구 경기에서 상대방을 존중해야 한다.",
+    "example_zh": "在足球比賽中要尊重對方。",
+    "example_type": "topik"
+  },
+  {
+    "word": "임신",
+    "hanja": [
+      "妊娠"
+    ],
+    "meaning": "懷孕",
+    "tag": "醫學",
+    "frequency": 2,
+    "example_ko": "그녀는 임신 초기라서 조심해야 한다.",
+    "example_zh": "她剛懷孕，要小心。",
+    "example_type": "topik"
+  },
+  {
+    "word": "잡히다",
+    "hanja": [],
+    "meaning": "被抓住；被逮捕；被發現",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "도둑이 결국 잡혔다.",
+    "example_zh": "小偷終於被抓到了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "밭",
+    "hanja": [],
+    "meaning": "田地；田；農田",
+    "tag": "生活",
+    "frequency": 2,
+    "example_ko": "농부가 밭에서 채소를 심었다.",
+    "example_zh": "農夫在田裡種了蔬菜。",
+    "example_type": "topik"
+  },
+  {
+    "word": "식구",
+    "hanja": [
+      "食口"
+    ],
+    "meaning": "家人；家庭成員",
+    "tag": "生活",
+    "frequency": 2,
+    "example_ko": "이번 명절에는 식구들이 모두 모인다.",
+    "example_zh": "這個節日家人都會聚在一起。",
+    "example_type": "topik"
+  },
+  {
+    "word": "확실하다",
+    "hanja": [
+      "確實"
+    ],
+    "meaning": "確定、可靠",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "그 사실은 확실하다.",
+    "example_zh": "那個事實是確定的。",
+    "example_type": "topik"
+  },
+  {
+    "word": "개선",
+    "hanja": [
+      "改善"
+    ],
+    "meaning": "改善、改進",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "회사는 근무 환경을 개선했다.",
+    "example_zh": "公司改善了工作環境。",
+    "example_type": "topik"
+  },
+  {
+    "word": "글자",
+    "hanja": [
+      "文字"
+    ],
+    "meaning": "字、文字",
+    "tag": "生活",
+    "frequency": 2,
+    "example_ko": "이 책에는 작은 글자가 많다.",
+    "example_zh": "這本書有很多小字。",
+    "example_type": "topik"
+  },
+  {
+    "word": "범위",
+    "hanja": [
+      "範圍"
+    ],
+    "meaning": "範圍",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "시험 범위를 확인해라.",
+    "example_zh": "確認考試範圍。",
+    "example_type": "topik"
+  },
+  {
+    "word": "조상",
+    "hanja": [
+      "祖上"
+    ],
+    "meaning": "祖先、祖宗",
+    "tag": "社會",
+    "frequency": 2,
+    "example_ko": "우리는 조상에게 제사를 지냈다.",
+    "example_zh": "我們向祖先祭祀。",
+    "example_type": "topik"
+  },
+  {
+    "word": "철학",
+    "hanja": [
+      "哲學"
+    ],
+    "meaning": "哲學",
+    "tag": "文學",
+    "frequency": 2,
+    "example_ko": "그는 대학에서 철학을 공부한다.",
+    "example_zh": "他在大學讀哲學。",
+    "example_type": "topik"
+  },
+  {
+    "word": "검다",
+    "hanja": [],
+    "meaning": "黑色、黝黑",
+    "tag": "生活",
+    "frequency": 2,
+    "example_ko": "밤하늘이 매우 검다.",
+    "example_zh": "夜空非常黑。",
+    "example_type": "topik"
+  },
+  {
+    "word": "대형",
+    "hanja": [
+      "大型"
+    ],
+    "meaning": "大型、巨大",
+    "tag": "生活",
+    "frequency": 2,
+    "example_ko": "대형 트럭이 길을 막고 있다.",
+    "example_zh": "大型貨車擋住了路。",
+    "example_type": "topik"
+  },
+  {
+    "word": "문제점",
+    "hanja": [
+      "問題點"
+    ],
+    "meaning": "問題點、問題所在",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "보고서에서 여러 문제점을 발견했다.",
+    "example_zh": "在報告中發現了好幾個問題。",
+    "example_type": "topik"
+  },
+  {
+    "word": "불가능하다",
+    "hanja": [
+      "不可能"
+    ],
+    "meaning": "不可能、做不到",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "그 일을 혼자 하는 것은 불가능하다.",
+    "example_zh": "一個人做那件事是不可能的。",
+    "example_type": "topik"
+  },
+  {
+    "word": "충격",
+    "hanja": [
+      "衝擊"
+    ],
+    "meaning": "衝擊、震驚",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "그 소식은 큰 충격이었다.",
+    "example_zh": "那個消息是一個很大的衝擊。",
+    "example_type": "topik"
+  },
+  {
+    "word": "퍼지다",
+    "hanja": [],
+    "meaning": "擴散、傳開",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "소문이 빠르게 퍼졌다.",
+    "example_zh": "謠言迅速傳開了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "상당히",
+    "hanja": [
+      "相當"
+    ],
+    "meaning": "相當、頗為",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "상당히 많은 사람들이 모였다.",
+    "example_zh": "相當多的人聚集了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "꽤",
+    "hanja": [],
+    "meaning": "相當、頗為",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "그 영화는 꽤 재미있었다.",
+    "example_zh": "那部電影相當有趣。",
+    "example_type": "topik"
+  },
+  {
+    "word": "한참",
+    "hanja": [],
+    "meaning": "好久、很久",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "너를 한참 기다렸어.",
+    "example_zh": "我等了你很久。",
+    "example_type": "topik"
+  },
+  {
+    "word": "끊다",
+    "hanja": [],
+    "meaning": "切斷、中斷",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "전화 연결을 끊어라.",
+    "example_zh": "把電話掛斷。",
+    "example_type": "topik"
+  },
+  {
+    "word": "넘어가다",
+    "hanja": [],
+    "meaning": "越過、轉到、過度到",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "그는 다음 주제로 넘어갔다.",
+    "example_zh": "他轉到下一個主題。",
+    "example_type": "topik"
+  },
+  {
+    "word": "담기다",
+    "hanja": [],
+    "meaning": "被裝入、盛著、包含",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "편지에 진심이 담겨 있다.",
+    "example_zh": "信中裝著真心。",
+    "example_type": "topik"
+  },
+  {
+    "word": "마당",
+    "hanja": [],
+    "meaning": "院子、庭院",
+    "tag": "生活",
+    "frequency": 2,
+    "example_ko": "아이들이 마당에서 놀고 있다.",
+    "example_zh": "孩子們在院子裡玩。",
+    "example_type": "topik"
+  },
+  {
+    "word": "서두르다",
+    "hanja": [],
+    "meaning": "匆忙、趕快、急忙",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "너무 서두르지 마.",
+    "example_zh": "別太急。",
+    "example_type": "topik"
+  },
+  {
+    "word": "짝",
+    "hanja": [],
+    "meaning": "一對；配對物",
+    "tag": "生活",
+    "frequency": 2,
+    "example_ko": "이 신발은 짝이 맞지 않는다.",
+    "example_zh": "這雙鞋不成對。",
+    "example_type": "topik"
+  },
+  {
+    "word": "충분하다",
+    "hanja": [
+      "充分"
+    ],
+    "meaning": "足夠；充分",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "시간이 충분하니까 천천히 해.",
+    "example_zh": "時間足夠，所以慢慢做。",
+    "example_type": "topik"
+  },
+  {
+    "word": "앞두다",
+    "hanja": [],
+    "meaning": "面臨；即將到來",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "시험을 앞두고 열심히 공부한다.",
+    "example_zh": "在考試前努力讀書。",
+    "example_type": "topik"
+  },
+  {
+    "word": "온갖",
+    "hanja": [],
+    "meaning": "各式各樣；各種各樣",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "온갖 꽃이 정원에 피었다.",
+    "example_zh": "各式各樣的花在花園裡開了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "기쁨",
+    "hanja": [],
+    "meaning": "喜悅；快樂",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "아이의 웃음에서 기쁨을 느꼈다.",
+    "example_zh": "從孩子的笑容中感到喜悅。",
+    "example_type": "topik"
+  },
+  {
+    "word": "깊이",
+    "hanja": [],
+    "meaning": "深度；深處",
+    "tag": "生活",
+    "frequency": 2,
+    "example_ko": "호수의 깊이를 잴 수 없다.",
+    "example_zh": "無法測量湖泊的深度。",
+    "example_type": "topik"
+  },
+  {
+    "word": "꾸미다",
+    "hanja": [],
+    "meaning": "裝飾；佈置",
+    "tag": "生活",
+    "frequency": 2,
+    "example_ko": "방을 예쁜 그림으로 꾸몄다.",
+    "example_zh": "房間用漂亮的畫裝飾了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "늘리다",
+    "hanja": [],
+    "meaning": "增加；使增多",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "회사는 생산량을 늘리기로 했다.",
+    "example_zh": "公司決定增加產量。",
+    "example_type": "topik"
+  },
+  {
+    "word": "시스템",
+    "hanja": [],
+    "meaning": "系統；體制",
+    "tag": "科學",
+    "frequency": 2,
+    "example_ko": "이 시스템은 자동으로 데이터를 처리한다.",
+    "example_zh": "這個系統會自動處理數據。",
+    "example_type": "topik"
+  },
+  {
+    "word": "참여",
+    "hanja": [
+      "參與"
+    ],
+    "meaning": "參與；加入",
+    "tag": "社會",
+    "frequency": 2,
+    "example_ko": "학생들의 참여가 중요하다.",
+    "example_zh": "學生的參與很重要。",
+    "example_type": "topik"
+  },
+  {
+    "word": "걸음",
+    "hanja": [],
+    "meaning": "步伐；腳步",
+    "tag": "生活",
+    "frequency": 2,
+    "example_ko": "그는 천천히 걸음을 옮겼다.",
+    "example_zh": "他慢慢地移動了腳步。",
+    "example_type": "topik"
+  },
+  {
+    "word": "겨우",
+    "hanja": [],
+    "meaning": "勉強；好不容易；僅僅",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "시험에 겨우 합격했다.",
+    "example_zh": "好不容易通過了考試。",
+    "example_type": "topik"
+  },
+  {
+    "word": "비교적",
+    "hanja": [
+      "比較的"
+    ],
+    "meaning": "相對地；比較上",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "오늘은 비교적 날씨가 좋다.",
+    "example_zh": "今天相對來說天氣很好。",
+    "example_type": "topik"
+  },
+  {
+    "word": "올바르다",
+    "hanja": [],
+    "meaning": "正確；恰當",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "그의 행동은 올바르지 않다.",
+    "example_zh": "他的行為不正確。",
+    "example_type": "topik"
+  },
+  {
+    "word": "흔하다",
+    "hanja": [],
+    "meaning": "常見；普遍",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "이 지역에서는 이런 일이 흔하다.",
+    "example_zh": "在這地區這種事很常見。",
+    "example_type": "topik"
+  },
+  {
+    "word": "늙다",
+    "hanja": [],
+    "meaning": "變老；年邁",
+    "tag": "生活",
+    "frequency": 2,
+    "example_ko": "할머니가 많이 늙었다.",
+    "example_zh": "奶奶變老了很多。",
+    "example_type": "topik"
+  },
+  {
+    "word": "단위",
+    "hanja": [
+      "單位"
+    ],
+    "meaning": "單位；計量單位",
+    "tag": "科學",
+    "frequency": 2,
+    "example_ko": "길이를 센티미터 단위로 잰다.",
+    "example_zh": "以厘米為單位測量長度。",
+    "example_type": "topik"
+  },
+  {
+    "word": "상상",
+    "hanja": [
+      "想像"
+    ],
+    "meaning": "想像；想像力",
+    "tag": "文學",
+    "frequency": 2,
+    "example_ko": "그는 상상 속에서 모험을 떠났다.",
+    "example_zh": "他在想像中展開冒險。",
+    "example_type": "topik"
+  },
+  {
+    "word": "소득",
+    "hanja": [
+      "所得"
+    ],
+    "meaning": "收入；所得",
+    "tag": "經濟",
+    "frequency": 2,
+    "example_ko": "그의 소득이 작아서 저축하기 어렵다.",
+    "example_zh": "他的收入少，很難儲蓄。",
+    "example_type": "topik"
+  },
+  {
+    "word": "맺다",
+    "hanja": [],
+    "meaning": "締結；達成；結成",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "회사와 계약을 맺었다.",
+    "example_zh": "與公司簽了合約。",
+    "example_type": "topik"
+  },
+  {
+    "word": "입술",
+    "hanja": [
+      "唇"
+    ],
+    "meaning": "嘴唇",
+    "tag": "生活",
+    "frequency": 2,
+    "example_ko": "그녀는 입술에 립스틱을 바르고 있다.",
+    "example_zh": "她在嘴唇上塗口紅。",
+    "example_type": "topik"
+  },
+  {
+    "word": "잎",
+    "hanja": [
+      "葉"
+    ],
+    "meaning": "葉子",
+    "tag": "環境",
+    "frequency": 2,
+    "example_ko": "가을이 되자 나무에 있는 잎이 모두 떨어졌다.",
+    "example_zh": "一到秋天，樹上的葉子全都掉了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "중간",
+    "hanja": [
+      "中間"
+    ],
+    "meaning": "中間、當中",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "수업 중간에 전화가 울렸다.",
+    "example_zh": "課堂中間電話響了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "대체로",
+    "hanja": [],
+    "meaning": "大致、一般而言",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "대체로 날씨가 따뜻해서 야외 활동이 좋다.",
+    "example_zh": "大體上天氣溫暖，很適合戶外活動。",
+    "example_type": "topik"
+  },
+  {
+    "word": "몹시",
+    "hanja": [],
+    "meaning": "非常、很",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "그는 몹시 피곤해 보여서 일찍 잔다.",
+    "example_zh": "他看起來非常疲倦，所以早點睡。",
+    "example_type": "topik"
+  },
+  {
+    "word": "특별하다",
+    "hanja": [
+      "特別"
+    ],
+    "meaning": "特別、特殊",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "오늘은 특별한 날이다.",
+    "example_zh": "今天是特別的一天。",
+    "example_type": "topik"
+  },
+  {
+    "word": "효과적",
+    "hanja": [
+      "效果的"
+    ],
+    "meaning": "有效、有成效",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "이 방법은 학습에 매우 효과적이다.",
+    "example_zh": "這個方法對學習非常有效。",
+    "example_type": "topik"
+  },
+  {
+    "word": "가까이",
+    "hanja": [],
+    "meaning": "靠近、接近",
+    "tag": "生活",
+    "frequency": 2,
+    "example_ko": "집에서 학교가 가까이 있어서 걸어 다닌다.",
+    "example_zh": "學校離家很近，所以走路去。",
+    "example_type": "topik"
+  },
+  {
+    "word": "낫다",
+    "hanja": [],
+    "meaning": "痊癒、康復",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "감기가 빨리 낫았다.",
+    "example_zh": "感冒很快痊癒了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "언젠가",
+    "hanja": [],
+    "meaning": "總有一天、有朝一日",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "언젠가 다시 고향에 돌아가고 싶다.",
+    "example_zh": "總有一天想回到家鄉。",
+    "example_type": "topik"
+  },
+  {
+    "word": "줄어들다",
+    "hanja": [],
+    "meaning": "減少、變少",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "인구가 줄어들고 있다.",
+    "example_zh": "人口正在減少。",
+    "example_type": "topik"
+  },
+  {
+    "word": "가만히",
+    "hanja": [],
+    "meaning": "靜靜地、一動不動",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "그는 가만히 창밖을 바라보았다.",
+    "example_zh": "他靜靜地望著窗外。",
+    "example_type": "topik"
+  },
+  {
+    "word": "한두",
+    "hanja": [],
+    "meaning": "一兩、少數幾個",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "한두 번 실패했다고 포기하지 마라.",
+    "example_zh": "不要因為失敗一兩次就放棄。",
+    "example_type": "topik"
+  },
+  {
+    "word": "흙",
+    "hanja": [
+      "土"
+    ],
+    "meaning": "泥土、土壤",
+    "tag": "環境",
+    "frequency": 2,
+    "example_ko": "아이들이 흙으로 놀면서 즐거워했다.",
+    "example_zh": "孩子們在泥土裡玩得很開心。",
+    "example_type": "topik"
+  },
+  {
+    "word": "고객",
+    "hanja": [
+      "顧客"
+    ],
+    "meaning": "顧客、客戶",
+    "tag": "經濟",
+    "frequency": 2,
+    "example_ko": "회사는 고객의 의견을 중요하게 생각한다.",
+    "example_zh": "公司重視顧客的意見。",
+    "example_type": "topik"
+  },
+  {
+    "word": "과학자",
+    "hanja": [
+      "科學者"
+    ],
+    "meaning": "科學家",
+    "tag": "科學",
+    "frequency": 2,
+    "example_ko": "과학자는 새로운 이론을 발표했다.",
+    "example_zh": "科學家發表了新的理論。",
+    "example_type": "topik"
+  },
+  {
+    "word": "관광",
+    "hanja": [
+      "觀光"
+    ],
+    "meaning": "觀光、旅遊",
+    "tag": "經濟",
+    "frequency": 2,
+    "example_ko": "그 도시는 관광으로 유명하다.",
+    "example_zh": "那個城市以旅遊聞名。",
+    "example_type": "topik"
+  },
+  {
+    "word": "살아오다",
+    "hanja": [],
+    "meaning": "（至今）生活、一直居住",
+    "tag": "生活",
+    "frequency": 2,
+    "example_ko": "그는 어릴 때부터 서울에서 살아왔다.",
+    "example_zh": "他從小就在首爾生活到現在。",
+    "example_type": "topik"
+  },
+  {
+    "word": "식품",
+    "hanja": [
+      "食品"
+    ],
+    "meaning": "食品、食物",
+    "tag": "生活",
+    "frequency": 2,
+    "example_ko": "이 식품은 유통기한이 지났다.",
+    "example_zh": "這項食品已經過了保存期限。",
+    "example_type": "topik"
+  },
+  {
+    "word": "연기",
+    "hanja": [
+      "延期",
+      "煙",
+      "演技"
+    ],
+    "meaning": "延期、煙、演技",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "회의가 연기되었다.",
+    "example_zh": "會議被延後了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "회원",
+    "hanja": [
+      "會員"
+    ],
+    "meaning": "會員（組織或團體的成員）",
+    "tag": "社會",
+    "frequency": 2,
+    "example_ko": "나는 도서관 회원으로 등록했다.",
+    "example_zh": "我已經登記成為圖書館會員。",
+    "example_type": "topik"
+  },
+  {
+    "word": "조미료",
+    "hanja": [
+      "調味料"
+    ],
+    "meaning": "調味料（用於增添食物味道的材料）",
+    "tag": "生活",
+    "frequency": 2,
+    "example_ko": "요리에 조미료를 적게 넣어라.",
+    "example_zh": "在菜裡少放調味料。",
+    "example_type": "topik"
+  },
+  {
+    "word": "풀리다",
+    "hanja": [],
+    "meaning": "鬆開、解除（綁著的東西鬆開或緊張感消除）",
+    "tag": "生活",
+    "frequency": 2,
+    "example_ko": "매듭이 쉽게 풀렸다.",
+    "example_zh": "繩結很容易鬆開。",
+    "example_type": "topik"
+  },
+  {
+    "word": "가꾸다",
+    "hanja": [],
+    "meaning": "栽培、打理（種植或培養植物，或修飾打扮）",
+    "tag": "生活",
+    "frequency": 2,
+    "example_ko": "그녀는 마당에서 꽃을 가꾼다.",
+    "example_zh": "她在庭院裡種植花草。",
+    "example_type": "topik"
+  },
+  {
+    "word": "고민",
+    "hanja": [
+      "苦悶"
+    ],
+    "meaning": "苦惱、煩惱（對問題感到思慮或焦慮）",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "그는 직장 문제로 고민하고 있다.",
+    "example_zh": "他為了工作上的問題而苦惱。",
+    "example_type": "topik"
+  },
+  {
+    "word": "집다",
+    "hanja": [],
+    "meaning": "拿、夾、取（用手或工具夾取或抓取物品）",
+    "tag": "生活",
+    "frequency": 2,
+    "example_ko": "그는 핸드폰을 집었다.",
+    "example_zh": "他拿起了手機。",
+    "example_type": "topik"
+  },
+  {
+    "word": "화면",
+    "hanja": [
+      "畫面"
+    ],
+    "meaning": "畫面、螢幕（顯示影像或文字的表面）",
+    "tag": "科學",
+    "frequency": 2,
+    "example_ko": "스마트폰 화면이 깨졌다.",
+    "example_zh": "智能手機的螢幕壞了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "대표적",
+    "hanja": [
+      "代表的"
+    ],
+    "meaning": "代表性的（具有典型或具代表意義的）",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "그는 대표적인 한국 작가 중 한 명이다.",
+    "example_zh": "他是代表性的韓國作家之一。",
+    "example_type": "topik"
+  },
+  {
+    "word": "사회적",
+    "hanja": [
+      "社會的"
+    ],
+    "meaning": "社會的（與社會或公共生活相關的）",
+    "tag": "社會",
+    "frequency": 2,
+    "example_ko": "사회적 문제에 관심을 가져야 한다.",
+    "example_zh": "應該關注社會問題。",
+    "example_type": "topik"
+  },
+  {
+    "word": "생겨나다",
+    "hanja": [],
+    "meaning": "產生、出現（某事物開始存在或發生）",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "갑자기 큰 문제가 생겨났다.",
+    "example_zh": "突然出現了大問題。",
+    "example_type": "topik"
+  },
+  {
+    "word": "태양",
+    "hanja": [
+      "太陽"
+    ],
+    "meaning": "太陽（發光發熱的恆星，地球的中心恆星）",
+    "tag": "科學",
+    "frequency": 2,
+    "example_ko": "태양은 동쪽에서 뜬다.",
+    "example_zh": "太陽從東方升起。",
+    "example_type": "topik"
+  },
+  {
+    "word": "틀림없다",
+    "hanja": [],
+    "meaning": "沒錯、確定（用於表示肯定沒有錯誤）",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "네 말이 틀림없다.",
+    "example_zh": "你說的是沒錯。",
+    "example_type": "topik"
+  },
+  {
+    "word": "채우다",
+    "hanja": [],
+    "meaning": "填滿、填寫、滿足（把空缺填好或充滿）",
+    "tag": "生活",
+    "frequency": 2,
+    "example_ko": "빈 병을 물로 채웠다.",
+    "example_zh": "把空瓶子裝滿了水。",
+    "example_type": "topik"
+  },
+  {
+    "word": "기본적",
+    "hanja": [
+      "基本的"
+    ],
+    "meaning": "基本的、根本的（最基礎或必要的）",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "기본적인 규칙을 먼저 배워야 한다.",
+    "example_zh": "必須先學習基本規則。",
+    "example_type": "topik"
+  },
+  {
+    "word": "부족",
+    "hanja": [
+      "不足"
+    ],
+    "meaning": "不足、不夠（數量或程度不達標）",
+    "tag": "生活",
+    "frequency": 2,
+    "example_ko": "음식이 부족하다.",
+    "example_zh": "食物不足。",
+    "example_type": "topik"
+  },
+  {
+    "word": "지켜보다",
+    "hanja": [],
+    "meaning": "注視、觀察（持續看守或注意某人某事）",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "그는 창문에서 길을 지켜보고 있다.",
+    "example_zh": "他在窗邊看著街道。",
+    "example_type": "topik"
+  },
+  {
+    "word": "개성",
+    "hanja": [
+      "個性"
+    ],
+    "meaning": "個性、特色（個人的獨特性或風格）",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "그 배우는 강한 개성이 있다.",
+    "example_zh": "那位演員很有個性。",
+    "example_type": "topik"
+  },
+  {
+    "word": "더하다",
+    "hanja": [],
+    "meaning": "加、增加；（程度）加重（增加量或使情況更加）",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "설탕을 더하면 맛이 더 달아진다.",
+    "example_zh": "如果多加糖味道會更甜。",
+    "example_type": "topik"
+  },
+  {
+    "word": "무너지다",
+    "hanja": [],
+    "meaning": "倒塌、崩潰（建築或結構倒下，或局勢崩潰）",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "오래된 건물이 지진으로 무너졌다.",
+    "example_zh": "老舊的建築物因地震倒塌了。",
+    "example_type": "topik"
+  },
+  {
+    "word": "후반",
+    "hanja": [
+      "後半"
+    ],
+    "meaning": "後半（某一段時間或範圍的後半部分）",
+    "tag": "其他",
+    "frequency": 2,
+    "example_ko": "그는 20대 후반이다.",
+    "example_zh": "他二十多歲的後半。",
     "example_type": "topik"
   }
 ]
